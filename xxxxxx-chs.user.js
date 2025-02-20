@@ -5,6 +5,7 @@
 // @description  网页游戏 xxxxx (https://www.xxxxx.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
+// @contributionUR    https://gityx.com/donate/intro.html
 // @license      MIT
 // @include      *https://www.xxxxx.com/*
 // @grant        none
