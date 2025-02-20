@@ -1,9 +1,12 @@
 // ==UserScript==
-// @name         idlehack-chs
+// @name         Idle Hack 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
 // @version      0.0.17
-// @description  Idle Quest RPG (https://www.idlehack.net) 游戏汉化脚本 - 锅巴汉化出品
-// @author       麦子、JAR、小蓝、好阳光的小锅巴
+// @description  网页游戏 Idle Hack (https://www.idlehack.net) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Hack.
+// @author       好阳光的小锅巴 & 麦子
+// @copyright    锅巴汉化
+// @contributionUR    https://gityx.com/donate/intro.html
+// @license      MIT
 // @include      *idlehack.net*
 // @grant        none
 // @website      https://www.gityx.com
