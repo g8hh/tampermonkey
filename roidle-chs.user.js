@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Ragnarok Oblivion Idle 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.11
+// @version      0.0.12
 // @description  Ragnarok Oblivion Idle (https://roidle.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Ragnarok Oblivion Idle.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://roidle.com/assets/images/icons/favicon.ico
 // @license      MIT
 // @include      *https://roidle.com/*
 // @grant        none

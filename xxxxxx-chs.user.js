@@ -6,6 +6,7 @@
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://www.zed.city/icons/favicon.svg
 // @license      MIT
 // @include      *https://www.xxxxx.com/*
 // @grant        none

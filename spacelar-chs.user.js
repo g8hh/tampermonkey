@@ -1,9 +1,13 @@
 // ==UserScript==
-// @name         spacelar-chs
+// @name         Spacelar 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.15
-// @description  Spacelar (https://spacelar.queslar.com/#/ref/543) 游戏汉化脚本 - 锅巴汉化出品
-// @author       麦子、JAR、小蓝、好阳光的小锅巴
+// @version      0.0.16
+// @description  Spacelar (https://spacelar.queslar.com/#/ref/543) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Spacelar.
+// @author       好阳光的小锅巴 & 麦子
+// @copyright    锅巴汉化
+// @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://spacelar.queslar.com/favicon.ico
+// @license      MIT
 // @include      *https://spacelar.queslar.com/*
 // @grant        none
 // @website      https://www.gityx.com/

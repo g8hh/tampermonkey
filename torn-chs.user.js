@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Torn 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.48
+// @version      0.0.49
 // @description  Torn (https://www.torn.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://www.torn.com/favicon/torn/32x32.png
 // @license      MIT
 // @include      *https://www.torn.com/*
 // @grant        none

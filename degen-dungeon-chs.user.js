@@ -1,9 +1,12 @@
 // ==UserScript==
-// @name         degen-dungeon-chs
+// @name         Degen Dungeon 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.1
-// @description  Degen Dungeon (https://www.degen-dungeon.com/) 游戏汉化脚本 - 锅巴汉化出品
-// @author       麦子、JAR、小蓝、好阳光的小锅巴
+// @version      0.0.10
+// @description  Degen Dungeon (https://www.degen-dungeon.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Degen Dungeon.
+// @author       好阳光的小锅巴 & 麦子
+// @copyright    锅巴汉化
+// @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://www.degendungeon.com/favicon.ico
 // @include      *https://www.degendungeon.com/*
 // @grant        none
 // @website      https://www.gityx.com/

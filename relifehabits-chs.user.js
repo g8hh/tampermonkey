@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Relife Habits 简体中文汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.3
+// @version      0.0.5
 // @description  网页游戏 Relife Habits (https://relifehabits.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Relife Habits.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
+// @icon        https://relifehabits.com/icon.ico
 // @license      MIT
 // @include      *https://relifehabits.com/*
 // @grant        none
@@ -122,7 +123,7 @@ var cnItems = {
     "dealt": "输出",
     "Floor": "楼层",
     "Floors": "楼层",
-    "Hero's Landing": "英雄登陆",
+    "Hero's Landing": "英雄大陆",
     "It's a long way up...": "这是一条很长的路…",
     "You have been defeated. Do some quests or buy items from the shop to get stronger": "你被打败了。做一些任务或从商店购买物品来变得更强",
     "You need to enable JavaScript to run this app.": "你需要启用JavaScript来运行这个应用程序。",
@@ -136,6 +137,7 @@ var cnItems = {
     "Complete 20 sit-ups to improve your core strength.": "完成20个仰卧起坐来提高你的核心力量。",
     "Compliment Someone": "赞美他人",
     "Declutter your inbox by unsubscribing from unnecessary newsletters.": "取消订阅不必要的时事通讯，清理你的收件箱。",
+    "Do 10 Pushups": "做10个俯卧撑",
     "Do 10 Push-Ups": "做10个俯卧撑",
     "Do 20 Sit-Ups": "做20个仰卧起坐",
     "Get better quests as you level up": "随着等级的提升，可以获得更好的任务",
@@ -252,7 +254,7 @@ var cnItems = {
     "Elucidator and Dark Repulser(SAO)": "阐释者和黑暗排斥者（SAO）",
     "Frazzle": "破碎",
     "Fright": "惊吓",
-    "Goblin Slayer Club": "妖精杀手俱乐部",
+    "Goblin Slayer Club": "哥布林杀手俱乐部",
     "Guardian Angel": "守护天使",
     "Intelligence Required:": "智力要求：",
     "It leaves a lot of splinters in your enemy but otherwise not very effective": "它会在你的敌人身上留下很多碎片，但除此之外效果并不好",
@@ -308,24 +310,24 @@ var cnItems = {
     "Three's a party.": "三个人就够了。",
     "Veteran Goblin has appeared": "资深哥布林出现",
     "Witch's Hut": "女巫小屋",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "1 Minute Wall Sit": "坐墙1分钟",
+    "Bone-Horned Helmet": "骨角头盔",
+    "Complete 10 pushups to improve your chest and overall upperbody strength.": "完成10个俯卧撑来提高你的胸部和整个上半身的力量。",
+    "Increase your core stability and legs by wall-sitting for 1 minute.": "坐墙1分钟，增加核心稳定性和腿部力量。",
+    "Listen to a Podcast": "听播客",
+    "Punctuality": "准时",
+    "Read a Biography": "阅读传记",
+    "Read a biography of a historical figure to gain inspiration.": "读一个历史人物的传记来获得灵感。",
+    "Spend 30 minutes listening to an educational podcast.": "花30分钟听一个有教育意义的播客。",
+    "Stretch your body for 5 minutes to improve flexibility.": "伸展身体5分钟，提高柔韧性。",
+    "Take a 5-Minute Stretch Break": "休息5分钟，伸展一下身体",
+    "torso": "躯干",
+    "feet": "脚部",
+    "Surprise Party": "惊喜派对",
+    "Two's a crowd.": "两个人太多了。",
+    "Goblin Assassin": "Goblin Assassin",
+    "Need Help?": "需要帮助?",
+    "If you rolled 6 and 6, then you would roll 2 more dice, one for each 6 you get. In this example, your extra rolls might come out to 6 and 5. Very lucky! Since you got another 6, you can reroll a third time, and say you get 2. Your final EDR would be 6 + 6 + 6 + 5 + 2 = 25.": "如果你掷出6和6，那么你将再掷出2个骰子，每掷出6一个骰子。在这个例子中，额外掷出的点数可能是6和5。非常幸运！既然你又得到了6，你可以第三次掷骰子，得到2。你最终的EDR是6 + 6 + 6 + 5 + 2 = 25。",
     "": "",
     "": "",
     "": "",

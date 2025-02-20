@@ -1,9 +1,13 @@
 // ==UserScript==
-// @name         queslar-chs
+// @name         Queslar 简中汉化脚本
 // @namespace    https://www.g8hh.com/
-// @version      0.0.65
-// @description  Queslar (https://www.queslar.com/#/ref/13134) 游戏汉化脚本 - 锅巴汉化出品
-// @author       麦子、JAR、小蓝、好阳光的小锅巴
+// @version      0.0.67
+// @description  Queslar (https://www.queslar.com/#/ref/13134) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Queslar.
+// @author       好阳光的小锅巴 & 麦子
+// @copyright    锅巴汉化
+// @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://queslar.com/favicon.ico
+// @license      MIT
 // @include      *https://queslar.com/*
 // @grant        none
 // @website      https://www.gityx.com

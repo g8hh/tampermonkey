@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         Idle Hack 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.19
+// @version      0.0.20
 // @description  网页游戏 Idle Hack (https://www.idlehack.net) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Hack.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://idlehack.net/favicon.ico
 // @license      MIT
 // @include      *https://idlehack.net*
 // @grant        none
