@@ -1,7 +1,7 @@
 // ==UserScript==
-// @name         Torn City 简中汉化脚本
+// @name         Torn 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.47
+// @version      0.0.48
 // @description  Torn (https://www.torn.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
