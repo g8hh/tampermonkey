@@ -1,10 +1,12 @@
 // ==UserScript==
-// @name         iqrpg-chs
+// @name         xxxx 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
 // @version      0.0.1
-// @description  Idle Quest RPG (https://www.iqrpg.com/) 游戏汉化脚本 - 锅巴汉化出品
-// @author       麦子、JAR、小蓝、好阳光的小锅巴
-// @include      *https://www.iqrpg.com/*
+// @description  网页游戏 xxxxx (https://www.xxxxx.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
+// @author       好阳光的小锅巴 & 麦子
+// @copyright    锅巴汉化
+// @license      MIT
+// @include      *https://www.xxxxx.com/*
 // @grant        none
 // @website      https://www.gityx.com/
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js

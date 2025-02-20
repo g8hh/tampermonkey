@@ -1,9 +1,11 @@
 // ==UserScript==
-// @name         relifehabits-chs
+// @name         Relife Habits 简体中文汉化脚本
 // @namespace    https://www.g8hh.com.cn/
 // @version      0.0.1
-// @description  Relife Habits (https://relifehabits.com/) 游戏汉化脚本 - 锅巴汉化出品
-// @author       麦子、JAR、小蓝、好阳光的小锅巴
+// @description  网页游戏 Relife Habits (https://relifehabits.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Relife Habits.
+// @author       好阳光的小锅巴 & 麦子
+// @copyright    锅巴汉化
+// @license      MIT
 // @include      *https://relifehabits.com/*
 // @grant        none
 // @website      https://www.gityx.com/
