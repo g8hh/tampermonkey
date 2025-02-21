@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Relife Habits 简体中文汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.7
+// @version      0.0.8
 // @description  网页游戏 Relife Habits (https://relifehabits.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Relife Habits.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -323,6 +323,7 @@ var cnItems = {
     "Take a 5-Minute Stretch Break": "休息5分钟，伸展一下身体",
     "torso": "躯干",
     "feet": "脚部",
+    "weapon": "武器",
     "Surprise Party": "惊喜派对",
     "Two's a crowd.": "两个人太多了。",
     "Goblin Assassin": "Goblin Assassin",
@@ -391,10 +392,10 @@ var cnItems = {
     "Under 18": "未满18岁",
     "Select Your Age Range (Optional: So that we can tailor a better experience for you)": "选择您的年龄范围（可选：以便我们为您量身定制更好的体验）",
     "Username is required": "用户名不能为空",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Make a Vow": "许下誓言",
+    "My Vows": "我的誓言",
+    "No vows found.": "暂无誓言。",
+    "Vows give GREAT rewards, but DIRE consequences if not finished on time.": "誓言会带来巨大的回报，但如果没有按时完成，后果会很严重。",
     "": "",
     "": "",
     "": "",
