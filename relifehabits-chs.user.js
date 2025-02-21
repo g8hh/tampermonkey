@@ -1,12 +1,13 @@
 // ==UserScript==
 // @name         Relife Habits 简体中文汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.9
+// @version      0.0.10
 // @description  网页游戏 Relife Habits (https://relifehabits.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Relife Habits.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
 // @icon        https://relifehabits.com/icon.ico
+// @require      https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js
 // @license      MIT
 // @include      *https://relifehabits.com/*
 // @grant        none
@@ -401,9 +402,9 @@ var cnItems = {
     "Difficulty": "难度",
     "Vow Name": "誓约名称",
     "Choose Stats": "选择属性",
-    "": "",
-    "": "",
-    "": "",
+    "damage": "伤害",
+    "hitAbility": "命中",
+    "parry": "闪避",
     "": "",
     "": "",
     "": "",
@@ -1049,10 +1050,56 @@ function TransSubTextNode(node) {
         }
     }
 }
+let clicks = null;
+let checks = null;
+// 自动战斗
+function autoFight(){
+    if($('.fixed.inset-0.bg-black.bg-opacity-50.z-50 .bg-red-500.text-white').length > 0){
+        $('.flex.gap-3.mt-4 .w-full.bg-red-500').trigger('click');
+   }
+}
+
+// 检测链接
+function checkUrl(){
+    if(location.href.indexOf('/game') < 0){
+        $('#btnStart').hide();
+        $('#btnStart').removeClass('open');
+        $('#btnStart').text('开始战斗')
+        clearInterval(clicks);
+    }else{
+        $('#btnStart').show();
+        if(!$('#btnStart').hasClass('open')){
+            $('#btnStart').trigger('click');
+        }
+    }
+}
+// 在页面上添加 HTML 结构
+function createHTML() {
+    var btnStart = '<button id="btnStart" class="px-4 py-2 bg-indigo-600 rounded-md mb-4" style="position: absolute;right: 20px;top: 90px;color: #fff;display: none;">开启自动战斗</button>'
+    $('body').append(btnStart);
+}
+
 
 ! function() {
     console.log("加载汉化模块");
-
+    // 创建按钮
+    // createHTML();
+    // 检测链接，显示战斗按钮
+    // checks = setInterval(checkUrl,3000);
+    // 自动战斗
+    $('#btnStart').click(function(){
+        if( $('#btnStart').hasClass('open')){
+            clearInterval(clicks);
+            clearInterval(checks);
+            $('#btnStart').removeClass('open');
+            $('#btnStart').text('开始战斗')
+        }else{
+            clicks=setInterval(autoFight,5000);
+            checks = setInterval(checkUrl,3000);
+            $('#btnStart').addClass('open');
+            $('#btnStart').text('停止战斗')
+        }
+    })
     let observer_config = {
         attributes: false,
         characterData: true,
