@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Relife Habits 简体中文汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.10
+// @version      0.0.11
 // @description  网页游戏 Relife Habits (https://relifehabits.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Relife Habits.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -313,7 +313,6 @@ var cnItems = {
     "Complete 10 pushups to improve your chest and overall upperbody strength.": "完成10个俯卧撑来提高你的胸部和整个上半身的力量。",
     "Increase your core stability and legs by wall-sitting for 1 minute.": "坐墙1分钟，增加核心稳定性和腿部力量。",
     "Listen to a Podcast": "听播客",
-    "Punctuality": "准时",
     "Read a Biography": "阅读传记",
     "Read a biography of a historical figure to gain inspiration.": "读一个历史人物的传记来获得灵感。",
     "Spend 30 minutes listening to an educational podcast.": "花30分钟听一个有教育意义的播客。",
@@ -405,6 +404,36 @@ var cnItems = {
     "damage": "伤害",
     "hitAbility": "命中",
     "parry": "闪避",
+    "Deadline:": "截止日期:",
+    "Consequences:": "结果:",
+    "Finish Vow": "现在完成",
+    "COMPLETED": "已完成",
+    "Current Level": "当前等级",
+    "Current Stats": "当前属性",
+    "Cooldown:": "冷却时间:",
+    "HealthAdd": "生命值增加",
+    "magicPenetration": "魔法穿透",
+    "magicResistance": "魔抗",
+    "mana": "法力",
+    "Mana Cost:": "法力成本:",
+    "Remove": "移除",
+    "Selected Spell:": "已选择法术:",
+    "Type:": "类型:",
+    "Stat:": "属性:",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": "",
     "": "",
     "": "",
