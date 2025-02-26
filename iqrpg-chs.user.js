@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Quest RPG 简中汉化脚本
 // @namespace    https://www.g8hh.com/
-// @version      0.1.65
+// @version      0.1.66
 // @description  网页游戏 Idle Quest RPG (https://www.iqrpg.com/?r=21364) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Quest RPG.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -9,6 +9,7 @@
 // @icon         https://www.iqrpg.com/favicon.ico
 // @license      MIT
 // @include      https://iqrpg.com*
+// @include      https://www.iqrpg.com*
 // @include      https://test.iqrpg.com*
 // @grant        none
 // @website      https://www.gityx.com
