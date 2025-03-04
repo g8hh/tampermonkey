@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mini Realms 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.10
+// @version      0.0.11
 // @description  网页游戏 Mini Realms (https://minirealms.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mini Realms.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -270,9 +270,9 @@ var cnItems = {
     "- Defend the land that the traps are placed on. Each trap can survive 2 attacks\n\t\t\t\t\tbefore being destroyed and they will be the first to go before your soldiers": "- 保卫放置陷阱的土地。每个陷阱可以在被摧毁前经受两次攻击，并且它们会第一个在你的士兵之前被摧毁",
     "- Each barrack creates soldiers which will give their lives to protect the realm\n\t\t\t\t\tno matter where the attack is": "- 每个兵营都会创造士兵，无论攻击在哪里，他们都会献出自己的生命来保护王国",
     "to see what\n\t\t\t\tthey suggest and save your verification code found under your\n": "查看他们的建议，并保存您的\n\t\t\t的验证码发现于",
-    "": "",
-    "": "",
-    "": "",
+    "Attack Land": "攻击土地",
+    "Select a square to destroy it": "选择一个方块以摧毁它",
+    "Welcome to realm": "欢迎来到王国",
     "": "",
     "": "",
     "": "",
@@ -566,6 +566,7 @@ var cnPostfix = {
     "resources every 10min": "资源每10分钟",
     "'s realm's Value": "的王国价值",
     "'s realm's Rank:": "的王国排名",
+    "Attack Land ": "攻击土地 ",
     "": "",
     "": "",
     "": "",
