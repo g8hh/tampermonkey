@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mini Realms 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.15
+// @version      0.0.16
 // @description  网页游戏 Mini Realms (https://minirealms.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mini Realms.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -294,29 +294,30 @@ var cnItems = {
     "More AP in": "获得更多 AP 还需要",
     "The down side of attacking another player is that now they know that you exist and where to find you. When you successfully destroy a land, you'll get rewarded with resources. Go to your profile page and lets convert all those resources into gold.": "攻击另一名玩家的不利之处在于，他们现在知道你的存在，也知道你在哪里。当你成功摧毁一片土地时，你将获得资源奖励。去你的个人资料页面，让所有这些资源转换成黄金。",
     "Covert": "转换",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Congratulations! You're now 1 gold richer. Wait till you see what you can do with gold...": "恭喜你!你现在多了1黄金。等着看你能用黄金做什么吧...",
+    "Level up!": "升级了!",
+    "Army Composition": "军队组成",
+    "Army Stats": "军队统计",
+    "Att": "攻击",
+    "Def": "防御",
+    "Defence:": "防御:",
+    "Guard": "守卫",
+    "Hero": "英雄",
+    "Level up!": "升级！",
+    "Resource Cost:": "资源成本:",
+    "Retire unit": "退休单位",
+    "Sniper": "狙击手",
+    "Strength:": "力量:",
+    "Tank": "坦克",
+    "Train unit ( 1 gold )": "训练单位 (1黄金)",
+    "Units": "单位",
+    "Unit": "单位",
+    "Untrainable": "不可训练",
+    "You can train an army that will die for you fighting the creatures in the emptiness.": "你可以训练一支愿意为你牺牲的军队，在虚空中与生物战斗。",
+    "Need at least 1 gold to train units": "至少需要 1 黄金来训练单位",
+    "They seem like a fine young prospect...": "他们看起来很有前途...",
+    "A guard was trained!": "训练出了一名卫兵！",
+    "Place your new warehouse to store more resources!": "放置您的新仓库以存储更多资源！",
     "": "",
     "": "",
     "": "",
@@ -965,7 +966,7 @@ function autoFight(){
 ! function() {
     console.log("加载汉化模块");
     // 5秒一次自动收集资源
-    // clicks=setInterval(autoFight,10000);
+    clicks=setInterval(autoFight,10000);
     let observer_config = {
         attributes: false,
         characterData: true,
