@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mini Realms 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.14
+// @version      0.0.15
 // @description  网页游戏 Mini Realms (https://minirealms.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mini Realms.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -958,14 +958,14 @@ function TransSubTextNode(node) {
 let clicks = null;
 // 自动收集资源
 function autoFight(){
-    if($('.mx-2.px-1.button-secondary').length > 0){
-        $('.mx-2.px-1.button-secondary').trigger('click');
+    if($('.flex.text-sm.mb-2 .mx-2.px-1.button-secondary').length > 0){
+        $('.flex.text-sm.mb-2 .mx-2.px-1.button-secondary').trigger('click');
    }
 }
 ! function() {
     console.log("加载汉化模块");
     // 5秒一次自动收集资源
-    // clicks=setInterval(autoFight,5000);
+    // clicks=setInterval(autoFight,10000);
     let observer_config = {
         attributes: false,
         characterData: true,
