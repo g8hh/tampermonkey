@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mini Realms 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.16
+// @version      0.0.17
 // @description  网页游戏 Mini Realms (https://minirealms.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mini Realms.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -318,9 +318,11 @@ var cnItems = {
     "They seem like a fine young prospect...": "他们看起来很有前途...",
     "A guard was trained!": "训练出了一名卫兵！",
     "Place your new warehouse to store more resources!": "放置您的新仓库以存储更多资源！",
-    "": "",
-    "": "",
-    "": "",
+    "Choose a unit type to retire one unit from:": "选择一个单位的类型来退休一个单位：",
+    "Have you been working out?": "你一直在锻炼吗？",
+    "Big spender here": "这里的消费大户",
+    "Make your next moves now": "现在就开始下一步行动",
+    "You want to do something": "你想做点什么",
     "": "",
     "": "",
     "": "",
@@ -555,7 +557,7 @@ var cnPrefix = {
     "More stamina in": "恢复更多耐力还需",
     "A warehouse has been built on ": "一座仓库已建成于 ",
     "Crops have been built on ": "作物已经被种植于 ",
-    "": "",
+    "Welcome to realm ": "欢迎来到王国 ",
     "": "",
     "": "",
     "": "",
