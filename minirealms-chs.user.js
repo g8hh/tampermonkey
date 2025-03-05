@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mini Realms 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.17
+// @version      0.0.18
 // @description  网页游戏 Mini Realms (https://minirealms.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mini Realms.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -172,6 +172,7 @@ var cnItems = {
     "Bonus Amount": "奖励数量",
     "'s Value": "的价值",
     "'s Rank:": "的排名：",
+    "Sum of All Resource Bonuses": "所有资源加成的总和",
     "(Sum of All Resource Bonuses)": "（所有资源加成的总和）",
     "Library": "图书馆",
     "Most value in a region": "在一个地区最大的价值",
@@ -323,10 +324,10 @@ var cnItems = {
     "Big spender here": "这里的消费大户",
     "Make your next moves now": "现在就开始下一步行动",
     "You want to do something": "你想做点什么",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Convert": "转换",
+    "send": "发送",
+    "Go say Hi!": "去打个招呼吧！",
+    "Message": "消息",
     "": "",
     "": "",
     "": "",
@@ -960,15 +961,17 @@ function TransSubTextNode(node) {
 }
 let clicks = null;
 // 自动收集资源
-function autoFight(){
+function autoClaim(){
+    // 强制刷新页面
+    location.reload(); 
     if($('.flex.text-sm.mb-2 .mx-2.px-1.button-secondary').length > 0){
         $('.flex.text-sm.mb-2 .mx-2.px-1.button-secondary').trigger('click');
    }
 }
 ! function() {
     console.log("加载汉化模块");
-    // 5秒一次自动收集资源
-    clicks=setInterval(autoFight,10000);
+    // 1分钟自动一次自动收集资源
+    clicks=setInterval(autoClaim,60000);
     let observer_config = {
         attributes: false,
         characterData: true,
