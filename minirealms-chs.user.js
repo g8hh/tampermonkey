@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mini Realms 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.20
+// @version      0.0.22
 // @description  网页游戏 Mini Realms (https://minirealms.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mini Realms.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -317,7 +317,9 @@ var cnItems = {
     "You can train an army that will die for you fighting the creatures in the emptiness.": "你可以训练一支愿意为你牺牲的军队，在虚空中与生物战斗。",
     "Need at least 1 gold to train units": "至少需要 1 黄金来训练单位",
     "They seem like a fine young prospect...": "他们看起来很有前途...",
-    "A guard was trained!": "训练出了一名卫兵！",
+    "A guard was trained!": "训练出了一名守卫！",
+    "A sniper was trained!": "训练出了一名狙击手！",
+    "A tank was trained!": "训练出了一名坦克！",
     "Place your new warehouse to store more resources!": "放置您的新仓库以存储更多资源！",
     "Choose a unit type to retire one unit from:": "选择一个单位的类型来退休一个单位：",
     "Have you been working out?": "你一直在锻炼吗？",
@@ -334,11 +336,11 @@ var cnItems = {
     "Trap": "陷阱",
     "Study away!": "继续学习！",
     "All gold related items have been bought!": "所有与黄金相关的物品已经被购买！",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "You feel energized!": "你感到精力充沛！",
+    "... training new soliders ...": "... 训练新的士兵 ...",
+    "Recruitment in progress..": "招募中..",
+    "You don't have enough stamina space!": "你没有足够的耐力空间！",
+    "The recruit failed training.": "新兵训练不及格。",
     "": "",
     "": "",
     "": "",
@@ -559,7 +561,7 @@ var cnPrefix = {
     "A warehouse has been built on ": "一座仓库已建成于 ",
     "Crops have been built on ": "作物已经被种植于 ",
     "Welcome to realm ": "欢迎来到王国 ",
-    "": "",
+    "Develop Land x": "开发土地 x",
     "": "",
     "": "",
     "": "",
@@ -754,6 +756,7 @@ var cnRegReplace = new Map([
     [/^([\d\.,]+) Warehouses$/, '$1 仓库'],
     [/^([\d\.,]+) Warehouse$/, '$1 仓库'],
     [/^([\d\.,]+) soldiers defending the realm$/, '$1 士兵正在保卫王国'],
+    [/^(.+) has been fortified with traps$/, '$1 已经设置了陷阱'],
     [/^(.+) has increased in value by ([\d\.,]+)$/, '$1 提高了它的价值 $2'],
     [/^Attack ([\d\.,]+) land in another realm$/, '攻击 $1 个土地 在另一个王国'],
     [/^Refill ([\d\.,]+) stamina$/, '回复 $1 耐力'],
@@ -761,6 +764,7 @@ var cnRegReplace = new Map([
     [/^Referred ([\d\.,]+) other players$/, '邀请 $1 其他玩家加入游戏'],
     [/^Gain ([\d\.,]+) additional gold$/, '获取 $1 额外黄金'],
     [/^Gain ([\d\.,]+) resources$/, '获取 $1 资源'],
+    [/^You have ([\d\.,]+) guard remaining.$/, '你还剩下 $1 守卫。'],
     [/^Recover ([\d\.,]+) stamina$/, '恢复 $1 耐力'],
     [/^Recover ([\d\.,]+) stamina, gain crops$/, '恢复 $1 耐力, 获得作物'],
     [/^Recover ([\d\.,]+) stamina, gain a barrack$/, '恢复 $1 耐力, 获得一个兵营'],
