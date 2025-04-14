@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.6
+// @version      0.0.7
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -558,9 +558,9 @@ var cnItems = {
     "Forged": "已锻造",
     "Magic": "魔法",
     "Potion": "药水",
-    "": "",
-    "": "",
-    "": "",
+    "The purchase was successful.": "购买成功。",
+    "You have reached your marketplace slot limit. Upgrade in the Store to add more slots.": "您已达到您的市场栏位限制。在商店中升级以增加更多栏位。",
+    "The resource is either unavailable or insufficient in quantity.": "资源不可用或数量不足。",
     "": "",
     "": "",
     "": "",
