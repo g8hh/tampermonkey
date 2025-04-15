@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.11
+// @version      0.0.12
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -605,13 +605,16 @@ var cnItems = {
     "Release": "放生",
     "Pet equipped successfully.": "成功装备宠物。",
     "Incubation started successfully.": "成功开始孵化。",
-    "Oceanbreeze": "海风",
-    "Tideshadow": "潮影",
     "Cancel": "取消",
     "Confirm Release": "确认放生",
     "Are you sure you want to release this pet?": "你确定要放生这只宠物吗？",
     "Amount:": "数量:",
     "Rune": "符文",
+    "Pet unequipped successfully.": "成功卸下宠物。",
+    "Pet released successfully.": "成功放生宠物。",
+    "Sproutle": "史普罗特",
+    "Your pet slots are full. Upgrade in the Store to increase your capacity.": "宠物栏位已满。在商店中升级以增加您的容量。",
+    "Brewing Venomguard Tonic...": "酿造防毒液补剂...",
     "": "",
     "": "",
     "": "",
@@ -647,19 +650,17 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "Dirtibug": "Dirtibug",
+    "Lagoonmyst": "Lagoonmyst",
+    "Loamera": "洛美拉",
+    "Oceanbreeze": "海风",
+    "Tideshadow": "潮影",
+    "Seaglimpse": "海景",
+    "Dirtibug": "臭虫",
     "Fighting Harmony of Death...": "对抗和谐的死神...",
     "Brewing Shadowbane Elixir...": "酿造魔剑长生不老药...",
     "WELCOME50": "WELCOME50",
     "Smelting Copper Bar...": "正在冶炼铜矿石...",
+    "Harvesting Carrot...": "正在收割胡萝卜...",
     "Harvesting Wheat...": "正在收割小麦...",
     "Chopping Willow Wood...": "正在砍伐柳木...",
     "Chopping Pine Wood...": "正在砍伐松木...",
@@ -1109,6 +1110,8 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)x Copper Ore$/, '$1x 铜矿石'],
     [/^([\d\.]+)x Copper Ore.$/, '$1x 铜矿石。'],
     [/^([\d\.]+)x Harmony of Death$/, '$1x 和谐的死神'],
+    [/^([\d\.]+)x Carrot$/, '$1x 胡萝卜'],
+    [/^([\d\.]+)x Carrot.$/, '$1x 胡萝卜。'],
     [/^([\d\.]+)x Wheat$/, '$1x 小麦'],
     [/^([\d\.]+)x Wheat.$/, '$1x 小麦。'],
     [/^([\d\.]+)x Silver Ore$/, '$1x 银矿石'],
