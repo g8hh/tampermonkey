@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.10
+// @version      0.0.11
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -611,6 +611,7 @@ var cnItems = {
     "Confirm Release": "确认放生",
     "Are you sure you want to release this pet?": "你确定要放生这只宠物吗？",
     "Amount:": "数量:",
+    "Rune": "符文",
     "": "",
     "": "",
     "": "",
@@ -654,8 +655,7 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
-    "": "",
-    "": "",
+    "Dirtibug": "Dirtibug",
     "Fighting Harmony of Death...": "对抗和谐的死神...",
     "Brewing Shadowbane Elixir...": "酿造魔剑长生不老药...",
     "WELCOME50": "WELCOME50",
@@ -1054,6 +1054,7 @@ var cnRegReplace = new Map([
     [/^You are gaining (.+) elves per second$/, '你每秒获得 $1 精灵'],
     [/^You have (.+) points$/, '你有 $1 点数'],
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
+    [/^You can only have up to (.+) pets equipped.$/, '你只能装备 $1 宠物。'],
     [/^(.+) hit you for (.+) damage!$/, '$1 击中了你并造成了 $2 伤害！'],
     [/^You hit (.+) for (.+) damage!$/, '你击中了 $1 并造成了 $2 伤害！'],
     [/^CRITICAL HIT! You dealt (.+) damage!$/, '暴击! 你造成了 $1 伤害!'],
