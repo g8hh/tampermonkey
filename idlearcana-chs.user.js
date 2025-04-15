@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.9
+// @version      0.0.10
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -584,20 +584,20 @@ var cnItems = {
     "m": "分钟",
     "h": "小时",
     "d": "天",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Defeat": "被击败",
+    "🐾 Incubate": "🐾 孵化",
+    "🎁 Expedition Rewards": "🎁 探险奖励",
+    "🎉 Claim Drops": "🎉 收集掉落",
+    "User": "用户",
+    "You Lost": "你输了",
+    "You have reached the limit for simultaneous incubations. Upgrade your incubation queue capacity in the Store.": "同时孵化数量已达上限。可以在商店中提升孵化队列容量。",
+    "Common": "普通",
+    "Drop Chances for": "掉率关于",
+    "Epic": "史诗",
+    "Legendary": "传说",
+    "Mythical": "神话",
+    "Rare": "稀有",
+    "Uncommon": "罕见",
     "": "",
     "": "",
     "": "",
@@ -695,7 +695,7 @@ var cnItems = {
     "$": "$",
     "+": "+",
     "%)": "%)",
-    "s": "",
+    "s": "秒",
     "💎": "💎",
     "🚨": "🚨",
     "🔥": "🔥",
