@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.12
+// @version      0.0.13
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -659,7 +659,8 @@ var cnItems = {
     "Fighting Harmony of Death...": "对抗和谐的死神...",
     "Brewing Shadowbane Elixir...": "酿造魔剑长生不老药...",
     "WELCOME50": "WELCOME50",
-    "Smelting Copper Bar...": "正在冶炼铜矿石...",
+    "Smelting Copper Bar...": "正在冶炼铜锭...",
+    "Smelting Silver Bar...": "正在冶炼银锭...",
     "Harvesting Carrot...": "正在收割胡萝卜...",
     "Harvesting Wheat...": "正在收割小麦...",
     "Chopping Willow Wood...": "正在砍伐柳木...",
@@ -1110,6 +1111,8 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)x Copper Ore$/, '$1x 铜矿石'],
     [/^([\d\.]+)x Copper Ore.$/, '$1x 铜矿石。'],
     [/^([\d\.]+)x Harmony of Death$/, '$1x 和谐的死神'],
+    [/^([\d\.]+)x Venomguard Tonic$/, '$1x 防毒液补剂'],
+    [/^([\d\.]+)x Venomguard Tonic.$/, '$1x 防毒液补剂。'],
     [/^([\d\.]+)x Carrot$/, '$1x 胡萝卜'],
     [/^([\d\.]+)x Carrot.$/, '$1x 胡萝卜。'],
     [/^([\d\.]+)x Wheat$/, '$1x 小麦'],

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Degen Dungeon 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.36
+// @version      0.0.37
 // @description  Degen Dungeon (https://www.degen-dungeon.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Degen Dungeon.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -589,6 +589,7 @@ var cnItems = {
     "Processing...": "处理中...",
     "Read All": "全部已读",
     "Ruins of the Ancients Cover": "上古遗迹封面",
+    "Sands of Eternity": "永恒之沙",
     "Sands of Eternity Dungeon Ticket": "永恒之沙地下城门票",
     "Show Less": "显示更少",
     "Start Prayer": "开始祈祷",
@@ -703,10 +704,10 @@ var cnItems = {
     "waiting for user": "等待用户",
     "setting active character": "设置活跃角色",
     "Invalid quantity": "无效的数量",
-    "LIST": "列表",
+    "LIST": "上架",
     "MANAGE": "管理",
     "No pending invites": "暂无等待中的邀请",
-    "VENDOR": "供应商",
+    "VENDOR": "商人",
     "Party invites will appear here": "队伍邀请将出现在这里",
     "mage": "法师",
     "Active Combat": "当前战斗",
@@ -933,6 +934,9 @@ var cnItems = {
     "emp)": "赋权)",
     "Leather Boots.": "皮革靴。",
     "Leather Hat.": "皮革帽。",
+    "Leather Gloves.": "皮革手套。",
+    "Leather Handle.": "皮革手柄。",
+    "Leather Pouch.": "皮革袋子。",
     "Cannot use food in combat": "战斗中不能使用食物",
     "Grilled Minnow.": "烤鲦鱼。",
     "Insufficient gold": "金币不足",
@@ -941,6 +945,7 @@ var cnItems = {
     "Wool Gloves.": "羊毛手套。",
     "Wool Hat.": "羊毛帽。",
     "Wool Staff.": "羊毛杖。",
+    "Copper Sword.": "铜剑。",
     "Your Cooking task is complete!": "你的烹饪任务已完成！",
     "No mail": "暂无邮件",
     "Leather.": "皮革.",
