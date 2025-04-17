@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.13
+// @version      0.0.14
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1106,6 +1106,8 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)x Oak Wood sold for ([\d\.]+) Gold$/, '出售 $1x 橡木 获得了 $2 金币'],
     [/^([\d\.]+)x Shadowbane Elixir$/, '$1x 魔剑长生不老药'],
     [/^([\d\.]+)x Shadowbane Elixir.$/, '$1x 魔剑长生不老药。'],
+    [/^([\d\.]+)x Silver Bar.$/, '$1x 银锭。'],
+    [/^([\d\.]+)x Silver Bar$/, '$1x 银锭'],
     [/^([\d\.]+)x Copper Bar$/, '$1x 铜锭'],
     [/^([\d\.]+)x Copper Bar.$/, '$1x 铜锭。'],
     [/^([\d\.]+)x Copper Ore$/, '$1x 铜矿石'],
