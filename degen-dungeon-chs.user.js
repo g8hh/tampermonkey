@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Degen Dungeon 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.43
+// @version      0.0.44
 // @description  Degen Dungeon (https://www.degen-dungeon.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Degen Dungeon.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -967,6 +967,40 @@ var cnItems = {
     "Enter a price": "请输入价格",
     "items).": "物品).",
     "Maximum Items Reached": "达到最大物品上限(挂单 5 个 + 待领取物品)",
+    "Browser Default": "浏览器默认",
+    "Change the game language": "更改游戏语言",
+    "English": "英文",
+    "Language": "语言",
+    "Language changes will apply immediately across the entire application.": "语言更改将立即应用于整个应用程序。",
+    "Portuguese (Português)": "英语 (英语)",
+    "Select Language": "选择语言",
+    "Workshop": "作坊",
+    "% efficiency": "% 效率",
+    "Efficiency Bonus": "效率加成",
+    "Dismantle": "拆除",
+    "Experience": "经验值",
+    "Insufficient experience": "经验值不足",
+    "Idling": "空闲",
+    "A calming alchemical liquid brewed from Grimmwood's whisperleaf herb.": "一种镇静的炼金术液体，由格里姆伍德的耳语叶药草酿造。",
+    "Gathered from wild sheep in Grimmwood's open fields; unprocessed but useful for tailoring.": "从格里姆伍德开阔的田野里的野羊身上采集；未经加工，但对裁缝有用。",
+    "Next Level:": "下一级:",
+    "Players": "玩家",
+    "XP:": "经验值:",
+    "Upgrade your crafting skills and dismantle items for account wide upgrades": "升级你的制作技能和拆除项目的帐户范围升级",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": "",
     "": "",
     "": "",
