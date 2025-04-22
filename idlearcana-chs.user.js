@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Arcana 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.15
+// @version      0.0.17
 // @description  网页游戏 Idle Arcana (https://idlearcana.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Arcana.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -636,8 +636,8 @@ var cnItems = {
     "Stormcurrent": "激流",
     "Tickets Until Guaranteed": "到必得券",
     "Venom King": "毒王",
-    "": "",
-    "": "",
+    "Sadly you did not get a mercenary this time. Try next time!": "遗憾的是，这次你没有得到一个雇佣兵。下次再试试吧！",
+    "No tickets remaining for today.": "今日已无剩余抽奖券。",
     "": "",
     "": "",
     "": "",
@@ -1107,6 +1107,7 @@ var cnRegReplace = new Map([
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
     [/^You can only have up to (.+) pets equipped.$/, '你只能装备 $1 宠物。'],
     [/^(.+) hit you for (.+) damage!$/, '$1 击中了你并造成了 $2 伤害！'],
+    [/^(.+) has won a battle versus you. They gained (.+) gold and (.+) points.$/, '$1 战胜了你。他们获得了 $2 金币和 $3 点数。'],
     [/^You hit (.+) for (.+) damage!$/, '你击中了 $1 并造成了 $2 伤害！'],
     [/^CRITICAL HIT! You dealt (.+) damage!$/, '暴击! 你造成了 $1 伤害!'],
     [/^Opponent CRITICAL HIT! They dealt (.+) damage!$/, '对手暴击！他们造成了 $1 点伤害！'],
@@ -1164,6 +1165,8 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)x Harmony of Death$/, '$1x 和谐的死神'],
     [/^([\d\.]+)x Venomguard Tonic$/, '$1x 防毒液补剂'],
     [/^([\d\.]+)x Venomguard Tonic.$/, '$1x 防毒液补剂。'],
+    [/^([\d\.]+)x Harbinger of Masks$/, '$1x 面具先驱者'],
+    [/^([\d\.]+)x Harbinger of Masks.$/, '$1x 面具先驱者。'],
     [/^([\d\.]+)x Carrot$/, '$1x 胡萝卜'],
     [/^([\d\.]+)x Carrot.$/, '$1x 胡萝卜。'],
     [/^([\d\.]+)x Wheat$/, '$1x 小麦'],
@@ -1183,6 +1186,7 @@ var cnRegReplace = new Map([
     [/^\(Currently: ([\d\.,]+) queue\/s\)$/, '(当前: $1 队列\/秒)'],
     [/^\(Currently: ([\d\.,]+) hours\)$/, '(当前: $1 小时)'],
     [/^\(Currently: ([\d\.,]+) slots\)$/, '(当前: $1 栏位)'],
+    [/^\+([\d\.,]+) Mercenary Ticket Daily Limit$/, '\+$1 雇佣兵抽奖券每日上限'],
     [/^\+([\d\.,]+) Pet Slots$/, '\+$1 宠物栏位'],
     [/^\+([\d\.,]+) Market Slots$/, '\+$1 市场栏位'],
     [/^\+([\d\.,]+) Market Slot$/, '\+$1 市场栏位'],
