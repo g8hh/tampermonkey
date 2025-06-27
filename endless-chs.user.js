@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Endless 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.32
+// @version      0.0.34
 // @description  网页游戏 Endless (https://dev.ghost-team.top/endless/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Endless.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -545,6 +545,19 @@ var cnItems = {
     "Resourceful": "足智多谋",
     "Treasure Hunter": "寻宝猎人",
     "unique": "独特",
+    "(current)": "(当前)",
+    "Claim": "领取",
+    "Claimable Quests": "可领取奖励的任务",
+    "": "",
+    "No quests ready to claim.": "暂无可领取奖励的任务",
+    "3rd fight method apart from \"Explore\" and \"Arena\".": "除了“探索”和“竞技场”之外的第三种打法。",
+    "Auto salvage. Will also be able to choose gold/materials for salvage method.": "自动回收。也将能够选择黄金/材料的回收方法。",
+    "Companions will be added. They will have their own stats and abilities, and will help you in battles. (will be able to equip items and gain xp)": "同伴将被添加。他们将有自己的属性和能力，并将在战斗中帮助你。（将能够装备物品并获得经验值）",
+    "New skils for all classes.": "所有职业的新技能。",
+    "Prestige system will be added. Will reset all progress to give you some new resource that will be persistent across prestiges.": "声望系统将被添加。将重置所有的进度，给你一些新的资源，将持续跨越声望。",
+    "Apply": "同意",
+    "OK": "确定",
+    " reduction from armor is now based on region as well.": "护甲减少现在也基于区域。",
     "": "",
     "": "",
     "": "",
@@ -586,6 +599,21 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "LEGENDARY": "传说",
     "SWORD": "剑",
     "HELMET": "头盔",
     "AXE": "斧子",
@@ -1094,6 +1122,8 @@ var cnExcludeWhole = [
     /^([\d\.]+)x$/,
     /^x([\d\.]+)$/,
     /^ ([\d\.]+)$/,
+    /^💥 ([\d\.]+)$/,
+    /^💥  \-([\d\.]+)$/,
     /^ ([\d\.]+) \(\+([\d\.]+)\)$/,
     /^\+([\d\.]+) \(([\d\.]+)$/,
     /^\+([\d\.]+)\)$/,
@@ -1244,6 +1274,7 @@ var cnRegReplace = new Map([
     [/^Requires Level ([\d\.,]+)$/, '要求等级 $1'],
     [/^Level ([\d\.,]+)$/, '等级 $1'],
     [/^Day ([\d\.,]+)$/, '天数 $1'],
+    [/^Level ([\d\.,]+), Tier ([\d\.,]+)$/, '等级 $1，层级 $2'],
     [/^\(Lvl ([\d\.,]+)\)$/, '（等级 $1）'],
     [/^Buy ([\d\.,]+) for ([\d\.,]+) SP$/, '购买 $1 花费 $2 技能点'],
     [/^Increases strength by ([\d\.,]+).$/, '提高 力量 $1。'],

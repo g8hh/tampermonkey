@@ -1,10 +1,10 @@
 // ==UserScript==
 // @name         《永恒之塔》自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
-// @version      0.0.33.14
-// @description  Eternity Tower (https://eternitytower.net/) 游戏汉化脚本 - 锅巴汉化出品
+// @version      0.0.34
+// @description  Eternity Tower (http://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
-// @include      *https://eternitytower.net/*
+// @include      *http://tower.bluesky.site/*
 // @grant        none
 // @website      https://www.gityx.com
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/eternitytower-auto2.user.js
@@ -23,6 +23,8 @@
  * 更新日志
  * 0.0.x
  * ·种地：自定义种子没了的情况下，应该要自动种其它种子；
+ *  * 0.0.34
+ * ·战斗：指定给队伍某个人或者宠物加血。
  * 0.0.33
  * ·战斗技能：1技能放治疗技能的话，当生命值低于80%就会给自己加血。
  * 0.0.32
@@ -94,7 +96,7 @@
     //无人值守-结束
     //吃食物-开始
     content += '<div class="JB-form">';
-    content += '<div class="tit">吃食物（必须在战斗界面启用；包里没有的食物不要选） - 《<a href="https://shimo.im/sheets/ypTrXqgyP6Cg3vDg/forrm/" target="_blank">攻略</a>》</div>';
+    content += '<div class="tit">吃食物（必须在战斗界面启用；包里没有的食物不要选） - 《<a href="https://docs.qq.com/sheet/DRFF4Z1FQUk5HbmJa" target="_blank">攻略</a>》</div>';
     content += '想回血/回能量必填<input id="username" type="text" value="" placeholder="输入你的用户名"  autocomplete="on"/>';
     content += '<br/>';
     content += '生命值低于<select id="minHP">';
@@ -102,17 +104,17 @@
     content += '<option value="5">5%</option>';
     content += '<option value="10">10%</option>';
     content += '<option value="20">20%</option>';
-    content += '<option value="30" selected>30%</option>';
+    content += '<option value="30">30%</option>';
     content += '<option value="40">40%</option>';
-    content += '<option value="50">50%</option>';
+    content += '<option value="50" selected>50%</option>';
     content += '<option value="60">60%</option>';
     content += '<option value="70">70%</option>';
     content += '<option value="80">80%</option>';
     content += '<option value="90">90%</option>';
     content += '</select>时吃';
     content += '<select id="Food1">';
-    content += '<option value="watermelon" selected>西瓜-回200血-持续10秒</option>';
-    content += '<option value="carrot">胡萝卜-回350血-持续10秒</option>';
+    content += '<option value="watermelon">西瓜-回200血-持续10秒</option>';
+    content += '<option value="carrot" selected>胡萝卜-回350血-持续10秒</option>';
     content += '<option value="banana">香蕉-回650血-持续13秒</option>';
     content += '<option value="acaiBerry" >巴西莓-回300血-持续25秒</option>';
     content += '<option value="pear" >梨-回150血-持续25秒</option>';
@@ -134,9 +136,9 @@
     content += '<option value="5">5</option>';
     content += '<option value="10">10</option>';
     content += '<option value="15">15</option>';
-    content += '<option value="20" selected>20</option>';
+    content += '<option value="20">20</option>';
     content += '<option value="25">25</option>';
-    content += '<option value="30">30</option>';
+    content += '<option value="30" selected>30</option>';
     content += '<option value="35">35</option>';
     content += '</select>时吃';
     content += '<select id="Food2">';
@@ -163,7 +165,7 @@
     content += '<button id="startSkill" type="primary" >启动</button>';
     content += '<button id="stopSkill" type="danger" disabled>停止</button>';
     content += '<br/>';
-    content += '自动回血，1技能放治疗技能，低于80%血就会自动回血。1技能不是治疗技能时不要启动';
+    content += '自动回血，1技能放治疗技能，低于 <input id="healAmount" type="text" value="80" placeholder="输入整数数字" autocomplete="on"/> % 血就会自动回血。1技能不是治疗技能时不要启动';
     content += '<br/>';
     content += '<button id="autoHeal" type="primary">开启</button>';
     content += '<button id="stopHeal" type="danger" disabled>关闭</button>';
@@ -537,14 +539,14 @@
                 }
             }
             // 如果用户在AFK战斗，则继续战斗
-            if (localStorage.getItem('afkBattle') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('afkBattle') == 'true') {
 
-                if (url == 'https://eternitytower.net/battle') {
+                if (url == 'http://tower.bluesky.site/battle') {
                     $('#startAFK').trigger('click');
                 }
             }
             // 如果用户在solo固定战斗，则继续战斗
-            if (localStorage.getItem('soloBattle') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('soloBattle') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var fightMinHP = parseInt(localStorage.getItem('fightMinHP'));
                 $('#fightMinHP').val(fightMinHP);
@@ -553,12 +555,12 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'https://eternitytower.net/battle') {
+                if (url == 'http://tower.bluesky.site/battle') {
                     $('#startSolo').trigger('click');
                 }
             }
             // 如果用户在solo爬楼战斗，则继续战斗
-            if (localStorage.getItem('soloUpBattle') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('soloUpBattle') == 'true') {
                 var fightMinHP = parseInt(localStorage.getItem('fightMinHP'));
                 $('#fightMinHP').val(fightMinHP);
                 var fightMinEnergy = parseInt(localStorage.getItem('fightMinEnergy'));
@@ -566,12 +568,12 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'https://eternitytower.net/battle') {
+                if (url == 'http://tower.bluesky.site/battle') {
                     $('#startSoloUp').trigger('click');
                 }
             }
             // 自动采矿
-            if (localStorage.getItem('autoMing') == 'true') {
+            if (url.includes('mining') && localStorage.getItem('autoMing') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var minTime = parseInt(localStorage.getItem('minTime'));
                 $('#minTime').val(minTime)
@@ -579,12 +581,12 @@
                 $('#MingType').val(MingType)
                 var MingEnergy = parseInt(localStorage.getItem('MingEnergy'));
                 $('#MingEnergy').val(MingEnergy)
-                if (url == 'https://eternitytower.net/mining') {
+                if (url == 'http://tower.bluesky.site/mining') {
                     $('#startMing').trigger('click');
                 }
             }
             // 自动种地
-            if (localStorage.getItem('autoFarm') == 'true') {
+            if (url.includes('farming') && localStorage.getItem('autoFarm') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var FoodSeed = localStorage.getItem('FoodSeed');
                 $('#FoodSeed').val(FoodSeed)
@@ -592,7 +594,7 @@
                 $('#myFamingTime').val(myFamingTime)
                 var famingTime = parseInt(localStorage.getItem('famingTime'));
                 $('#famingTime').val(famingTime)
-                if (url == 'https://eternitytower.net/farming') {
+                if (url == 'http://tower.bluesky.site/farming') {
                     $('#startFarming').trigger('click');
                 }
             }
@@ -917,15 +919,17 @@
             //$('.ability-icon-container').trigger("click");
             //选择目标
             //$('.battle-unit-container .battle-unit').trigger("click");
+            // 判断血量，低于xx才放加血技能
+            var healAmount =  $('#healAmount').val()
             if (attObj == 1) {
                 //优先打最后一个怪，防止召唤小弟
                 $('.battle-units-container+.col .flex-row .flex-column:last-child img').trigger("click");
             }
             if (c1) {
-                doSkill(2);
                 // 1技能放加血技能，给自己加血
                 var minWid2 = ($('.me').parent().parent().find('.health-bar .progress-bar').width() / $('.me').parent().parent().find('.progress.health-bar').width()) * 100;
-                if (isAutoHeal && minWid2 < 80) {
+                if (isAutoHeal && minWid2 < healAmount) {
+                    doSkill(2);
                     setTimeout(function() {
                         $('.me').parent().find('.battle-unit').trigger('click'); 
                      },50)
@@ -1799,11 +1803,11 @@
                 //判断是否正在吃食物
                 if ($('.me').parent().parent().find('.justify-content-center img:nth-child(2)').length == 0) {
                     //没吃食物，则点击食物
-                    for (var i = 0; i <= eatItem.length; i++) {
-                        eatItem[i].click();
+                    for (var x = 0; x <= eatItem.length; x++) {
+                        eatItem[x].click();
                         // 如果是手机，还需要再点一次
                         if ($(window).width() < 1000) {
-                            eatItem[i].click();
+                            eatItem[x].click();
                         }
                     }
                     // console.log('生命值低于设定值，吃点东西回回血~ ' + nowTime())
