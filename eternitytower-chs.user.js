@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Eternity Tower 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.1.70
+// @version      0.1.72
 // @description  Eternity Tower (http://tower.bluesky.site) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Eternity Tower.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1041,7 +1041,7 @@ var cnItems = {
     'lapis lazuli amulet': '天青石护身符',
     'Prized': '珍贵的',
     'Divine': '神圣的',
-    'Ethereal': '超凡的',
+    'Ethereal': '空灵的',
     'Epic': '史诗',
     'Water Ball': '水球',
     'gold amulet': '金护身符',
@@ -3386,7 +3386,7 @@ var cnItems = {
     "Suspicious ": "可疑",
     "spartans spear": "斯巴达矛",
     "Spartan": "斯巴达",
-    "": "",
+    "Crops": "作物",
     "": "",
     "": "",
     "": "",

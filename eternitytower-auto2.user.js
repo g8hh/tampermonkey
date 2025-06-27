@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         《永恒之塔》自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
-// @version      0.0.34
+// @version      0.0.34.3
 // @description  Eternity Tower (http://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
 // @include      *http://tower.bluesky.site/*
@@ -926,13 +926,39 @@
                 $('.battle-units-container+.col .flex-row .flex-column:last-child img').trigger("click");
             }
             if (c1) {
-                // 1技能放加血技能，给自己加血
-                var minWid2 = ($('.me').parent().parent().find('.health-bar .progress-bar').width() / $('.me').parent().parent().find('.progress.health-bar').width()) * 100;
-                if (isAutoHeal && minWid2 < healAmount) {
-                    doSkill(2);
-                    setTimeout(function() {
-                        $('.me').parent().find('.battle-unit').trigger('click'); 
-                     },50)
+                // 获取当前队伍人数
+                var groupAmount = $('.battle-units-container .flex-column.flex-wrap').length;
+                // 如果是一个人，只给自己加血
+                if(groupAmount < 2){
+                    // 1技能放加血技能，当生命值低于设定值时，开始加血
+                    var minWid2 = ($('.me').parent().parent().find('.health-bar .progress-bar').width() / $('.me').parent().parent().find('.progress.health-bar').width()) * 100;
+                    if (isAutoHeal && minWid2 < healAmount) {
+                        doSkill(2);
+                        setTimeout(function() {
+                            $('.me').parent().find('.battle-unit').trigger('click'); 
+                        },50)
+                    }else if(!isAutoHeal){
+                        // 如果1技能不是加血技能，则直接施放
+                        doSkill(2);
+                    }
+                }else{
+                    // 组队情况下，给血量低的加血
+                    for (var h = 1; h <= groupAmount; h++) {
+                        // 判断血量
+                        var minWidth = ($('.battle-units-container .flex-column:nth-child(' + h + ')').find('.health-bar .progress-bar').width() / $('.battle-units-container .flex-column:nth-child(' + h + ')').find('.progress.health-bar').width()) * 100;
+                        // 判断开启加血了
+                        if (isAutoHeal && minWidth < healAmount) {
+                            doSkill(2);
+                            setTimeout(function() {
+                                $('.battle-units-container .flex-column:nth-child(' + h + ')').find('.battle-unit').trigger('click'); 
+                                // console.log(minWidth +'当前生命值; 组队加血执行给了：' + h)
+                            },50)
+                                break;
+                        }else if(!isAutoHeal){
+                            // 如果1技能不是加血技能，则直接施放
+                            doSkill(2);
+                        }
+                    }
                 }
             }
             if (c2) {
