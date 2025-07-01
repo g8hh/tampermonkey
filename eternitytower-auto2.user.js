@@ -1,11 +1,12 @@
 // ==UserScript==
 // @name         《永恒之塔》自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
-// @version      0.0.34.3
+// @version      0.0.39
 // @description  Eternity Tower (http://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
 // @include      *http://tower.bluesky.site/*
 // @grant        none
+// @require      https://g8hh.com.cn/static/js/keepalive.js
 // @website      https://www.gityx.com
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/eternitytower-auto2.user.js
 // @downloadURL    https://g8hh.com.cn/zh/tampermonkey/eternitytower-auto2.user.js
@@ -23,8 +24,18 @@
  * 更新日志
  * 0.0.x
  * ·种地：自定义种子没了的情况下，应该要自动种其它种子；
- *  * 0.0.34
- * ·战斗：指定给队伍某个人或者宠物加血。
+ * 0.0.39
+ * ·战斗：撤退按钮放在顶部。
+ * 0.0.38
+ * ·战斗：自动加血技能改成2个，按需启动。
+ * 0.0.37
+ * ·后台：引入后台挂机脚本，防止息屏就不战斗了。（不确定是否有效）
+ * 0.0.36
+ * ·手机：手机端自动化脚本适配。
+ * 0.0.35
+ * ·制作：自动制作。
+ * 0.0.34
+ * ·战斗：可以给全队人和宠物加血了。
  * 0.0.33
  * ·战斗技能：1技能放治疗技能的话，当生命值低于80%就会给自己加血。
  * 0.0.32
@@ -67,7 +78,7 @@
 ! function () {
     var content = '';
     content += '<!-- 脚本动态内容 开始 -->';
-    content += '<style>.main-im{position:fixed;right:10px;bottom:50px;line-height:normal;z-index:9999}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-radius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("//g8hh.com.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:none;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:105px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("//g8hh.com.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:670px;height:400px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-680px;top:-354px;overflow-y:auto;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("//g8hh.com.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:-10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("//g8hh.com.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("//g8hh.com.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;bottom:320px;}@media screen and (max-width:480px){.main-im{display:none;}}.JB-form{padding:10px;color:#000;}.JB-form *{margin:5px;font-size:13px;}.JB-form .tit{font-weight:bold;}.JB-form input{width:100px;height:30px;line-height:30px;text-align:center;}.JB-form input#minTime,.JB-form input#famingTime{width:50px;}.JB-form button{width:50px;height:30px;}#nofood,#noseed,#noSkill{opacity:0;color:red;}#nofood.show,#noseed.show,#noSkill.show{opacity:1;}.JB-form input[type=checkbox]{width:auto;vertical-align: middle;}.JB-form label{user-select: none;margin-left:0;}</style>';
+    content += '<style>.main-im{position:fixed;right:10px;bottom:50px;line-height:normal;z-index:9999}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-radius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("//g8hh.com.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:none;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:105px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("//g8hh.com.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:670px;height:400px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-680px;top:-354px;overflow-y:auto;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("//g8hh.com.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:-10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("//g8hh.com.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("//g8hh.com.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;bottom:320px;}.JB-form{padding:10px;color:#000;}.JB-form *{margin:5px;font-size:13px;}.JB-form .tit{font-weight:bold;}.JB-form input{width:100px;height:30px;line-height:30px;text-align:center;}.JB-form input#minTime,.JB-form input#famingTime{width:50px;}.JB-form button{width:50px;height:30px;}#nofood,#noseed,#noSkill{opacity:0;color:red;}#nofood.show,#noseed.show,#noSkill.show{opacity:1;}.JB-form input[type=checkbox]{width:auto;vertical-align: middle;}.JB-form label{user-select: none;margin-left:0;}.recent-battles-btn.text-muted{color:#0275d8 !important;}.forfeit-battle{position:absolute;top:0px;}@media screen and (max-width: 800px) {.main-im {right:inherit;left:50%;display:block !important;bottom:inherit; top:30px;margin-left:-100px;}.main-im .open-im{left:50%;right:inherit;bottom:inherit;top:10px;margin-left:inherit;}.main-im .im_main .weixing-show{left:-50px;width:320px;height:480px;top:-120px}.main-im .im_main .weixing-show select{display:block;width:280px;}.forfeit-battle{right:0px;}}</style>';
     content += '<div class="main-im">';
     content += '<div id="open_im" class="open-im">&nbsp;</div>  ';
     content += '<div class="im_main" id="im_main">';
@@ -94,6 +105,126 @@
     content += '<button id="nobodyStop" type="danger" disabled>停止</button>';
     content += '</div>';
     //无人值守-结束
+
+    //制作-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">制作（选择想制作的物品，自动定时添加制作队列。）</div>';
+    content += '定时自动制作 ';
+    content += '<select id="CraftType">';
+    content += '<option value="none" disabled>武器 - 匕首（每次1个）</option>';
+    content += '<option value="copper_dagger" selected>铜匕首-单个10经验-12秒</option>';
+    content += '<option value="tin_dagger">锡匕首-单个37经验-48秒</option>';
+    content += '<option value="bronze_dagger">青铜匕首-单个37经验-48秒</option>';
+    content += '<option value="iron_dagger">铁匕首-单个60经验-1分36秒</option>';
+    content += '<option value="silver_dagger">银匕首-单个500经验-1分36秒</option>';
+    content += '<option value="gold_dagger">金匕首-单个1000经验-1分36秒</option>';
+    content += '<option value="carbon_dagger">碳匕首-单个2000经验-3分12秒</option>';
+    content += '<option value="steel_dagger">钢匕首-单个3000经验-3分12秒</option>';
+    content += '<option value="platinum_dagger">铂匕首-单个5000经验-3分12秒</option>';
+    content += '<option value="titanium_dagger">钛匕首-单个7500经验-3分12秒</option>';
+    content += '<option value="tungsten_dagger">钨匕首-单个12500经验-3分12秒</option>';
+    content += '<option value="obsidian_dagger">黑曜石匕首-单个20000经验-3分12秒</option>';
+    content += '<option value="cobalt_dagger">钴匕首-单个30000经验-48分钟</option>';
+    content += '<option value="mithril_dagger">秘银匕首-单个50000经验-24分钟</option>';
+    content += '<option value="adamantium_dagger">艾德曼合金匕首-单个87500经验-48分钟</option>';
+    content += '<option value="orichalcum_dagger">星陨石匕首-单个125000经验-48分钟</option>';
+    content += '<option value="meteorite_dagger">陨石匕首-单个250000经验-48分钟</option>';
+    content += '<option value="fairy_steel_dagger">仙女钢匕首-单个400000经验-48分钟</option>';
+    content += '<option value="elven_steel_dagger">精灵钢匕首-单个625000经验-48分钟</option>';
+    content += '<option value="none" disabled>武器 - 战斧（每次1个）</option>';
+    content += '<option value="copper_battle_axe">铜战斧-单个76经验-1分36秒</option>';
+    content += '<option value="tin_battle_axe">锡战斧-单个76经验-1分36秒</option>';
+    content += '<option value="bronze_battle_axe">青铜战斧-单个76经验-1分36秒</option>';
+    content += '<option value="iron_battle_axe">铁战斧-单个160经验-4分</option>';
+    content += '<option value="silver_battle_axe">银战斧-单个2000经验-4分</option>';
+    content += '<option value="gold_battle_axe">金战斧-单个4000经验-4分</option>';
+    content += '<option value="carbon_battle_axe">碳战斧-单个8000经验-8分</option>';
+    content += '<option value="steel_battle_axe">钢战斧-单个12000经验-8分</option>';
+    content += '<option value="platinum_battle_axe">铂金战斧-单个20000经验-8分</option>';
+    content += '<option value="titanium_battle_axe">钛战斧-单个3000经验-8分</option>';
+    content += '<option value="tungsten_battle_axe">钨战斧-单个50000经验-8分</option>';
+    content += '<option value="obsidian_battle_axe">黑曜石战斧-单个80000经验-8分</option>';
+    content += '<option value="cobalt_battle_axe">钴战斧-单个120000经验-72分钟</option>';
+    content += '<option value="mithril_battle_axe">秘银战斧-单个200000经验-72分钟</option>';
+    content += '<option value="adamantium_battle_axe">艾德曼合金战斧-单个350000经验-72分钟</option>';
+    content += '<option value="orichalcum_battle_axe">星陨石战斧-单个500000经验-72分钟</option>';
+    content += '<option value="meteorite_battle_axe">陨石战斧-单个1000000经验-72分钟</option>';
+    content += '<option value="fairy_steel_battle_axe">仙女钢战斧-单个1600000经验-72分钟</option>';
+    content += '<option value="elven_steel_battle_axe">精灵钢战斧-单个2500000经验-72分钟</option>';
+    content += '<option value="none" disabled>经验 - 塔（每次5个，单个96秒，共480秒）</option>';
+    content += '<option value="stone_pylon">石塔-单个30经验</option>';
+    content += '<option value="tin_pylon">锡塔-单个50经验</option>';
+    content += '<option value="iron_pylon">铁塔-单个200经验</option>';
+    content += '<option value="gold_pylon">金塔-单个350经验</option>';
+    content += '<option value="steel_pylon">钢塔-单个500经验</option>';
+    content += '<option value="titanium_pylon">钛塔-单个650经验</option>';
+    content += '<option value="obsidian_pylon">黑曜石塔-单个800经验</option>';
+    content += '<option value="mithril_pylon">秘银塔-单个800经验</option>';
+    content += '<option value="orichalcum_pylon">星陨石塔-单个1500经验</option>';
+    content += '<option value="fairy_steel_pylon">仙女钢塔-单个2000经验</option>';
+    content += '<option value="none" disabled>经验 - 墙壁（每次100个，单个48秒，共4800秒）</option>';
+    content += '<option value="stone_wall">石墙-单个10经验</option>';
+    content += '<option value="copper_wall">铜墙-单个15经验</option>';
+    content += '<option value="bronze_wall">青铜墙-单个50经验</option>';
+    content += '<option value="silver_wall">银墙-单个100经验</option>';
+    content += '<option value="silver_essence_wall">银精华墙-每次x个，单个12秒，共x秒-单个1000经验</option>';
+    content += '<option value="carbon_wall">碳墙-单个130经验</option>';
+    content += '<option value="bamboo_wall">竹墙-每次x个，单个480秒，共x秒-单个1经验</option>';
+    content += '<option value="platinum_wall">铂墙-单个170经验</option>';
+    content += '<option value="tungsten_wall">钨墙-单个200经验</option>';
+    content += '<option value="cobalt_wall">钴墙-单个250经验</option>';
+    content += '<option value="adamantium_wall">艾德曼合金墙-单个300经验</option>';
+    content += '<option value="meteorite_wall">陨石墙-单个400经验</option>';
+    content += '<option value="none" disabled>金币 - 石器（每次5个，单个48秒，共480秒，单价x金币）</option>';
+    content += '<option value="stonpolished_stonee_pylon">磨制石器-单个30金币</option>';
+    content += '<option value="polished_tin">抛光锡-单个x金币</option>';
+    content += '<option value="polished_iron">抛光铁-单个175金币</option>';
+    content += '<option value="polished_gold">抛光金-单个350金币</option>';
+    content += '<option value="polished_steel">抛光钢-单个x金币</option>';
+    content += '<option value="polished_titanium">抛光钛-单个x金币</option>';
+    content += '<option value="polished_obsidian">抛光黑曜石-单个x金币</option>';
+    content += '<option value="polished_mithril">抛光秘银-单个2200金币</option>';
+    content += '<option value="polished_orichalcum">抛光的星陨石-单个2200金币</option>';
+    content += '<option value="polished_fairy_steel">抛光的仙女钢-单个3000金币</option>';
+    content += '<option value="none" disabled>金币 - 雕像（每次100个，单个48秒，共4800秒，单价x金币）</option>';
+    content += '<option value="copper_sculpture">铜雕像-单个45金币</option>';
+    content += '<option value="bronze_sculpture">青铜雕像-单个125金币</option>';
+    content += '<option value="silver_sculpture">银雕像-单个250金币</option>';
+    content += '<option value="carbon_sculpture">碳雕像-单个550金币</option>';
+    content += '<option value="platinum_sculpture">铂金雕像-单个x金币</option>';
+    content += '<option value="tungsten_sculpture">钨雕像-单个x金币</option>';
+    content += '<option value="cobalt_sculpture">钴雕像-单个x金币</option>';
+    content += '<option value="mithril_sculpture">秘银雕像-单个x金币</option>';
+    content += '<option value="adamantium_sculpture">艾德曼合金雕像-单个1300金币</option>';
+    content += '<option value="meteorite_sculpture">陨石雕像-单个1300金币</option>';
+    content += '<option value="none" disabled>资源 - 金属锭（每次100个）</option>';
+    content += '<option value="copper_bar">铜锭-单个2秒-共200秒</option>';
+    content += '<option value="tin_bar">锡锭-单个3秒-共300秒</option>';
+    content += '<option value="bronze_bar">青铜锭-单个4秒-共400秒</option>';
+    content += '<option value="iron_bar">铁锭-单个6秒-共600秒</option>';
+    content += '<option value="silver_bar">银锭-单个6秒-共600秒</option>';
+    content += '<option value="gold_bar">金锭-单个6秒-共600秒</option>';
+    content += '<option value="carbon_bar">碳锭-单个7秒-共700秒</option>';
+    content += '<option value="steel_bar">钢锭-单个8秒-共800秒</option>';
+    content += '<option value="platinum_bar">铂锭-单个9秒-共900秒</option>';
+    content += '<option value="titanium_bar">钛锭-单个10秒-共1000秒</option>';
+    content += '<option value="tungsten_bar">钨锭-单个10秒-共1000秒</option>';
+    content += '<option value="obsidian_bar">黑曜石锭-单个11秒-共1100秒</option>';
+    content += '<option value="cobalt_bar">钴锭-单个12秒-共1200秒</option>';
+    content += '<option value="mithril_bar">秘银锭-单个14秒-共1400秒</option>';
+    content += '<option value="adamantium_bar">艾德曼合金锭-单个15秒-共1500秒</option>';
+    content += '<option value="orichalcum_bar">星陨石锭-单个26秒-共2600秒</option>';
+    content += '<option value="meteorite_bar">陨石锭-单个29秒-共2900秒</option>';
+    content += '<option value="fairy_steel_bar">仙女钢锭-单个36秒-共3600秒</option>';
+    content += '<option value="elven_steel_bar">精灵钢锭-单个40秒-共4000秒</option>';
+    content += '</select> ';
+    content += '<br/>';
+    content += '制作间隔(秒) <input id="craftTime" type="text" value="100" placeholder="输入整数数字" autocomplete="on"/> 秒；';
+    content += '<button id="startCraft" type="primary" >启动</button>';
+    content += '<button id="stopCraft" type="danger" disabled>停止</button>';
+    content += '</div>';
+    //制作-结束
+
     //吃食物-开始
     content += '<div class="JB-form">';
     content += '<div class="tit">吃食物（必须在战斗界面启用；包里没有的食物不要选） - 《<a href="https://docs.qq.com/sheet/DRFF4Z1FQUk5HbmJa" target="_blank">攻略</a>》</div>';
@@ -154,6 +285,7 @@
     content += '<div id="nofood">你没有这种食物，去农场种一些吧~</div>';
     content += '</div>';
     //吃食物-结束
+
     //选择技能-开始
     content += '<div class="JB-form">';
     content += '<div class="tit">自动放技能（T技能是选目标的，不需要点）</div>';
@@ -165,16 +297,25 @@
     content += '<button id="startSkill" type="primary" >启动</button>';
     content += '<button id="stopSkill" type="danger" disabled>停止</button>';
     content += '<br/>';
-    content += '自动回血，1技能放治疗技能，低于 <input id="healAmount" type="text" value="80" placeholder="输入整数数字" autocomplete="on"/> % 血就会自动回血。1技能不是治疗技能时不要启动';
+    content += '自动回血<br/>';
+    content += '1 技能放治疗技能，低于 <input id="healAmount" type="text" value="90" placeholder="输入整数数字" autocomplete="on"/> % 血就会自动回血。';
     content += '<br/>';
+    content += '1 技能不是治疗技能时不要启动。';
     content += '<button id="autoHeal" type="primary">开启</button>';
     content += '<button id="stopHeal" type="danger" disabled>关闭</button>';
+    content += '<br/>---------------------------------------------------------------<br/>';
+    content += '2 技能放治疗技能，低于 <input id="healAmount2" type="text" value="60" placeholder="输入整数数字" autocomplete="on"/> % 血就会自动回血。';
+    content += '<br/>';
+    content += '2 技能不是治疗技能时不要启动。';
+    content += '<button id="autoHeal2" type="primary">开启</button>';
+    content += '<button id="stopHeal2" type="danger" disabled>关闭</button>';
     content += '<br/>';
     content += '优先攻击最右位置的怪物（部分怪物会召唤小弟）需先启动自动技能';
     content += '<button id="attLeft" type="primary">开启</button>';
     content += '<button id="attRight" type="danger" disabled>关闭</button>';
     content += '</div>';
     //选择技能-结束
+
     //单人战斗-开始
     content += '<div class="JB-form">';
     content += '<div class="tit">单人战斗（Solo）</div>';
@@ -260,7 +401,7 @@
     content += '<option value="obsidianCluster">黑曜石簇</option>';
     content += '<option value="mithrilCluster">秘银簇</option>';
     content += '<option value="cursedCluster">诅咒簇</option>';
-    content += '<option value="adamantiumCluster">埃德曼合金簇</option>';
+    content += '<option value="adamantiumCluster">艾德曼合金簇</option>';
     content += '<option value="orichalcumCluster">星陨石簇</option>';
     content += '<option value="fairySteelCluster">仙女钢簇</option>';
     content += '<option value="coal">煤</option>';
@@ -281,7 +422,7 @@
     content += '<option value="obsidian">黑曜石</option>';
     content += '<option value="mithril">秘银</option>';
     content += '<option value="emerald">翡翠</option>';
-    content += '<option value="adamantium">埃德曼合金</option>';
+    content += '<option value="adamantium">艾德曼合金</option>';
     content += '<option value="lapislazuli">天青石</option>';
     content += '<option value="orichalcum">星陨石</option>';
     content += '<option value="meteorite">陨石</option>';
@@ -304,7 +445,7 @@
     content += '<option value="obsidianEssence">黑曜石精华</option>';
     content += '<option value="cobaltEssence">钴精华</option>';
     content += '<option value="mithrilEssence">秘银精华</option>';
-    content += '<option value="adamantiumEssence">埃德曼合金精华</option>';
+    content += '<option value="adamantiumEssence">艾德曼合金精华</option>';
     content += '<option value="meteoriteEssence">陨石精华</option>';
     content += '<option value="cursedEssence">诅咒精华</option>';
     content += '</select> ';
@@ -350,21 +491,21 @@
     content += '<option value="grapesSeed">葡萄-秒回1500生命；额外回复500生命-持续20秒-需要种植65级-生长需15分钟</option>';
     content += '<option value="strawberrySeed">草莓-秒回300生命；额外回复1200生命-持续15秒-需要种植70级-生长需10分钟</option>';
 
-    content += '<option value="marigoldSeed" >万寿菊-可以卖钱-需要种植9级-生长需15分钟</option>';
-    content += '<option value="blueRoseSeed" >蓝玫瑰-可以卖钱-需要种植19级-生长需15分钟</option>';
-    content += '<option value="chrysanthemumSeed" >菊花-可以卖钱-需要种植19级</option>';
-    content += '<option value="pinkHydrangeaSeed" >粉红色的绣球花-可以卖钱-需要种植29级</option>';
-    content += '<option value="hydrangeaSeed" >绣球花-可以卖钱-需要种植39级</option>';
-    content += '<option value="poppySeed" >罂粟-可以卖钱-需要种植49级</option>';
-    content += '<option value="redHydrangeaSeed" >红色绣球花-可以卖钱-需要种植49级</option>';
-    content += '<option value="sunburstHydrangeaSeed" >阳光绣球花-可以卖钱-需要种植59级-生长需15分钟</option>';
-    content += '<option value="zinniaSeed" >百日菊-可以卖钱-需要种植59级-生长需8小时</option>';
-    content += '<option value="crimsonHydrangeaSeed" >深红色绣球花-可以卖钱-需要种植69级-生长需8小时</option>';
-    content += '<option value="tulipSeed" >郁金香-可以卖钱-需要种植69级-生长需8小时</option>';
-    content += '<option value="lilySeed" >百合-可以卖钱-需要种植79级-生长需15分钟</option>';
-    content += '<option value="orchidSeed" >兰花-可以卖钱-需要种植79级-生长需8小时</option>';
-    content += '<option value="gardeniaSeed" >栀子花-可以卖钱-需要种植89级-生长需4小时</option>';
-    content += '<option value="poenySeed" >牡丹-可以卖钱-需要种植89级-生长需15分钟</option>';
+    content += '<option value="marigoldSeed" >万寿菊-可以卖钱-单价xx金币-需要种植9级-生长需15分钟</option>';
+    content += '<option value="blueRoseSeed" >蓝玫瑰-可以卖钱-单价xx金币-需要种植19级-生长需15分钟</option>';
+    content += '<option value="chrysanthemumSeed" >菊花-可以卖钱-单价xx金币-需要种植19级</option>';
+    content += '<option value="pinkHydrangeaSeed" >粉红色的绣球花-可以卖钱-单价xx金币-需要种植29级</option>';
+    content += '<option value="hydrangeaSeed" >绣球花-可以卖钱-单价xx金币-需要种植39级-生长需15分钟</option>';
+    content += '<option value="poppySeed" >罂粟-可以卖钱-单价xx金币-需要种植49级</option>';
+    content += '<option value="redHydrangeaSeed" >红色绣球花-可以卖钱-单价xx金币-需要种植49级</option>';
+    content += '<option value="sunburstHydrangeaSeed" >阳光绣球花-可以卖钱-单价xx金币-需要种植59级-生长需15分钟</option>';
+    content += '<option value="zinniaSeed" >百日菊-可以卖钱-单价xx金币-需要种植59级-生长需8小时</option>';
+    content += '<option value="crimsonHydrangeaSeed" >深红色绣球花-可以卖钱-单价xx金币-需要种植69级-生长需8小时</option>';
+    content += '<option value="tulipSeed" >郁金香-可以卖钱-单价xx金币-需要种植69级-生长需8小时</option>';
+    content += '<option value="lilySeed" >百合-可以卖钱-单价xx金币-需要种植79级-生长需15分钟</option>';
+    content += '<option value="orchidSeed" >兰花-可以卖钱-单价xx金币-需要种植79级-生长需8小时</option>';
+    content += '<option value="gardeniaSeed" >栀子花-可以卖钱-单价xx金币-需要种植89级-生长需4小时</option>';
+    content += '<option value="poenySeed" >牡丹-可以卖钱-单价xx金币-需要种植89级-生长需15分钟</option>';
 
     content += '<option value="rubiaFlowerSeed" >茜草花-可以用来铭刻-需要种植2级-生长需2分钟</option>';
     content += '<option value="basilSeed" >蓬蒿-可以用来铭刻-需要种植4级</option>';
@@ -374,7 +515,7 @@
     content += '<option value="agrimonySeed" >仙鹤草-可以用来铭刻-需要种植12级</option>';
 
 
-    content += '<option value="chiliSeed" >辣椒-可以用来铭刻-打怪掉落-需要种植15级</option>';
+    content += '<option value="chilliSeed" >辣椒-可以用来铭刻-打怪掉落-需要种植15级</option>';
     content += '<option value="celerySeed" >芹菜-可以用来铭刻-打怪掉落-需要种植20级</option>';
     content += '<option value="cardoonSeed" >刺棘蓟-可以用来铭刻-打怪掉落-需要种植25级</option>';
     content += '<option value="feverfewSeed" >小白菊-可以用来铭刻-打怪掉落-需要种植74级-生长需24分钟</option>';
@@ -418,8 +559,8 @@
     content += '<button id="stopFarming" type="danger" disabled>停止</button>';
     content += '<div id="noseed">你没有这种植物种子，去商店买一些吧~</div>';
     content += '</div>';
+    
     //种地-结束
-
     content += '</div>';
     content += '</div>';
     content += '<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>';
@@ -540,10 +681,7 @@
             }
             // 如果用户在AFK战斗，则继续战斗
             if (url.includes('battle') && localStorage.getItem('afkBattle') == 'true') {
-
-                if (url == 'http://tower.bluesky.site/battle') {
-                    $('#startAFK').trigger('click');
-                }
+                $('#startAFK').trigger('click');
             }
             // 如果用户在solo固定战斗，则继续战斗
             if (url.includes('battle') && localStorage.getItem('soloBattle') == 'true') {
@@ -596,6 +734,17 @@
                 $('#famingTime').val(famingTime)
                 if (url == 'http://tower.bluesky.site/farming') {
                     $('#startFarming').trigger('click');
+                }
+            }
+            // 自动制作
+            if (url.includes('crafting') && localStorage.getItem('autoCraft') == 'true') {
+                //   从本地存储里面取出时间间隔，填入文本框
+                var craftTime = parseInt(localStorage.getItem('craftTime'));
+                $('#craftTime').val(craftTime)
+                var MingType = localStorage.getItem('CraftType');
+                $('#CraftType').val(CraftType)
+                if (url == 'http://tower.bluesky.site/crafting') {
+                    $('#startCraft').trigger('click');
                 }
             }
         }
@@ -869,7 +1018,7 @@
     //启用放回血技能
     var isAutoHeal = false
     $('#autoHeal').click(function () {
-        // 标识开始自动放技能
+        // 标识开始自动放技能 1
         localStorage.setItem('autoHeal', true);
         isAutoHeal = true;
         $(this).attr("disabled", true);
@@ -878,11 +1027,30 @@
 
     //停止放回血技能
     $('#stopHeal').click(function () {
-        // 标识停止自动放技能
+        // 标识停止自动放技能 1
         localStorage.setItem('autoHeal', false);
         isAutoHeal = false
         $(this).attr("disabled", true);
         $("#autoHeal").attr("disabled", false);
+    });
+    
+    //启用放回血技能 2
+    var isAutoHeal2 = false
+    $('#autoHeal2').click(function () {
+        // 标识开始自动放技能 2
+        localStorage.setItem('autoHeal2', true);
+        isAutoHeal2 = true;
+        $(this).attr("disabled", true);
+        $("#stopHeal2").attr("disabled", false);
+    });
+
+    //停止放回血技能 2
+    $('#stopHeal2').click(function () {
+        // 标识停止自动放技能 2
+        localStorage.setItem('autoHeal2', false);
+        isAutoHeal2 = false
+        $(this).attr("disabled", true);
+        $("#autoHeal2").attr("disabled", false);
     });
     //执行事件
     function doSkill(e) {
@@ -921,6 +1089,7 @@
             //$('.battle-unit-container .battle-unit').trigger("click");
             // 判断血量，低于xx才放加血技能
             var healAmount =  $('#healAmount').val()
+            var healAmount2 =  $('#healAmount2').val()
             if (attObj == 1) {
                 //优先打最后一个怪，防止召唤小弟
                 $('.battle-units-container+.col .flex-row .flex-column:last-child img').trigger("click");
@@ -962,7 +1131,41 @@
                 }
             }
             if (c2) {
-                    doSkill(3)
+                // 获取当前队伍人数
+                var groupAmount2 = $('.battle-units-container .flex-column.flex-wrap').length;
+                // 如果是一个人，只给自己加血
+                if(groupAmount2 < 2){
+                    // 1技能放加血技能，当生命值低于设定值时，开始加血
+                    var minWidMe = ($('.me').parent().parent().find('.health-bar .progress-bar').width() / $('.me').parent().parent().find('.progress.health-bar').width()) * 100;
+                    if (isAutoHeal2 && minWidMe < healAmount2) {
+                        console.log('技能2血少');
+                        doSkill(3);
+                        setTimeout(function() {
+                            $('.me').parent().find('.battle-unit').trigger('click'); 
+                        },20)
+                    }else if(!isAutoHeal2){
+                        // 如果1技能不是加血技能，则直接施放
+                        doSkill(3);
+                    }
+                }else{
+                    // 组队情况下，给血量低的加血
+                    for (var h = 1; h <= groupAmount2; h++) {
+                        // 判断血量
+                        var minWidthAll = ($('.battle-units-container .flex-column:nth-child(' + h + ')').find('.health-bar .progress-bar').width() / $('.battle-units-container .flex-column:nth-child(' + h + ')').find('.progress.health-bar').width()) * 100;
+                        // 判断开启加血了
+                        if (isAutoHeal2 && minWidthAll < healAmount2) {
+                            doSkill(3);
+                            setTimeout(function() {
+                                $('.battle-units-container .flex-column:nth-child(' + h + ')').find('.battle-unit').trigger('click'); 
+                                // console.log(minWidth +'当前生命值; 组队加血执行给了：' + h)
+                            },60)
+                                break;
+                        }else if(!isAutoHeal2){
+                            // 如果1技能不是加血技能，则直接施放
+                            doSkill(3);
+                        }
+                    }
+                }
             }
             if (c3) {
                     doSkill(4)
@@ -985,7 +1188,9 @@
     //启动种地
     $("#startFarming").click(function () {
         //自动切换到种地界面
-        $('.navbar-nav .nav-item:nth-child(5) a').trigger('click');
+        if (!url.includes('farming')){
+            $('.navbar-nav .nav-item:nth-child(5) a').trigger('click');
+        }
         var p = $('#FoodSeed').val();
         // 标识种植的种子
         localStorage.setItem('FoodSeed', p);
@@ -1028,7 +1233,9 @@
     //自动种地
     function farming() {
         //自动切换到种地界面
+        if (!url.includes('farming')){
         $('.navbar-nav .nav-item:nth-child(5) a').trigger('click');
+        }
         //延时2秒执行操作，避免页面未加载完
         setTimeout(function () {
             // 点第一个tab，防止当前界面非地块
@@ -1070,6 +1277,73 @@
             }, 1500);
 
         }, 2000);
+    }
+    var autoCraft;
+    //启动制作
+    $("#startCraft").click(function () {
+        var craftTime = parseInt($('#craftTime').val());
+        if (craftTime == '') {
+            craftTime = 100;
+        }
+        //多留5秒
+        craftTime = craftTime * 1000;
+        autoCraft = setInterval(getCraft, craftTime);
+        // 标识启动采矿
+        localStorage.setItem('autoCraft', true);
+        $(this).attr("disabled", true);
+        $("#stopCraft").attr("disabled", false);
+    });
+
+    //停止制作
+    $("#stopCraft").click(function () {
+        // 标识停止采矿
+        localStorage.setItem('autoCraft', false);
+        clearInterval(autoCraft);
+        $(this).attr("disabled", true);
+        $("#startCraft").attr("disabled", false);
+    });
+    
+    //制作主方法
+    function getCraft() {
+        //自动切换到制作界面
+        if (!url.includes('crafting')){
+            $('.navbar-nav .nav-item:nth-child(4) a').trigger('click');
+        }
+        // 标识启动采矿
+        var craftTime = parseInt($('#craftTime').val());
+        localStorage.setItem('craftTime', craftTime);
+        //获取要制作的物品
+        var myCraft = $('#CraftType').val();
+        // 标识启动制作
+        localStorage.setItem('CraftType', myCraft);
+        //延时3秒执行操作，避免页面未加载完
+        setTimeout(function () {
+            // 点击子tab，防止当前界面非“制作”
+            var craftArr = ['_pylon', '_wall', 'polished_', '_sculpture', '_bar'];
+            var miningArr = ['', '', '', ''];
+            var woodArr = ['', '', '', ''];
+            var fightArr = ['_dagger', '_battle_axe'];
+            var magicArr = ['', '', '', ''];
+            // console.log('选择的物品', myCraft);
+            // 判断当前是否已经在对应制作Tab下，若没有，则点击对应Tab
+            if(craftArr.some(item => myCraft.includes(item)) && !$('.nav-tabs .nav-item[data-filter="crafting"] a').hasClass('active')){
+                $('.nav-tabs .nav-item[data-filter="crafting"] a').trigger('click');
+            }else if(fightArr.some(item => myCraft.includes(item)) && !$('.nav-tabs .nav-item[data-filter="combat"] a').hasClass('active')){
+                $('.nav-tabs .nav-item[data-filter="combat"] a').trigger('click');
+            }else{
+                // $('.nav-tabs:nth-child(3) .nav-item:nth-child(5) a').trigger('click');
+            }
+            if($('div[data-recipe="' + myCraft + '"] .recipe-tooltip').css("visibility") === "hidden"){
+                    $('div[data-recipe="' + myCraft + '"] .recipe-tooltip').css({'visibility':'visible','opacity':'1','height':'100%'});
+                    setTimeout(function(){
+                        $('div[data-recipe="' + myCraft + '"] .quick-craft').trigger('click');
+                        // console.log('刚展开，点击全部制作')
+                    },500);
+                }else{
+                        $('div[data-recipe="' + myCraft + '"] .quick-craft').trigger('click');
+                        // console.log('不用展开，点击全部制作')
+            }   
+        }, 3000);
     }
 
     var autoMing;
@@ -1128,7 +1402,9 @@
     //挖矿
     function getGem() {
         //自动切换到采矿界面
-        $('.navbar-nav .nav-item:nth-child(3) a').trigger('click');
+        if (!url.includes('mining')){
+            $('.navbar-nav .nav-item:nth-child(3) a').trigger('click');
+        }
         // 标识启动采矿
         var minTime = parseInt($('#minTime').val());
         localStorage.setItem('minTime', minTime);
@@ -1452,7 +1728,9 @@
     //冒险（AFK）--自动收集奖励、添加冒险任务到队列
     function afkFight() {
         // 进入战斗界面
-        $('.navbar-nav .nav-item:nth-child(2) a').trigger('click');
+        if (!url.includes('battle')){
+            $('.navbar-nav .nav-item:nth-child(2) a').trigger('click');
+        }
         //已完成的任务，先收集奖励
         if ($('.collect-adventure-btn.btn-success').length > 0) {
             //收集已完成任务奖励
@@ -1488,7 +1766,9 @@
     //组队打怪
     function groupFight() {
         // 进入战斗界面
-        $('.navbar-nav .nav-item:nth-child(2) a').trigger('click');
+        if (!url.includes('battle')){
+            $('.navbar-nav .nav-item:nth-child(2) a').trigger('click');
+        }
         // 存储组队战斗时间间隔
         localStorage.setItem('fightTime', $('#fightTime').val());
         //本次战斗未完成，继续战斗
@@ -1617,7 +1897,9 @@
     //刷单人固定楼Solo--自动打怪
     function soloFight() {
         // 进入战斗界面
-        $('.navbar-nav .nav-item:nth-child(2) a').trigger('click');
+        if (!url.includes('battle')){
+            $('.navbar-nav .nav-item:nth-child(2) a').trigger('click');
+        }
         //能量最小值
         var fightMinHP = $('#fightMinHP').val();
         var fightMinEnergy = $('#fightMinEnergy').val();
