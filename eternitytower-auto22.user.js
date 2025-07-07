@@ -7,8 +7,8 @@
 // @include      *https://tower.bluesky.site/*
 // @grant        none
 // @website      https://www.gityx.com
-// @updateURL    https://g8hh.cn/zh/tampermonkey/eternitytower-auto2.user.js
-// @downloadURL    https://g8hh.cn/zh/tampermonkey/eternitytower-auto2.user.js
+// @updateURL    https://g8hh.cn/zh/tampermonkey/eternitytower-auto22.user.js
+// @downloadURL    https://g8hh.cn/zh/tampermonkey/eternitytower-auto22.user.js
 // ==/UserScript==
 
 /**
@@ -612,12 +612,6 @@
         // 禁用死亡通知
         $('.disable-combat-deaths').trigger('click');
     }, 5000);
-    // 如果用户名为空，先尝试从本地读取
-    if (localStorage.getItem('username')) {
-        username = localStorage.getItem('username');
-        //   从本地存储里面取出用户名，填入文本框
-        $('#username').val(username)
-    }
     // 1分钟检测一次页面是否刷新过
     var autoFill2;
     //启动无人值守模式
