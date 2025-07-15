@@ -701,7 +701,7 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'http://tower.bluesky.site/battle') {
+                if (url == 'https://tower.bluesky.site/battle') {
                     $('#startSolo').trigger('click');
                 }
             }
@@ -714,7 +714,7 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'http://tower.bluesky.site/battle') {
+                if (url == 'https://tower.bluesky.site/battle') {
                     $('#startSoloUp').trigger('click');
                 }
             }
@@ -727,7 +727,7 @@
                 $('#MingType').val(MingType)
                 var MingEnergy = parseInt(localStorage.getItem('MingEnergy'));
                 $('#MingEnergy').val(MingEnergy)
-                if (url == 'http://tower.bluesky.site/mining') {
+                if (url == 'https://tower.bluesky.site/mining') {
                     $('#startMing').trigger('click');
                 }
             }
@@ -740,7 +740,7 @@
                 $('#myFamingTime').val(myFamingTime)
                 var famingTime = parseInt(localStorage.getItem('famingTime'));
                 $('#famingTime').val(famingTime)
-                if (url == 'http://tower.bluesky.site/farming') {
+                if (url == 'https://tower.bluesky.site/farming') {
                     $('#startFarming').trigger('click');
                 }
             }
@@ -751,7 +751,7 @@
                 $('#craftTime').val(craftTime)
                 var MingType = localStorage.getItem('CraftType');
                 $('#CraftType').val(CraftType)
-                if (url == 'http://tower.bluesky.site/crafting') {
+                if (url == 'https://tower.bluesky.site/crafting') {
                     $('#startCraft').trigger('click');
                 }
             }

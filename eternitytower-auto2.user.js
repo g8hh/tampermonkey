@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         《永恒之塔》自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
-// @version      0.0.39.4
+// @version      0.0.41.1
 // @description  Eternity Tower (https://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
 // @include      *https://tower.bluesky.site/*
@@ -23,6 +23,10 @@
  * 更新日志
  * 0.0.x
  * ·种地：自定义种子没了的情况下，应该要自动种其它种子；
+ * 0.0.40
+ * ·自动出售：增加自动出售已标记物品功能。
+ * 0.0.40
+ * ·自动化：增加重置脚本配置功能。
  * 0.0.39
  * ·战斗：撤退按钮放在顶部。
  * 0.0.38
@@ -96,6 +100,24 @@
     content += '<div class="im-footer" style="position:relative">';
     content += '<div class="weixing-container">';
     content += '<div class="weixing-show">';
+    //重置脚本-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">重置脚本配置（当出现脚本乱点等不正常情况时使用）</div>';
+    content += '* 此操作将重置你的脚本配置到默认值并自动刷新页面，然后需要重新配置、启动脚本';
+    content += '<button id="resetAuto" type="primary" >重置</button>';
+    content += '</div>';
+    //重置脚本-结束
+
+    //标签页后台运行脚本-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">标签页后台运行（刷新页面后点击一次即可）</div>';
+    content += '* 此功能是为了解决：游戏标签页切到后台时，游戏可能进入停滞，再次切换过来时爆发大量请求的问题。';
+    content += '<br/>';
+    content += '* 一般只需要在 挖矿、种地、战斗 这三个标签页下启用即可。';
+    content += '<button id="keepAlive" type="primary" >启动</button>';
+    content += '</div>';
+    //标签页后台运行脚本-结束
+
     //无人值守-开始
     content += '<div class="JB-form">';
     content += '<div class="tit">无人值守模式（适合睡觉、出门时启用挂机，当服务器更新时，实现自动重启脚本）</div>';
@@ -104,6 +126,17 @@
     content += '<button id="nobodyStop" type="danger" disabled>停止</button>';
     content += '</div>';
     //无人值守-结束
+
+    //自动出售-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">自动出售已标记物品（背包上限500，防止挂机时爆仓，建议间隔设大点，5分钟以上(300+)）</div>';
+    content += '* 适合刷多人塔掉落物品较多时启动，需要预先标记好要出售的物品。';
+    content += '<br/>';
+    content += '出售间隔(秒) <input id="sellTime" type="text" value="300" placeholder="输入整数数字" autocomplete="on"/> 秒；';
+    content += '<button id="multiSellStart" type="primary" >启动</button>';
+    content += '<button id="multiSellStop" type="danger" disabled>停止</button>';
+    content += '</div>';
+    //自动出售-结束
 
     //制作-开始
     content += '<div class="JB-form">';
@@ -504,7 +537,7 @@
     content += '<option value="redHydrangeaSeed" >红色绣球花-可以卖钱-单价xx金币-需要种植49级</option>';
     content += '<option value="sunburstHydrangeaSeed" >阳光绣球花-可以卖钱-单价xx金币-需要种植59级-生长需15分钟</option>';
     content += '<option value="zinniaSeed" >百日菊-可以卖钱-单价xx金币-需要种植59级-生长需8小时</option>';
-    content += '<option value="crimsonHydrangeaSeed" >深红色绣球花-可以卖钱-单价xx金币-需要种植69级-生长需8小时</option>';
+    content += '<option value="crimsonHydrangeaSeed" >深红色绣球花-可以卖钱-单价1500金币-需要种植69级-生长需15分钟</option>';
     content += '<option value="tulipSeed" >郁金香-可以卖钱-单价xx金币-需要种植69级-生长需8小时</option>';
     content += '<option value="lilySeed" >百合-可以卖钱-单价xx金币-需要种植79级-生长需15分钟</option>';
     content += '<option value="orchidSeed" >兰花-可以卖钱-单价xx金币-需要种植79级-生长需8小时</option>';
@@ -603,7 +636,100 @@
         var my_seconds = d.getSeconds();
         return my_hours + ":" + my_minutes + ":" + my_seconds
     }
+    // 重置脚本选项
+    $('#resetAuto').click(function () {
+        // localStorage.setItem('autoFill2', false);
+        // localStorage.setItem('autoSkill', false);
+        // localStorage.setItem('autoHeal', false);
+        // localStorage.setItem('autoHeal2', false);
+        // localStorage.setItem('autoFarm', false);
+        // localStorage.setItem('attLeft', false);
+        // localStorage.setItem('autoCraft', false);
+        // localStorage.setItem('autoMing', false);
+        // localStorage.setItem('soloBattle', false);
+        // localStorage.setItem('autoEateEnergy', false);
+        // localStorage.setItem('autoEate', false);
+        // localStorage.setItem('afkBattle', false);
+        // localStorage.setItem('groupBattle', false);
+        // localStorage.setItem('minEnergy', 30);
+        //  localStorage.setItem('fightTime', 60);
+        // localStorage.setItem('myFamingTime', 2);
+        // localStorage.setItem('craftTime', 100);
+        // localStorage.setItem('soloFightTime', 10);
+        localStorage.removeItem('autoFill2');
+        localStorage.removeItem('autoSkill');
+        localStorage.removeItem('autoHeal');
+        localStorage.removeItem('autoHeal2');
+        localStorage.removeItem('autoFarm');
+        localStorage.removeItem('attLeft');
+        localStorage.removeItem('autoCraft');
+        localStorage.removeItem('autoMing');
+        localStorage.removeItem('autoEateEnergy');
+        localStorage.removeItem('autoEate');
+        localStorage.removeItem('afkBattle');
+        localStorage.removeItem('craftTime');
+        localStorage.removeItem('CraftType');
+        localStorage.removeItem('fightTime');
+        localStorage.removeItem('fightMinHP');
+        localStorage.removeItem('fightMinEnergy');
+        localStorage.removeItem('famingTime');
+        localStorage.removeItem('Food1');
+        localStorage.removeItem('Food2');
+        localStorage.removeItem('FoodSeed');
+        localStorage.removeItem('groupTiRen');
+        localStorage.removeItem('groupBattle');
+        localStorage.removeItem('minHP');
+        localStorage.removeItem('minTime');
+        localStorage.removeItem('minEnergy');
+        localStorage.removeItem('MingEnergy');
+        localStorage.removeItem('MingType');
+        localStorage.removeItem('myFamingTime');
+        localStorage.removeItem('soloBattle');
+        localStorage.removeItem('soloFightTime');
+        localStorage.removeItem('soloUpBattle');
+        localStorage.removeItem('username');
+        localStorage.removeItem('keepAlive');
+        localStorage.removeItem('autoSell');
+        localStorage.removeItem('sellTime');
+        location.reload();
+        
+    });
     // 初始化时自动启用上次的脚本配置
+    setTimeout(function () {
+     // 刷新页面后，从本地存储里面取出时间间隔，填入文本框
+     if(localStorage.getItem('minEnergy')){
+        var minEnergy = parseInt(localStorage.getItem('minEnergy'));
+        $('#minEnergy').val(minEnergy);
+     }
+     if(localStorage.getItem('Food2')){
+        var Food2 = localStorage.getItem('Food2');
+        $('#Food2').val(Food2);
+     }
+     if(localStorage.getItem('Food1')){
+        var Food1 = localStorage.getItem('Food1');
+        $('#Food1').val(Food1)
+     }
+     if(localStorage.getItem('minHP')){
+        var minHP = parseInt(localStorage.getItem('minHP'));
+        $('#minHP').val(minHP)
+     }
+     if(localStorage.getItem('FoodSeed')){
+        var FoodSeed = localStorage.getItem('FoodSeed');
+        $('#FoodSeed').val(FoodSeed)
+     }
+     if(localStorage.getItem('minTime')){
+        var minTime = parseInt(localStorage.getItem('minTime'));
+        $('#minTime').val(minTime)
+     }
+     if(localStorage.getItem('MingType')){
+        var MingType = localStorage.getItem('MingType');
+        $('#MingType').val(MingType)
+     }
+     if(localStorage.getItem('sellTime')){
+        var sellTime = parseInt(localStorage.getItem('sellTime'));
+        $('#sellTime').val(sellTime)
+     }
+    }, 3000);
     setTimeout(function () {
         // 自动攻击右边敌人
         if (localStorage.getItem('autoFill2') == 'true') {
@@ -639,7 +765,7 @@
     var url = window.location.href;
     function autoLoad2() {
         var username = $('#username').val();
-        if (username == '') {
+        // if (username == '') {
             // 如果用户名为空，先尝试从本地读取
             if (localStorage.getItem('username')) {
                 username = localStorage.getItem('username');
@@ -647,7 +773,7 @@
                 $('#username').val(username)
             }
             // 自动回血
-            if (localStorage.getItem('autoEate') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('autoEate') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var minHP = parseInt(localStorage.getItem('minHP'));
                 $('#minHP').val(minHP)
@@ -656,39 +782,50 @@
                 $('#startEatFood').trigger('click');
             }
             // 自动回能量
-            if (localStorage.getItem('autoEateEnergy') == 'true') {
-                //   从本地存储里面取出时间间隔，填入文本框
-                var minEnergy = parseInt(localStorage.getItem('minEnergy'));
-                $('#minEnergy').val(minEnergy)
+            if (url.includes('battle') && localStorage.getItem('autoEateEnergy') == 'true') {
+                if(localStorage.getItem('minEnergy')){
+                    //   从本地存储里面取出时间间隔，填入文本框
+                    var minEnergy = parseInt(localStorage.getItem('minEnergy'));
+                    $('#minEnergy').val(minEnergy)
+                }else{
+                    localStorage.setItem('minEnergy', 30);
+                    $('#minEnergy').val(30);
+                }
                 var Food2 = localStorage.getItem('Food2');
                 $('#Food2').val(Food2)
                 $('#startEatEnergyFood').trigger('click');
             }
             // 自动放技能
-            if (localStorage.getItem('autoSkill') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('autoSkill') == 'true') {
                 $('#startSkill').trigger('click');
             }
             // 自动放回血技能 1
-            if (localStorage.getItem('autoHeal') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('autoHeal') == 'true') {
                 $('#autoHeal').trigger('click');
             }
             // 自动放回血技能 2
-            if (localStorage.getItem('autoHeal2') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('autoHeal2') == 'true') {
                 $('#autoHeal2').trigger('click');
             }
             // 自动攻击右边敌人
-            if (localStorage.getItem('attLeft') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('attLeft') == 'true') {
                 $('#attLeft').trigger('click');
             }
             // 如果用户在组队战斗，则继续战斗
-            if (localStorage.getItem('groupBattle') == 'true') {
-                //   从本地存储里面取出时间间隔，填入文本框
-                var fightTime = parseInt(localStorage.getItem('fightTime'));
-                $('#fightTime').val(fightTime)
-                $('#startGroupFight').trigger('click');
+            if (url.includes('battle') && localStorage.getItem('groupBattle') == 'true') {
+                if(localStorage.getItem('fightTime')){
+                    //   从本地存储里面取出时间间隔，填入文本框
+                    var fightTime = parseInt(localStorage.getItem('fightTime'));
+                    $('#fightTime').val(fightTime)
+                    $('#startGroupFight').trigger('click');
+                }else{
+                    localStorage.setItem('fightTime', 60);
+                    $('#fightTime').val(60);
+                    $('#startGroupFight').trigger('click');
+                }
             }
             // 如果用户在组队战斗时选了自动踢人，则继续战斗
-            if (localStorage.getItem('groupTiRen') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('groupTiRen') == 'true') {
                 if ($('.me').parent().parent().find('.justify-content-center img.mr-1').length == 1) {
                     $('#startTi').trigger('click');
                 }
@@ -707,7 +844,7 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'http://tower.bluesky.site/battle') {
+                if (url == 'https://tower.bluesky.site/battle') {
                     $('#startSolo').trigger('click');
                 }
             }
@@ -720,7 +857,7 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'http://tower.bluesky.site/battle') {
+                if (url == 'https://tower.bluesky.site/battle') {
                     $('#startSoloUp').trigger('click');
                 }
             }
@@ -733,7 +870,7 @@
                 $('#MingType').val(MingType)
                 var MingEnergy = parseInt(localStorage.getItem('MingEnergy'));
                 $('#MingEnergy').val(MingEnergy)
-                if (url == 'http://tower.bluesky.site/mining') {
+                if (url == 'https://tower.bluesky.site/mining') {
                     $('#startMing').trigger('click');
                 }
             }
@@ -746,7 +883,7 @@
                 $('#myFamingTime').val(myFamingTime)
                 var famingTime = parseInt(localStorage.getItem('famingTime'));
                 $('#famingTime').val(famingTime)
-                if (url == 'http://tower.bluesky.site/farming') {
+                if (url == 'https://tower.bluesky.site/farming') {
                     $('#startFarming').trigger('click');
                 }
             }
@@ -757,10 +894,70 @@
                 $('#craftTime').val(craftTime)
                 var MingType = localStorage.getItem('CraftType');
                 $('#CraftType').val(CraftType)
-                if (url == 'http://tower.bluesky.site/crafting') {
+                if (url == 'https://tower.bluesky.site/crafting') {
                     $('#startCraft').trigger('click');
                 }
             }
+            // 自动出售
+            if (url.includes('crafting') && localStorage.getItem('autoSell') == 'true') {
+                //   从本地存储里面取出时间间隔，填入文本框
+                var sellTime = parseInt(localStorage.getItem('sellTime'));
+                $('#sellTime').val(sellTime)
+                if (url == 'https://tower.bluesky.site/crafting') {
+                    $('#multiSellStart').trigger('click');
+                }
+            }
+            // 自动启用标签页后台运行
+            if (localStorage.getItem('keepAlive') == 'true') {
+                $('#keepAlive').trigger('click');
+                $("#keepAlive").attr("disabled", true);
+            }
+        // }
+    }
+
+    //启用自动出售
+    var autoSell = false
+    var sellInterval;
+    $('#multiSellStart').click(function () {
+        // 标识自动出售
+        autoSell = true
+        localStorage.setItem('autoSell', autoSell);
+        // 标识启动出售
+        var sellTime = parseInt($('#sellTime').val());
+        localStorage.setItem('sellTime', sellTime);
+        sellTime = sellTime * 1000;
+        sellInterval = setInterval(sellFunc, sellTime);
+        $(this).attr("disabled", true);
+        $("#multiSellStop").attr("disabled", false);
+    });
+
+    //停止自动出售
+    $('#multiSellStop').click(function () {
+        // 标识自动出售
+        autoSell = false
+        localStorage.setItem('autoSell', autoSell);
+        clearInterval(sellInterval);
+        $(this).attr("disabled", true);
+        $("#multiSellStart").attr("disabled", false);
+    });
+    
+    //自动出售主方法
+    function sellFunc() {
+        //自动切换到制作界面
+        if (!url.includes('crafting')){
+            $('.navbar-nav .nav-item:nth-child(4) a').trigger('click');
+        }
+        if(url.includes('crafting')){
+            // 点击批量出售按钮
+            $('.multiSellStart').trigger('click');
+            //延时点击确认出售按钮，避免页面未加载完
+            setTimeout(function () {
+                $('.multiSellConfirm').trigger('click');
+            }, 10000);
+            //延时点击弹框的确认出售按钮，避免页面未加载完
+            setTimeout(function () {
+                $('.modalButtonConfirm').trigger('click');
+            }, 20000);
         }
     }
 
@@ -865,7 +1062,7 @@
                 growTime = 480;
                 break;
             case 'crimsonHydrangeaSeed':
-                growTime = 480;
+                growTime = 15;
                 break;
             case 'lilySeed':
                 growTime = 15;
@@ -1003,6 +1200,13 @@
 
     });
 
+    // 启用标签页后台运行
+    $('#keepAlive').bind('click',function(e){
+		var d=document,s=d.createElement('script');s.src='//g8hh.cn/static/js/keepalive.js';d.body.appendChild(s);
+        // 标识启动后台
+        localStorage.setItem('keepAlive', true);
+        $("#keepAlive").attr("disabled", true);
+	});
     var autoSkill;
     var c1, c2, c3, c4, c5, c6, c7, c8;
     //    var bb;
@@ -1155,7 +1359,7 @@
                     // 1技能放加血技能，当生命值低于设定值时，开始加血
                     var minWidMe = ($('.me').parent().parent().find('.health-bar .progress-bar').width() / $('.me').parent().parent().find('.progress.health-bar').width()) * 100;
                     if (isAutoHeal2 && minWidMe < healAmount2) {
-                        console.log('技能2血少');
+                        // console.log('技能2血少');
                         doSkill(3);
                         setTimeout(function() {
                             $('.me').parent().find('.battle-unit').trigger('click'); 
