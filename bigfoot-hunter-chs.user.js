@@ -10,6 +10,7 @@
 // @license      MIT
 // @include      *https://bigfoot-hunt.com/*
 // @grant        none
+// @require      https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js
 // @website      https://www.gityx.com/
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
 // @downloadURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
@@ -109,7 +110,7 @@ var cnItems = {
     "++ Rare Chance": "++ 稀有率",
     "+++ Rare Chance": "+++ 稀有率",
     "a 2X boost to Discoveries and XP for 1 HOUR!": "一个2倍的提升到发现和经验持续 1 小时！",
-    "ACTIVE": "活跃的",
+    "ACTIVE": "当前",
     "Analysts": "分析师",
     "ANCIENT GROVE": "古老的树林",
     "ARTIFACTS": "神器",
@@ -126,6 +127,7 @@ var cnItems = {
     "Experts": "专家",
     "EXTREME EXPEDITION": "极限探险",
     "Footprints": "足迹",
+    "footprints": "足迹",
     "footprint": "足迹",
     "FORBIDDEN PEAKS": "禁忌峰",
     "GLOBAL HUNT BOOST": "全局狩猎加成",
@@ -134,7 +136,7 @@ var cnItems = {
     "HIGHER DISCOVERY RATES": "更高的发现率",
     "Idle Rate:": "放置率:",
     "LEGENDARY ENCOUNTER ZONE": "传说相遇区",
-    "LOADING BIGFOOT DATA...": "正在加载大脚数据…",
+    "LOADING BIGFOOT DATA...": "正在加载大脚怪数据…",
     "MASSIVE 18-INCH PRINT IN MUD": "泥里有巨大的18英寸的指纹",
     "MISTY MOUNTAINS": "迷雾山脉",
     "MOUNTAIN PEAK": "山顶",
@@ -145,6 +147,7 @@ var cnItems = {
     "RESEARCH LAB REQUIRED": "需要研究实验室",
     "Sighting": "目击",
     "Sightings": "目击",
+    "sightings": "目击",
     "STRANGE HOWL RECORDING": "怪嚎录音",
     "Territory": "领土",
     "THE ULTIMATE EXPEDITION": "终极探险",
@@ -152,7 +155,7 @@ var cnItems = {
     "Trail Cams": "跟踪摄像头",
     "UNUSUAL NEST STRUCTURE": "不寻常的巢结构",
     "⚠️ TEMPORARILY DISABLED - TECHNICAL ISSUES": "⚠️暂时禁用 - 技术问题",
-    "FOUND!": "已发现!",
+    "FOUND!": "发现!",
     "HUGE SHADOW MOVING THROUGH TREES": "巨大的阴影穿过树林",
     "POINTS": "点数",
     "SEARCHING...": "搜索中...",
@@ -175,8 +178,8 @@ var cnItems = {
     "EVIDENCE COLLECTOR": "证据收集者",
     "EXPAND TERRITORY TO SIZE 3": "将领土扩大到3",
     "FIND 10 FOOTPRINTS": "找到10个足迹",
-    "FIND 50 LEGENDARY ENCOUNTERS": "找到50个传奇遭遇",
-    "FIND YOUR FIRST LEGENDARY ENCOUNTER": "找到你的第一次传奇遭遇",
+    "FIND 50 LEGENDARY ENCOUNTERS": "找到50个传说遭遇",
+    "FIND YOUR FIRST LEGENDARY ENCOUNTER": "找到你的第一次传说遭遇",
     "FIRST CONTACT": "第一次接触",
     "FOOTPRINT HUNTER": "足迹猎人",
     "FRESH TRACKS LEADING NORTH": "新的足迹指向北方",
@@ -250,7 +253,7 @@ var cnItems = {
     "BROKEN TREE BRANCH 12 FEET HIGH": "折断的树枝有12英尺高",
     "evidence": "证据",
     "sighting": "目击",
-    "GLOWING EYES IN DARKNESS": "GLOWING EYES IN DARKNESS",
+    "GLOWING EYES IN DARKNESS": "黑暗中发光的眼睛",
     "CREATURE WATCHING FROM RIDGE": "山脊上的生物",
     "DARK PINE FOREST": "黑松林",
     "MOVEMENT IN THICK BRUSH": "粗刷移动",
@@ -287,28 +290,65 @@ var cnItems = {
     "MASSIVE FIGURE BY WATERFALL": "瀑布形成的巨大雕像",
     "rare": "稀有",
     "BIGFOOT HUNTER CHAT": "大脚怪猎人聊天室",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "DISCOVERIES WHILE AWAY!": "发现，在你离开的时候！",
+    "🌲 WELCOME BACK! YOU FOUND": "🌲欢迎回来！你发现了",
+    "STRANGE ODOR SAMPLE": "奇怪气味样本",
+    "MYSTERIOUS SCRATCH MARKS": "神秘的划痕",
+    "SELECT": "选择",
+    "COARSE HAIR SAMPLE ON BRANCH": "树枝上的粗毛样本",
+    "ADVANCED OPTICS": "高级光学",
+    "ANALYZE EVIDENCE MORE EFFECTIVELY": "更有效地分析证据",
+    "ANCIENT ARTIFACTS": "古代神器",
+    "BASIC TRACKING": "基础追踪",
+    "BEHAVIOR PATTERNS": "行为模式",
+    "BETTER SIGHTING EQUIPMENT": "更好的观测设备",
+    "CURRENT RESEARCH": "当前研究",
+    "DNA ANALYSIS": "DNA分析",
+    "Evidence)": "证据)",
+    "IMPROVES FOOTPRINT DISCOVERY RATE": "提高足迹发现率",
+    "ORBITAL SURVEILLANCE NETWORK": "轨道监视网络",
+    "RESEARCH (": "研究(",
+    "RESEARCHING...": "研究中...",
+    "SATELLITE IMAGING": "卫星成像",
+    "STUDY BIGFOOT ARCHAEOLOGY": "研究大脚怪考古学",
+    "UNDERSTAND BIGFOOT MOVEMENT": "了解大脚怪的运动",
+    "COMPLETED": "已完成",
+    "BLURRY PHOTO OF CREATURE": "模糊的生物照片",
+    "ACTIVE BONUSES": "当前加成",
+    "Base Rate:": "基础速率:",
+    "COINS": "金币",
+    "Coins:": "金币:",
+    "CRYSTAL CLEAR BIGFOOT FOOTAGE": "清晰的大脚怪镜头",
+    "Effective Rate:": "效率:",
+    "Expedition: +": "探险: +",
+    "INVENTORY": "库存",
+    "legendary": "传说",
+    "Research: +": "研究: +",
+    "SELL ALL FOR": "全部出售获得",
+    "Sell for Coins": "出售获得金币",
+    "Used for Upgrades": "用于升级",
+    "Tracking: +": "追踪: +",
+    "BONUS: +": "加成: +",
+    "COINS!": "金币!",
+    "UNLOCKS ADVANCED EQUIPMENT": "解锁高级装备",
+    "ARE YOU ABSOLUTELY SURE?": "你绝对确定吗？",
+    "CANCEL": "取消",
+    "YES, RESET EVERYTHING": "是的，重置所有东西",
+    "Achievements: +": "成就: +",
+    "BIGFOOT HAIR SAMPLE": "大脚怪毛发样本",
+    "Bigfoot Hair Sample": "大脚怪毛发样本",
+    "RARE FIND!": "稀有的发现！",
+    "Artifacts: +": "神器: +",
+    "Ancient Footprint Cast": "古老的足迹铸造",
+    "ANCIENT FOOTPRINT CAST": "古老的足迹铸造",
+    "RARE": "稀有",
+    "SELL FOR": "出售获得",
+    "UNCOMMON": "罕见",
+    "+50% Evidence Value, +2.0% Rare Chance": "+50% 证据价值, +2.0% 稀有率",
+    "BIGFOOT ARTIFACT": "大脚怪神器",
+    "BIGFOOT FAMILY SIGHTING": "大脚怪家族目击",
+    "Leadership: +": "领导力: +",
+    "📢 SYSTEM": "📢 系统",
     "": "",
     "": "",
     "": "",
@@ -698,6 +738,8 @@ var cnRegReplace = new Map([
     [/^You are gaining (.+) elves per second$/, '你每秒获得 $1 精灵'],
     [/^You have (.+) points$/, '你有 $1 点数'],
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
+    [/^🚀 ADMIN has activated a GLOBAL HUNT BOOST! All hunters get (.+) discoveries and XP for (.+) hour!$/, '🚀 管理员已经激活了全局狩猎提升！所有猎人获得 $1 发现和 经验值，持续 $2 小时！'],
+    [/^ARTIFACT DISCOVERED! (.+) has found the legendary (.+)!$/, '发现神器！$1 找到了传说中的 $2！'],
     [/^Jan ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 1 月 $1, $3:$4'],
     [/^Feb ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 2 月 $1, $3:$4'],
     [/^Mar ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 3 月 $1, $3:$4'],
@@ -721,6 +763,14 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)d ([\d\.]+)h ([\d\.]+)m$/, '$1天 $2小时 $3分'],
     [/^([\d\.]+)e([\d\.,]+) elves$/, '$1e$2 精灵'],
     [/^([\d\.,]+) elves$/, '$1 精灵'],
+    [/^\+([\d\.,]+) SKILL POINT$/, '\+$1 技能点'],
+    [/^\+([\d\.,]+)\% SIGHTING CHANCE$/, '\+$1\% 目击几率'],
+    [/^\+([\d\.,]+)\% EVIDENCE VALUE$/, '\+$1\% 证据价值'],
+    [/^\+([\d\.,]+)\% IDLE RATE$/, '\+$1\% 放置率'],
+    [/^\+([\d\.,]+)\% Footprint Rate$/, '\+$1\% 足迹率'],
+    [/^\+([\d\.,]+)\% DISCOVERY MULTIPLIER$/, '\+$1\% 发现乘数'],
+    [/^\+([\d\.,]+)x DISCOVERY MULTIPLIER$/, '\+$1x 发现乘数'],
+    [/^\+([\d\.,]+)\% FOOTPRINT DISCOVERY RATE$/, '\+$1\% 足迹发现率'],
     [/^([\d\.,]+) TOTAL DISCOVERIES$/, '$1 总计发现'],
     [/^REACH HUNTER LEVEL ([\d\.,]+)$/, '达到猎人等级 $1'],
     [/^Day ([\d\.,]+)$/, '天数 $1'],
@@ -915,6 +965,88 @@ function TransSubTextNode(node) {
 }
 
 ! function() {
+
+    // 引入右侧引导
+    var content = '';
+    content += '<!-- 脚本动态内容 开始 -->';
+    content += '<style>.main-im div{display:block;}.main-im{position:fixed;right:10px;top:calc(50vh + 35px);line-height:normal;z-index:9999;}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-raius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("https://g8hh.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:block;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:125px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;color:#000 !important;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;font-size:12px !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("https://g8hh.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:112px;height:200px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-125px;top:-126px;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("https://g8hh.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("https://g8hh.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .close-ball,.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("https://g8hh.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;top:50vh;}.main-im .close-ball{right:-15px;top:48vh;z-index:9999999;background:none;}</style>';
+    
+    content +='<!-- 客服动态内容 开始 -->';
+     content +='<div class="main-im">';
+    content +='<div id="open_im" class="open-im">&nbsp;</div><div class="close-ball">x</div>';
+    content +='<div class="im_main" id="im_main">';
+    content +='<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>';
+    // content +='<a href="https://qm.qq.com/cgi-bin/qm/qr?k=B1c6jzfLBTtNdim1peh9fSWdaOvvzo_S&jump_from=webapi" target="_blank" class="im-qq qq-a" title="点击加入 - Git游戏交流①群:627141737">';
+    // content +='<a href="https://qm.qq.com/cgi-bin/qm/qr?k=jlS3OQPfjBXuTV6kuLtThF5rICWNZynR&jump_from=webapi&authKey=qiagMjqscueWg8c8xvVh/SFDlYM4qdj/gFXjP/unmipGWDNoGRrCn4yO/+Z2Narl" target="_blank" class="im-qq qq-a" title="点击加入 - Git游戏交流②群:627141737">';
+    content +='<a href="https://qm.qq.com/cgi-bin/qm/qr?k=sCNqtJEi7Qjk-YtwHSs6S4vvVaEBxOO7&jump_from=webapi" target="_blank" class="im-qq qq-a" title="点击加入 - Git游戏交流③群:730783833">';
+    content +='<div class="qq-container"></div>';
+    content +='<div class="qq-hover-c"><img class="img-qq" src="//g8hh.cn/static/images/kf/qq.png"></div>';
+    content +='<span>点击加群</span>';
+    content +='</a>';
+    content +='<div class="im-tel">';
+    content +='<div>QQ群号:</div>';
+    content +='<div class="tel-num">730783833</div>';
+    content +='<div>更多同类游戏:</div>';
+    content +='<div class="tel-num"><a href="https://www.gityx.com" target="_blank" title="Git游戏：gityx.com~">Git游戏</a><a href="https://g8hh.com.cn" target="_blank" style="margin-left:5px;" title="锅巴汉化：g8hh.cn">锅巴汉化</a><br /><a href="https://gityx.com/hanhua/hanhuazhong/733.html" target="_blank" style="margin-left:5px;" title="点击查看游戏攻略" >游戏攻略交流论坛</a><br /><a href="javascript:void(0)" id="keepAlive" title="开启标签页后台运行，让游戏可以在后台继续运行，点击一次即可。" style="color:green !important;">* 启用后台游戏</a></div>';
+    content +='</div>';
+    content +='<div class="im-footer" style="position:relative">';
+    content +='<div class="weixing-container">';
+    content +='<div class="weixing-show">';
+    //content +='<div class="weixing-txt" style="font-size:13px;">支付宝扫一扫<br>每天领红包<br>0.1 - 99元<br><a href="http://g8hh.com/static/article/fuli.html" target="_blank" title="凡是扫这个二维码领的红包，都可以找我拿返现，点击查看详情">查看详情</a></div>';
+    //content +='<img class="weixing-ma" src="//g8hh.com/static/images/kf/zfb-ma.jpg">';
+//    content +='<div class="weixing-txt" style="font-size:13px;">打开手机QQ<br>扫码加群<br>一起讨论吧<br><a href="http://shang.qq.com/wpa/qunwpa?idkey=d10d784492d5e73cca25ff48f4763bdc14f698ffdbf42adbb0e9304495cb0387" target="_blank" title="点击加入 - GitHub游戏交流群:627141737">点击加群</a></div>';
+    content +='<div class="weixing-txt" style="font-size:13px;">打开微信扫一扫<br>关注公众号<br><br><a href="https://mp.weixin.qq.com/s/ezp5x6hOC8QPLnZ2bPFyEw" target="_blank" title="欢迎关注Git游戏关注，每周都有新游戏！">Git游戏</a></div>';
+    content +='<img class="weixing-ma" src="//g8hh.cn/static/images/kf/weixing-ma.jpg">';
+    content +='<div class="weixing-sanjiao"></div>';
+    content +='<div class="weixing-sanjiao-big"></div>';
+    content +='</div>';
+    content +='</div>';
+    content +='<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>';
+    content +='<div style="clear:both"></div>';
+    content +='</div>';
+    content +='</div>';
+    content +='</div>';
+    content +='<!-- 客服动态内容 结束 -->';
+    $("body").append(content);
+	$('#close_im').bind('click',function(){
+		$('#main-im').css("height","0");
+		$('#im_main').hide();
+		$('#open_im').show();
+	});
+	$('#open_im').bind('click',function(e){
+		$('#main-im').css("height","272");
+		$('#im_main').show();
+		$(this).hide();
+	});
+	$('.go-top').bind('click',function(){
+		$(window).scrollTop(0);
+	});
+	$(".weixing-container").bind('mouseenter',function(){
+		$('.weixing-show').show();
+	})
+	$(".weixing-container").bind('mouseleave',function(){        
+		$('.weixing-show').hide();
+	});
+    // 启用标签页后台运行
+    $('#keepAlive').bind('click',function(e){
+		var d=document,s=d.createElement('script');s.src='//g8hh.cn/static/js/keepalive.js';d.body.appendChild(s);
+	});
+
+//	定时关闭
+  setTimeout(function () {
+    $('#im_main').hide();
+  },5000);
+      //    关闭小球，防止遮挡
+  $('.close-ball').bind('click', function() {
+    if ($('.close-ball').hasClass('show')) {
+      $('#open_im').show()
+      $('.close-ball').removeClass('show')
+    } else {
+      $('.close-ball').addClass('show')
+      $('.im_main').hide()
+      $('#open_im').hide()
+    }
+  })
     console.log("加载汉化模块");
 
     let observer_config = {

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Eternity Tower 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.2.6
+// @version      0.2.7
 // @description  Eternity Tower (https://tower.bluesky.site) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Eternity Tower.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -3470,9 +3470,9 @@ var cnItems = {
     "Your class cooldown has been reset!": "你的职业冷却时间已重置！",
     "crimson_hydrangea": "深红色绣球花",
     "crimson hydrangea": "深红色绣球花",
-    "": "",
-    "": "",
-    "": "",
+    "Abandoned Lighthouse": "废弃的灯塔",
+    "A mysterious and glittering device.": "一个神秘而闪亮的装置。",
+    "a day": "1天",
     "": "",
     "": "",
     "": "",
@@ -3597,6 +3597,7 @@ var cnItems = {
     "greater carbon spirit": "高级碳精魂",
     "gold spirit": "金精魂",
     "tungsten spirit": "钨精魂",
+    "greater tungsten spirit": "高级钨精魂",
     "mithril spirit": "秘银精魂",
     "obsidian spirit": "黑曜石精魂",
     'elven steel spirit': '精灵钢精魂',
@@ -5227,6 +5228,19 @@ var cnPostfix = {
     "Increases all ally attack damage and attack speed by 20% + (20% of MP).  Maximum attack speed\n        and damage capped at 100%.": "增加所有队友的攻击伤害和攻击速度20% + （MP值的20%）。最大攻击速度\n和伤害上限为100%。",
     "Weaken": "虚弱",
     "Disoriented!": "迷失方向!",
+    "Use on an ally to form a mystical bond.  Whenever they are struck in combat, you instantly refill": "在盟友身上使用，形成一个神秘的纽带。当他们在战斗中被击中时，你会立即补充",
+    "You may reuse this ability at any time to place it on a different target.\n        You may not use this on yourself and the bond cannot be broken without transferring it to another ally.": "你可以在任何时候重用此技能，将其放置在不同的目标上。你不能在自己身上使用它，并且在不将它转移给其他盟友的情况下，纽带不能被打破。",
+    "The greater tungsten spirit is completely immune to all damage.": "高级钨精魂完全免疫所有伤害。",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": "",
     "": "",
     "": "",

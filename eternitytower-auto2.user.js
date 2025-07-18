@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         《永恒之塔》自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
-// @version      0.0.41.1
+// @version      0.0.41.4
 // @description  Eternity Tower (https://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
 // @include      *https://tower.bluesky.site/*
@@ -95,7 +95,7 @@
     content += '<div>QQ群号:</div>';
     content += '<div class="tel-num">867979275</div>';
     content += '<div>更多同类游戏:</div>';
-    content += '<div class="tel-num"><a href="http://www.gityx.com" target="_blank" title="我们有域名啦~">Git游戏</a><a href="https://gityx.com/notify/447.html" target="_blank" style="margin-left:5px;" title="点击查看游戏攻略">论坛</a><a href="http://g8hh.com.cn/" target="_blank" style="margin-left:5px;" title="锅巴汉化">锅巴汉化</a></div>';
+    content += '<div class="tel-num"><a href="http://www.gityx.com" target="_blank" title="有很多网页挂机放置游戏哦~">Git游戏</a><a href="https://gityx.com/notify/447.html" target="_blank" style="margin-left:5px;" title="点击查看游戏攻略">论坛</a><a href="http://g8hh.com.cn/" target="_blank" style="margin-left:5px;" title="锅巴汉化">锅巴汉化</a></div>';
     content += '</div>';
     content += '<div class="im-footer" style="position:relative">';
     content += '<div class="weixing-container">';
@@ -119,7 +119,7 @@
     //标签页后台运行脚本-结束
 
     //无人值守-开始
-    content += '<div class="JB-form">';
+    content += '<div class="JB-form" style="display:none;">';
     content += '<div class="tit">无人值守模式（适合睡觉、出门时启用挂机，当服务器更新时，实现自动重启脚本）</div>';
     content += '* 首次使用需配置好需要的各项条件，然后手动点击其后面的“启动”按钮一次，完成后再启动这个 →';
     content += '<button id="nobodyStart" type="primary" >启动</button>';
@@ -403,7 +403,7 @@
     content += '（建议设久一点，防止残血开战导致惨败）';
     content += '<br/>';
     content += '<br/>';
-    content += '队长功能：队友（能量低于2、没吃东西、没开自动吃能量食物脚本）时自动踢人，防止无法继续战斗</label>';
+    content += '队长功能：队友（能量低于5、没吃东西、没开自动吃能量食物脚本）时自动踢人，防止无法继续战斗</label>';
     content += '<button id="startTi" type="primary" >启动</button>';
     content += '<button id="stopTi" type="danger" disabled>停止</button>';
     content += '</div>';
@@ -2044,15 +2044,20 @@
 
     //自动踢能量值过低，并且没吃柠檬的人
     function tiren() {
-        $(".energy-bar .progress-bar .health-bar").each(function () {
+        $(".energy-bar .progress-bar .energy-bar").each(function () {
             var username2 = $('#username').val();
             var person = $(this).parents('.flex-column.d-flex').children().find('.battle-unit-name').text().replace(/(^\s*)|(\s*$)/g, "");
             var statusLenth = $('.tempStatus').length;
             var penergy = parseInt($(this).text());
             var isEating = $(this).parents('.battle-unit-container').children().find('.justify-content-center img').length;
-            //判断自己之外的人、能量值低于2、没有在吃柠檬
-            if ((person != username2) && (penergy < 2) && (isEating == 0)) {
+            // console.log("username2", username2);
+            // console.log("penergy", penergy);
+            // console.log("person", person);
+            // console.log("isEating", isEating);
+            //判断自己之外的人、能量值低于5、没有在吃柠檬
+            if ((person != username2) && (penergy < 5) && (isEating == 0)) {
                 //踢人
+                // console.log($(this).parents('.flex-column.d-flex').children().find('.btn-kick').html())
                 // console.log($(this).parents('.flex-column.d-flex').children().find('.btn-kick').html())
                 $(this).parents('.flex-column.d-flex').children().find('.btn-kick').trigger('click');
             } else {
