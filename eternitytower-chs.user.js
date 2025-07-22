@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Eternity Tower 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.2.7
+// @version      0.2.8
 // @description  Eternity Tower (https://tower.bluesky.site) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Eternity Tower.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1063,6 +1063,7 @@ var cnItems = {
     'gold chestplate': '金胸甲',
     'gold platelegs': '金腿甲',
     'hickory log': '山核桃原木',
+    'hickory book': '山核桃书',
     'Need/Greed Loot - Time Remaining': '需要/贪婪掠夺 - 剩余时间',
     'orichalcum': '星陨石',
     'orichalcum bar': '星陨石锭',
@@ -1650,6 +1651,7 @@ var cnItems = {
     'cobalt short sword': '钴短剑',
     'cobalt spear': '钴矛',
     'cobalt wall': '钴墙',
+    'denya book': '加蓬盘豆木书',
     'denya bow': '加蓬盘豆木弓',
     'denya idol': '加蓬盘豆木雕像',
     'denya staff': '加蓬盘豆木杖',
@@ -3473,8 +3475,8 @@ var cnItems = {
     "Abandoned Lighthouse": "废弃的灯塔",
     "A mysterious and glittering device.": "一个神秘而闪亮的装置。",
     "a day": "1天",
-    "": "",
-    "": "",
+    "Genies Lamp": "神灯",
+    "PQ (Solo)": "单人塔",
     "": "",
     "": "",
     "": "",
@@ -5231,8 +5233,8 @@ var cnPostfix = {
     "Use on an ally to form a mystical bond.  Whenever they are struck in combat, you instantly refill": "在盟友身上使用，形成一个神秘的纽带。当他们在战斗中被击中时，你会立即补充",
     "You may reuse this ability at any time to place it on a different target.\n        You may not use this on yourself and the bond cannot be broken without transferring it to another ally.": "你可以在任何时候重用此技能，将其放置在不同的目标上。你不能在自己身上使用它，并且在不将它转移给其他盟友的情况下，纽带不能被打破。",
     "The greater tungsten spirit is completely immune to all damage.": "高级钨精魂完全免疫所有伤害。",
-    "": "",
-    "": "",
+    "Increase health by 50%": "提升50%生命值",
+    "The tungsten spirit is completely immune to all damage.": "钨精魄对所有伤害都完全免疫。",
     "": "",
     "": "",
     "": "",

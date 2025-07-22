@@ -100,6 +100,18 @@
     content += '<div class="im-footer" style="position:relative">';
     content += '<div class="weixing-container">';
     content += '<div class="weixing-show">';
+    //介绍-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">永恒之塔自动化脚本介绍</div>';
+    content += '1、可以根据需要打开1-4个浏览器标签页，分别打开挖矿、种地、战斗、制作页面；';
+    content += '<br/>';
+    content += '2、各个标签页里面，都只做一件事，然后启动对应的脚本，避免各个页面来回跳。';
+    content += '<br/>';
+    content += '3、脚本的时间间隔不要设太低，以免频繁请求导致服务器卡顿。';
+    content += '<br/>';
+    content += '4、玩家尽量加一下QQ群：867979275，方便组队、问问题。';
+    content += '</div>';
+    //介绍-结束
     //重置脚本-开始
     content += '<div class="JB-form">';
     content += '<div class="tit">重置脚本配置（当出现脚本乱点等不正常情况时使用）</div>';
