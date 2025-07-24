@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Eternity Tower 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.2.8
+// @version      0.2.9
 // @description  Eternity Tower (https://tower.bluesky.site) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Eternity Tower.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -3477,7 +3477,7 @@ var cnItems = {
     "a day": "1天",
     "Genies Lamp": "神灯",
     "PQ (Solo)": "单人塔",
-    "": "",
+    "fire wave tome": "火波卷轴",
     "": "",
     "": "",
     "": "",
@@ -4444,7 +4444,7 @@ var cnPrefix = {
     "Inscribing defense Up Lv. ": "铭刻 防御提升 等级 ",
     "Inscribing Healing Power Up Lv. ": "铭刻 治疗力量提升 等级 ",
     "Inscribing iron will Lv. ": "铭刻 钢铁意志 等级 ",
-    "": "",
+    "vampirism tome Lv. ": "吸血鬼 卷轴 等级 ",
     "": "",
     "": "",
     "": "",
@@ -5484,6 +5484,8 @@ var cnRegReplace = new Map([
     [/^([\d\.]+) OOMs\/sec$/, '$1 OOMs\/秒'],
     [/^([\d\.]+)e([\d\.,]+)\/sec$/, '$1e$2\/秒'],
     [/^F([\d\.]+) $/, '层 $1 '],
+    [/^falcon T([\d\.]+)$/, '猎鹰 T$1'],
+    [/^damage T([\d\.]+)$/, '伤害 T$1'],
     [/^damage T([\d\.]+) $/, '伤害 T$1 '],
     [/^Requires level ([\d\.]+) $/, '需要等级 $1 '],
     [/^requires ([\d\.]+) more research points$/, '需要$1个研究点'],
