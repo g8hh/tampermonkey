@@ -1,22 +1,23 @@
 // ==UserScript==
-// @name         Fair Game 简中汉化脚本
+// @name         xxxx 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.8
-// @description  网页游戏 Fair Game (https://fair.kaliburg.de/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Fair Game.
+// @version      0.0.1
+// @description  网页游戏 xxxxx (https://www.xxxxx.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
-// @icon         https://fair.kaliburg.de/favicon.ico
+// @icon         https://www.zed.city/icons/favicon.svg
 // @license      MIT
-// @include      *https://fair.kaliburg.de*
+// @include      *https://www.xxxxx.com/*
 // @grant        none
+// @require      https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js
 // @website      https://www.gityx.com/
-// @updateURL    https://g8hh.com.cn/zh/tampermonkey/fair-chs.user.js
-// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/fair-chs.user.js
+// @updateURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
+// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
 // ==/UserScript==
 /**
  * ---------------------------
- * Time: 2025/06/09 10:08
+ * Time: 2025/06/15 21:19
  * Author: guoba
  * View: https://www.gityx.com/
  * ---------------------------
@@ -77,194 +78,6 @@ var cnItems = {
     "Duplicate": "复制",
     "Mute": "静音",
     "Unmute": "播放",
-    "Message length:": "消息长度:",
-    "[citation needed]": "[来源请求]",
-    "Account": "账户",
-    "DEF": "默认",
-    "Fair": "公平",
-    "Game": "游戏",
-    "Grapes": "葡萄",
-    "Open Main Menu": "打开主菜单",
-    "Points": "点数",
-    "Round:": "回合:",
-    "Rules": "规则",
-    "Send": "发送",
-    "Username": "用户名",
-    "Mystery Guest": "神秘游客",
-    "Mysterious Guest": "神秘游客",
-    "Back": "返回",
-    "E-Mail:": "邮箱:",
-    "Edit": "编辑",
-    "Tip": "提示",
-    "Try to collect a lot of power while staying on low position. Then shoot up the ranks, while carrying your power/sec through multi + bias instead of your position.": "尽量收集大量的能量，同时保持在低位置。然后迅速提升排名，同时通过乘数+天赋而不是你的位置来携带你的能量/秒。",
-    "Account:": "账号:",
-    "Buy Autopromote": "购买自动晋升",
-    "Change Password": "修改密码",
-    "Apply": "确认",
-    "Power": "能量",
-    "Logout": "登出",
-    "Ladder:": "天梯:",
-    "Chat": "聊天",
-    "Hide inactive rankers:": "隐藏不活跃的排名：",
-    "Hide promoted rankers:": "隐藏晋升的排名：",
-    "Hide vinegar and grape count:": "隐藏醋和葡萄数量：",
-    "Play sound on promotion:": "晋级时播放音效：",
-    "Play sound on mention:": "被@提到时播放音效：",
-    "Play sound on reaching first:": "达到第一时播放音效：",
-    "Select Theme:": "选择主题:",
-    "Show XX Ranker Above:": "在上面显示XX排名：",
-    "Show XX Ranker Below:": "在下面显示XX排名：",
-    "Show XX Bottom Ranker:": "显示下面XX排名：",
-    "Show XX Top Ranker:": "显示上面XX排名：",
-    "Sound": "声音",
-    "Themes": "主题",
-    "General": "常规",
-    "Enable Chat": "启用聊天",
-    "Enable Ladder": "启用天梯",
-    "Next": "下一个",
-    "The farm that propels you to AH is the good one.": "",
-    "The goal is to reach rank 1 on this ladder and promote to the next.": "目标是在这个天梯中达到第1名，并晋级到下一个天梯。",
-    "Show All Ranker:": "显示全部排名：",
-    "Show asshole-points subsection:": "展示混蛋点数小节：",
-    "Goal of Ladder": "天梯目标",
-    "Goal of Game": "游戏天梯",
-    "Once you reach the last Ladder, you can \"be an asshole\" and reset the round for everyone, gaining prestige.": "一旦你到达最后一个天梯，你就可以“成为一个混蛋”，重置每个人的回合，获得声望。",
-    "Done": "完成",
-    "Escaping this ladder is not as easy, since you can get shot down by your competition. The reason is needing to wait for 30sec on rank 1.": "逃离这个天梯并不容易，因为你可能会被竞争对手击败。原因是当你排名第一时需要等待30秒。",
-    "Sabotage": "妨碍",
-    "To shoot someone down or prevent getting shot down, you need grapes. You can get these by either being in last place or getting passed by another Ranker.": "为了击落某人或防止被击落，你需要葡萄。你可以通过成为最后一名或被其他排名者超越来获得这些。",
-    "AutoPromote": "自动晋升",
-    "AutoPromote Costs": "自动晋升成本",
-    "If you want skip the 30sec wait window and promotes once you reach rank 1 you can buy autopromote with hard-earned grapes.": "如果你想跳过30秒的等待窗口，当你达到1级时，你可以用辛苦赚来的葡萄购买自动晋升。",
-    "The further down you are the less the autopromote costs, so try to buy before starting the final climb.": "你的位置越低，自动晋升的成本就越低，所以尽量在开始最后的攀升之前购买。",
-    "Power-Gain": "能量增益",
-    "Promote @": "晋升 @",
-    "Shielded": "护盾",
-    "Vinegar": "醋",
-    "Vinegar Settings": "醋设置",
-    "Vinegar-Throws:": "醋-扔：",
-    "Login": "登录",
-    "Play as Guest": "以游客身份进行游戏",
-    "Don't have an account?": "还没有账号？",
-    "Forgot Password?": "忘记密码？",
-    "Forgot Password": "忘记密码",
-    "Password:": "密码:",
-    "Remember me:": "记住我:",
-    "Signup": "注册",
-    "Submit": "提交",
-    "Got a token already?": "已经有一个令牌了？",
-    "Please enter your email below to receive a password reset token.": "请在下面输入您的电子邮件以接收密码重置令牌。",
-    "Already have an account?": "已经有一个账号了？",
-    "and": "和",
-    "By continuing, you are setting up a FairGame account (or logging in to your current one) and agree to our": "通过继续，您正在设置一个公平游戏帐户（或登录到您当前的一个），并同意我们的",
-    "Privacy Policy.": "隐私政策。",
-    "New Password:": "新密码:",
-    "Repeat Password:": "重复密码:",
-    "Token:": "令牌:",
-    "Please look into your inbox and copy the token into the input below. Then choose a new password.": "请查看您的收件箱并将令牌复制到下面的输入中。然后选择一个新密码。",
-    "Email needs to be a valid email address": "电子邮箱必须是一个有效的电子邮件地址",
-    "Import UUID": "导入 UUID",
-    "Continue": "继续",
-    "Are you sure you want to continue? (You can link your account to an email later on)": "你确定要继续吗？（稍后您可以将您的帐户与电子邮件链接）",
-    "To enhance your account experience, we recommend linking your existing UUID. By doing so, you can seamlessly continue using your current account with all its features. As a guest, your access is limited, and there is a higher risk of encountering malicious scripts or losing your progress.": "为了增强您的帐户体验，我们建议链接您现有的UUID。通过这样做，您可以无缝地继续使用当前帐户的所有功能。作为访客，您的访问权限是有限的，并且遇到恶意脚本或丢失进度的风险更高。",
-    "Failed to import your UUID!": "导入UUID失败！",
-    "Invalid username or password": "无效的用户名或密码",
-    "Tutorials": "教程",
-    "Skip Tutorials": "跳过教程",
-    "Reset Tutorials": "重置教程",
-    "Privacy Policy": "隐私政策",
-    "Wine/Vinegar Split:": "酒/醋分配：",
-    "(Active)": "(活跃)",
-    "Export UUID": "导出 UUID",
-    "Link Account to Email": "链接账户到邮箱",
-    "Please enter your email and your password below to link your guest account to an email.": "请在下面输入您的电子邮箱和密码，将您的游客账户与电子邮件连接。",
-    "Another use of Grapes is to generate side-products such as vinegar and wine. You can set the split in the grapes-settings menu.": "葡萄的另一个用途是生产副产品，如醋和葡萄酒。你可以在葡萄设置菜单中设置分配。",
-    "Split Grapes": "分配葡萄",
-    "When you have enough vinegar you can throw between 25% - 100% of your current Vinegar.": "当你有足够的醋时，你可以扔掉25% - 100%的醋。",
-    "Wine": "酒",
-    "Throwing Vinegar": "扔醋",
-    "Wine is a 1 time shield, that's active when you have more wine than vinegar. The overflow hits the vinegar of the target.": "葡萄酒是一个一次盾牌，当你的葡萄酒比醋多时，它会被激活。溢出击中目标的醋。",
-    "Refunds": "退还",
-    "When either wine or vinegar hit 0 you get for each of them 25% of your vinegar from before the throw back (up to 25%, which is the minimum amount of vinegar you need to throw)": "当葡萄酒或醋中的任何一种达到0时，你可以从扔回之前得到25%的醋（最高可达25%，这是你需要扔回的醋的最低数量）",
-    "Finishing a ladder in the Top 10 also rewards Grapes/Vinegar/AutoPromotes.": "完成前10名的天梯也会奖励 葡萄/醋/自动晋升。",
-    "Top10": "前10",
-    "Balance": "平衡",
-    "Need to keep a balance on Vinegar/Wine & Grapes while climbing faster than the others.": "需要在醋/葡萄酒和葡萄上保持平衡，同时比其他人攀升得更快。",
-    "Good Luck": "祝你好运",
-    "Good Luck competing with your fellow Rankers and don't forget to check out our wiki or discord. <3": "祝你在与其他排名者的竞争中好运，不要忘记查看我们的wiki或discord。<3",
-    "1. First Steps": "1. 第一步",
-    "2. Upgrades": "2. 升级",
-    "3. Climbing the Ladder": "3. 攀升天梯",
-    "4. Grapes & AutoPromote": "4. 葡萄 & 自动晋升",
-    "5. Vinegar & Wine": "5. 醋 & 酒",
-    "6. Good Luck": "6. 祝你好运",
-    "Welcome": "欢迎",
-    "Welcome to the FairGame-Tutorial!": "欢迎来到 公平游戏 教程！",
-    "Help": "帮助",
-    "If you are ever stuck you can always check this tutorial again or ask in chad.": "如果你被卡住了，你可以再次查看本教程或在聊天里面询问。",
-    "These are your Points, you get a number of Points/sec based on your Power.": "这些是你的点数，你每秒钟得到的点数是基于你的能量。",
-    "This is your Power, you get a number of Power/sec based on how low you rank.": "这是你的能量，你将根据你的等级得到一定数量的能量/秒。",
-    "Bias": "天赋",
-    "You can increase your power/sec by 1, by resetting all your points and buying 1 bias.": "你可以通过重置你所有的点数和购买1个天赋来增加你的能量/秒。",
-    "Users": "用户",
-    "Time": "时间",
-    "Amount": "数量",
-    "Show Throw-Log": "显示扔醋日志",
-    "Percentage Thrown:": "扔出百分比:",
-    "Save Split": "保存分配",
-    "SMALL": "小",
-    "Stay Shielded": "保持护盾",
-    "Position": "位置",
-    "Position is based on Points. If you overtake someone else's points you raise one rank.": "位置以点数为基础。如果你超过了别人的点数，你将提升一个等级。",
-    "Power/sec Formula": "能量/秒 公式",
-    "You gain power based on the formula": "你根据公式获得能量",
-    "power/sec = multi * (bias + rank - 1)": "能量/秒 = 乘数 * (天赋 + 排名 - 1)",
-    "Multi": "乘数",
-    "Best way to increase power/sec is to multi, which also resets all bias/power/points.": "增加 能量/秒 的最佳方法是乘数，这也重置了所有的 天赋/能量/点数。",
-    "Expensive: Multi and bias purchases are more expensive on this ladder.": "昂贵：在这个天梯，乘数和天赋购买更昂贵。",
-    "Free Auto: Auto-promote is automatically gifted to all rankers on this ladder.": "免费自动：在这个天梯自动晋升是自动授予给所有排名的。",
-    "Default: Nothing special at all.": "默认：没有什么特别的。",
-    "Small: This ladder is shorter than usual.": "小：这个天梯比平常要短。",
-    "FAUTO": "免费自动",
-    "EXPSV": "昂贵",
-    "Lock Buttons": "锁定按钮",
-    "Add": "添加",
-    "Color the bias/multi:": "天赋/乘数颜色：",
-    "ETA Colors:": "预计时间 颜色:",
-    "Follow own ranker:": "关注自己的排名：",
-    "Ignored rankers (by ranker id):": "忽略排名（按排名id）：",
-    "Off": "关",
-    "Ladder": "天梯",
-    "Lock Buttons:": "锁定按钮:",
-    "Show bias/multi for ranker:": "显示排名者 天赋/乘数：",
-    "Show ETA to top/ranker:": "显示 登顶/排名者 预计时间：",
-    "Show power-gain for ranker:": "显示排名的能量增益：",
-    "Subscribed mentions:": "订阅提及：",
-    "Upload Custom Theme:": "上传自定义主题：",
-    "GLOBAL": "全局",
-    "If you have any questions, ideas, want to stay up to date to the latest updates or simply just want to chat with your\nfellow rankers, without having Chad listening, you can join us on our": "如果你有任何问题，想法，想要跟上最新的更新，或者只是想和你的排名伙伴聊天，没有查德听，你可以加入我们的",
-    "I appreciate everyone that's part of this amazing community. Thank you and have a grape!": "我感谢这个神奇社区的每一个人。谢谢你，吃颗葡萄吧！",
-    "You can also talk to a moderator about it:": "你也可以和版主讨论：",
-    "Please follow the rules below to keep things fair and comfy:": "请遵守以下规则，以保持公平和舒适：",
-    "The game is in testing phase; we ask that you report any bugs found and are not abusing them.": "游戏正处于测试阶段；我们要求您报告发现的任何错误，并且不要滥用它们。",
-    "A basic measure of respect, regarding the users of this server, is necessary.": "对于这个服务器的用户来说，基本的尊重度量是必要的。",
-    "We don't allow promotion and/or advertisement unless the explicitly permitted.": "除非得到明确许可，否则我们不允许促销和/或广告。",
-    "We don't tolerate any form of racism, homophobia, transphobia and/or any hostile statements toward LGBTQ+.": "我们不容忍任何形式的种族主义、同性恋恐惧症、变性恐惧症和/或任何对LGBTQ+的敌意言论。",
-    "This server is for all age-groups, so all pornographic and/or NSFL content is forbidden.": "此服务器适用于所有年龄组，因此禁止所有色情和/或NSFL内容。",
-    "Please keep the chat in english and the usernames interpretable.": "请使用英文聊天，保证用户名可翻译。",
-    "Don't use any malicious and/or automating scripts.": "不要使用任何恶意和/或自动化脚本。",
-    "Don't use multiple accounts during the same round.": "不要在同一回合使用多个账户。",
-    "No posting of uuids, emails, passwords and/or sensitive data.": "禁止发布uuid、电子邮件、密码和/或敏感数据。",
-    "Griefing is prohibited; repeatedly and intentionally making the game worse for everybody else can lead to a warning\nand ban.": "禁止恶意破坏;反复地故意地让游戏变得更糟，可能会导致警告和封号。",
-    "All members of the community are expected to comply with official requests from moderators. If you think any mod is\nmisusing their power please write @kaliburg a message on discord.": "社区的所有成员都应该遵守版主的官方要求。如果你认为任何mod都在滥用他们的权力，请给@kaliburg留言。",
-    "SHORT": "短",
-    "Short: Fewer ladders": "短：天梯榜更少",
-    "The throw was completely absorbed by the target's shield.": "投掷完全被目标的护盾吸收。",
-    "The throw broke through the target's shield and depleted all of their vinegar. (Refunds 25%)": "投掷突破了目标的护盾，耗尽了他们所有的醋。(退还25%)",
-    "The target had no shield, but the throw would have been enough to deplete both their vinegar and wine. (Refunds 25%)": "目标没有护盾，但这一掷足以耗尽他们的醋和酒。(退还25%)",
-    "Promote": "晋升",
-    "BIG": "大",
-    "Big: This ladder is longer than usual.": "大：这个天梯比平常要长。",
     "": "",
     "": "",
     "": "",
@@ -300,8 +113,12 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
-    "ETA -> You": "预计时间 -> 你",
-
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     // 图标代码，不能汉化
     "Jacorb's Games": "Jacorb's Games",
     "": "",
@@ -311,8 +128,14 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
+    "+": "+",
+    ".": ".",
+    "…": "…",
     ":": ":",
-    "/": "/",
+    "-": "-",
+    "|": "|",
+    "(": "(",
+    ")": ")",
     "Scientific": "科学计数法",
     "Standard": "标准",
     "Blind": "盲文",
@@ -379,7 +202,7 @@ var cnItems = {
     '更多同类游戏:': '更多同类游戏:',
     'i': 'i',
     'I': 'I',
-    'II': 'I',
+    'II': 'II',
     'III': 'III',
     'IV': 'IV',
     'V': 'V',
@@ -419,13 +242,36 @@ var cnItems = {
     'X': 'X',
     'Y': 'Y',
     'Z': 'Z',
+    'a': 'a',
+    'b': 'b',
+    'c': 'c',
+    'd': 'd',
+    'e': 'e',
+    'f': 'f',
+    'g': 'g',
+    'h': 'h',
+    'i': 'i',
+    'j': 'j',
+    'k': 'k',
+    'l': 'l',
+    'm': 'm',
+    'n': 'n',
+    'o': 'o',
+    'p': 'p',
+    'q': 'q',
+    'r': 'r',
+    's': 's',
+    't': 't',
+    'u': 'u',
+    'v': 'v',
+    'w': 'w',
+    'x': 'x',
+    'y': 'y',
+    'z': 'z',
     '<': '<',
     '<<': '<<',
     '>': '>',
     '>>': '>>',
-    "Gityx": "Gityx",
-    "Gz": "Gz",
-    "O": "O",
     'Jan': '1月',
     'Feb': '2月',
     'Mar': '3月',
@@ -449,24 +295,24 @@ var cnItems = {
 //需处理的前缀
 var cnPrefix = {
     "\n": "\n",
-    "                   ": "",
-    "                  ": "",
-    "                 ": "",
-    "                ": "",
-    "               ": "",
-    "              ": "",
-    "             ": "",
-    "            ": "",
-    "           ": "",
-    "          ": "",
-    "         ": "",
-    "        ": "",
-    "       ": "",
-    "      ": "",
-    "     ": "",
-    "    ": "",
-    "   ": "",
-    "  ": " ",
+    "                   ": "                   ",
+    "                  ": "                  ",
+    "                 ": "                 ",
+    "                ": "                ",
+    "               ": "               ",
+    "              ": "              ",
+    "             ": "             ",
+    "            ": "            ",
+    "           ": "           ",
+    "          ": "          ",
+    "         ": "         ",
+    "        ": "        ",
+    "       ": "       ",
+    "      ": "      ",
+    "     ": "     ",
+    "    ": "    ",
+    "   ": "   ",
+    "  ": "  ",
     " ": " ",
     //树游戏
     "\t\t\t": "\t\t\t",
@@ -487,15 +333,18 @@ var cnPrefix = {
     "Shift-Click to Toggle Tooltips: ": "Shift-单击以切换工具提示：",
     "Notation: ": "符号: ",
     "Toggle Music: ": "切换声音: ",
-    "Base Points for Promotion: ": "基础晋升点数: ",
-    "Active Rankers: ": "活跃排名：",
-    "Ladders: ": "天梯: ",
-    "Points for Promotion: ": "晋升点数：",
-    "Power [M: x": "能量 [乘数: x",
-    "Strength: ": "强度: ",
-    "Current: ": "当前: ",
-    "Notification volume: ": "通知音量：",
-    "ETA -> L": "预计时间 -> 天梯",
+    "Animations: ": "动画: ",
+    "Current Endgame: ": "当前终局: ",
+    "Space Background: ": "太空背景: ",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": "",
     "": "",
     "": "",
@@ -590,8 +439,11 @@ var cnExcludeWhole = [
     /^([\d\.]+)y ([\d\.]+)d ([\d\.]+)h ([\d\.]+)m ([\d\.]+)s$/,
     /^([\d\.]+)y ([\d\.]+)d ([\d\.]+)h$/,
     /^([\d\.]+)\-([\d\.]+)\-([\d\.]+)$/,
-    /^([\d\.]+)e(\d+)$/,
+    /^([\d\.]+)e([\d\.,]+)$/,
     /^([\d\.]+)$/,
+    /^×([\d\.]+)$/,
+    /^x([\d\.]+)$/,
+    /^v([\d\.]+)$/,
     /^\$([\d\.]+)$/,
     /^\(([\d\.]+)\)$/,
     /^([\d\.]+)\%$/,
@@ -600,13 +452,10 @@ var cnExcludeWhole = [
     /^([\d\.,]+)\/([\d\.,]+)$/,
     /^\(([\d\.]+)\/([\d\.]+)\)$/,
     /^成本(.+)$/,
-    /^周(.+)$/,
-    /^\@(.+)$/,
     /^\(([\d\.]+)\%\)$/,
     /^([\d\.]+):([\d\.]+):([\d\.]+)$/,
     /^([\d\.]+)K$/,
     /^([\d\.]+)M$/,
-    /^([\d\.]+)M\/$/,
     /^([\d\.]+)B$/,
     /^([\d\.]+) K$/,
     /^([\d\.]+) M$/,
@@ -614,18 +463,23 @@ var cnExcludeWhole = [
     /^([\d\.]+) T$/,
     /^([\d\.]+) Qi$/,
     /^([\d\.]+) Qa$/,
+    /^([\d\.]+) Sp$/,
+    /^([\d\.]+) Oc$/,
+    /^([\d\.]+) Dc$/,
+    /^([\d\.]+) UDc$/,
+    /^([\d\.]+) No$/,
+    /^([\d\.]+) Sx$/,
+    /^([\d\.]+) QaDc$/,
     /^([\d\.]+)s$/,
     /^([\d\.]+)x$/,
     /^x([\d\.]+)$/,
     /^([\d\.,]+)$/,
-    /^([\d\.,]+)\/$/,
     /^\$([\d\.,]+)$/,
     /^\+([\d\.,]+)$/,
     /^\-([\d\.,]+)$/,
     /^([\d\.,]+)x$/,
     /^x([\d\.,]+)$/,
-    /^\#([\d\.,]+)$/,
-    /^ \#([\d\.,]+)$/,
+    /^×([\d\.,]+)$/,
     /^([\d\.,]+) \/ ([\d\.,]+)$/,
     /^([\d\.]+)e([\d\.,]+)$/,
     /^([\d\.]+)e([\d\.,]+) \/ ([\d\.]+)e([\d\.,]+)$/,
@@ -653,17 +507,30 @@ var cnRegReplace = new Map([
     [/^You are gaining (.+) elves per second$/, '你每秒获得 $1 精灵'],
     [/^You have (.+) points$/, '你有 $1 点数'],
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
-    [/^\((.+)\%\) (.+) Vinegar$/, '\($1\%\) $2 醋'],
-    [/^\((.+)\%\) (.+) x Vinegar\/s$/, '\($1\%\) $2 x 醋\/秒'],
-    [/^\[B: \+([\d\.]+)\] (.+)\/$/, '\[天赋: \+$1 $2\/'],
-    [/^Welcome to the game (.+)! o\/ If you want to join the \"walling\" be sure to not buy auto promote!$/, '欢迎来到游戏 ￥1! o/ 如果你想加入“墙”一定不要购买自动晋升！'],
-    [/^Throw (.+) Vinegar$/, '扔 $1 醋'],
-    [/^Threw (.+) of their Vinegar$/, '扔了他们 $1 的醋'],
-    [/^Throw (.+) Vinegar (.+)$/, '扔 $1 醋 $2'],
-    [/^(.+) Wine\/s \((.+)\%\)$/, '$1 酒\/秒 \($2\%\)'],
-    [/^(.+) threw (.+) vinegar at you!$/, '$1 向你扔了 $2 醋'],
-    [/^Points \((.+)\%\) \((.+)\)$/, '点数 ($1\%) ($2)'],
-    [/^. They are the (.+) lucky initiate for the (.+) big ritual.$/, '。他们是第 $2 大祭典的第 $1 位幸运入会者。'],
+    [/^Jan ([\d\.,]+)$/, '1 月 $1'],
+    [/^Feb ([\d\.,]+)$/, '2 月 $1'],
+    [/^Mar ([\d\.,]+)$/, '3 月 $1'],
+    [/^Apr ([\d\.,]+)$/, '4 月 $1'],
+    [/^May ([\d\.,]+)$/, '5 月 $1'],
+    [/^Jun ([\d\.,]+)$/, '6 月 $1'],
+    [/^Jul ([\d\.,]+)$/, '7 月 $1'],
+    [/^Aug ([\d\.,]+)$/, '8 月 $1'],
+    [/^Sep ([\d\.,]+)$/, '9 月 $1'],
+    [/^Oct ([\d\.,]+)$/, '10 月 $1'],
+    [/^Nov ([\d\.,]+)$/, '11 月 $1'],
+    [/^Dec ([\d\.,]+)$/, '12 月 $1'],
+    [/^January, ([\d\.,]+)$/, '$1 年 1 月'],
+    [/^February, ([\d\.,]+)$/, '$1 年 2 月'],
+    [/^March, ([\d\.,]+)$/, '$1 年 3 月'],
+    [/^April, ([\d\.,]+)$/, '$1 年 4 月'],
+    [/^May, ([\d\.,]+)$/, '$1 年 5 月'],
+    [/^June, ([\d\.,]+)$/, '$1 年 6 月'],
+    [/^July, ([\d\.,]+)$/, '$1 年 7 月'],
+    [/^August, ([\d\.,]+)$/, '$1 年 8 月'],
+    [/^September, ([\d\.,]+)$/, '$1 年 9 月'],
+    [/^October, ([\d\.,]+)$/, ' $1 年 10 月'],
+    [/^November, ([\d\.,]+)$/, ' $1 年 11 月'],
+    [/^December, ([\d\.,]+)$/, ' $1 年 12 月'],
     [/^Jan ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 1 月 $1, $3:$4'],
     [/^Feb ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 2 月 $1, $3:$4'],
     [/^Mar ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 3 月 $1, $3:$4'],
@@ -676,6 +543,91 @@ var cnRegReplace = new Map([
     [/^Oct ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 10 月 $1, $3:$4'],
     [/^Nov ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 11 月 $1, $3:$4'],
     [/^Dec ([\d\.,]+) ([\d\.,]+), ([\d\.,]+):([\d\.,]+)$/, '$2 年 12 月 $1, $3:$4'],
+	[/^Jan ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '1月 $1 上午 $2:$3:$4'],
+	[/^Feb ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '2月 $1 上午 $2:$3:$4'],
+	[/^Mar ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '3月 $1 上午 $2:$3:$4'],
+	[/^Apr ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '4月 $1 上午 $2:$3:$4'],
+	[/^May ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '5月 $1 上午 $2:$3:$4'],
+	[/^Jun ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '6月 $1 上午 $2:$3:$4'],
+	[/^Jul ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '7月 $1 上午 $2:$3:$4'],
+	[/^Aug ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '8月 $1 上午 $2:$3:$4'],
+	[/^Sep ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '9月 $1 上午 $2:$3:$4'],
+	[/^Oct ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '10月 $1 上午 $2:$3:$4'],
+	[/^Nov ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '11月 $1 上午 $2:$3:$4'],
+	[/^Dec ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) AM$/, '12月 $1 上午 $2:$3:$4'],
+	[/^Jan ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '1月 $1 下午 $2:$3:$4'],
+	[/^Feb ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '2月 $1 下午 $2:$3:$4'],
+	[/^Mar ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '3月 $1 下午 $2:$3:$4'],
+	[/^Apr ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '4月 $1 下午 $2:$3:$4'],
+	[/^May ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '5月 $1 下午 $2:$3:$4'],
+	[/^Jun ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '6月 $1 下午 $2:$3:$4'],
+	[/^Jul ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '7月 $1 下午 $2:$3:$4'],
+	[/^Aug ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '8月 $1 下午 $2:$3:$4'],
+	[/^Sep ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '9月 $1 下午 $2:$3:$4'],
+	[/^Oct ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '10月 $1 下午 $2:$3:$4'],
+	[/^Nov ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '11月 $1 下午 $2:$3:$4'],
+	[/^Dec ([\d\.]+), ([\d\.]+):([\d\.]+):([\d\.]+) PM$/, '12月 $1 下午 $2:$3:$4'],
+	[/^Jan ([\d\.]+), ([\d\.]+) AM$/, '1月 $1 上午 $2'],
+	[/^Feb ([\d\.]+), ([\d\.]+) AM$/, '2月 $1 上午 $2'],
+	[/^Mar ([\d\.]+), ([\d\.]+) AM$/, '3月 $1 上午 $2'],
+	[/^Apr ([\d\.]+), ([\d\.]+) AM$/, '4月 $1 上午 $2'],
+	[/^May ([\d\.]+), ([\d\.]+) AM$/, '5月 $1 上午 $2'],
+	[/^Jun ([\d\.]+), ([\d\.]+) AM$/, '6月 $1 上午 $2'],
+	[/^Jul ([\d\.]+), ([\d\.]+) AM$/, '7月 $1 上午 $2'],
+	[/^Aug ([\d\.]+), ([\d\.]+) AM$/, '8月 $1 上午 $2'],
+	[/^Sep ([\d\.]+), ([\d\.]+) AM$/, '9月 $1 上午 $2'],
+	[/^Oct ([\d\.]+), ([\d\.]+) AM$/, '10月 $1 上午 $2'],
+	[/^Nov ([\d\.]+), ([\d\.]+) AM$/, '11月 $1 上午 $2'],
+	[/^Dec ([\d\.]+), ([\d\.]+) AM$/, '12月 $1 上午 $2'],
+	[/^Jan ([\d\.]+), ([\d\.]+) PM$/, '1月 $1 下午 $2'],
+	[/^Feb ([\d\.]+), ([\d\.]+) PM$/, '2月 $1 下午 $2'],
+	[/^Mar ([\d\.]+), ([\d\.]+) PM$/, '3月 $1 下午 $2'],
+	[/^Apr ([\d\.]+), ([\d\.]+) PM$/, '4月 $1 下午 $2'],
+	[/^May ([\d\.]+), ([\d\.]+) PM$/, '5月 $1 下午 $2'],
+	[/^Jun ([\d\.]+), ([\d\.]+) PM$/, '6月 $1 下午 $2'],
+	[/^Jul ([\d\.]+), ([\d\.]+) PM$/, '7月 $1 下午 $2'],
+	[/^Aug ([\d\.]+), ([\d\.]+) PM$/, '8月 $1 下午 $2'],
+	[/^Sep ([\d\.]+), ([\d\.]+) PM$/, '9月 $1 下午 $2'],
+	[/^Oct ([\d\.]+), ([\d\.]+) PM$/, '10月 $1 下午 $2'],
+	[/^Nov ([\d\.]+), ([\d\.]+) PM$/, '11月 $1 下午 $2'],
+	[/^Dec ([\d\.]+), ([\d\.]+) PM$/, '12月 $1 下午 $2'],
+	[/^Jan (.+), ([\d\.]+)$/, '$2 年 1 月 $1'],
+	[/^Feb (.+), ([\d\.]+)$/, '$2 年 2 月 $1'],
+	[/^Mar (.+), ([\d\.]+)$/, '$2 年 3 月 $1'],
+	[/^Apr (.+), ([\d\.]+)$/, '$2 年 4 月 $1'],
+	[/^May (.+), ([\d\.]+)$/, '$2 年 5 月 $1'],
+	[/^Jun (.+), ([\d\.]+)$/, '$2 年 6 月 $1'],
+	[/^Jul (.+), ([\d\.]+)$/, '$2 年 7 月 $1'],
+	[/^Aug (.+), ([\d\.]+)$/, '$2 年 8 月 $1'],
+	[/^Sep (.+), ([\d\.]+)$/, '$2 年 9 月 $1'],
+	[/^Oct (.+), ([\d\.]+)$/, '$2 年 10 月 $1'],
+	[/^Nov (.+), ([\d\.]+)$/, '$2 年 11 月 $1'],
+	[/^Dec (.+), ([\d\.]+)$/, '$2 年 12 月 $1'],
+	[/^January ([\d\.]+) Theme$/, '$1 年 1 月 主题'],
+	[/^February ([\d\.]+) Theme$/, '$1 年 2 月 主题'],
+	[/^March ([\d\.]+) Theme$/, '$1 年 3 月 主题'],
+	[/^April ([\d\.]+) Theme$/, '$1 年 4 月 主题'],
+	[/^May ([\d\.]+) Theme$/, '$1 年 5 月 主题'],
+	[/^June ([\d\.]+) Theme$/, '$1 年 6 月 主题'],
+	[/^July ([\d\.]+) Theme$/, '$1 年 7 月 主题'],
+	[/^August ([\d\.]+) Theme$/, '$1 年 8 月 主题'],
+	[/^September ([\d\.]+) Theme$/, '$1 年 9 月 主题'],
+	[/^October ([\d\.]+) Theme$/, '$1 年 10 月 主题'],
+	[/^November ([\d\.]+) Theme$/, '$1 年 11 月 主题'],
+	[/^December ([\d\.]+) Theme$/, '$1 年 12 月 主题'],
+	[/^Jan ([\d\.]+) \- Jan ([\d\.]+)$/, '1 月 $1 \- 1 月 $2'],
+	[/^Feb ([\d\.]+) \- Feb ([\d\.]+)$/, '2 月 $1 \- 2 月 $2'],
+	[/^Mar ([\d\.]+) \- Mar ([\d\.]+)$/, '3 月 $1 \- 3 月 $2'],
+	[/^Apr ([\d\.]+) \- Apr ([\d\.]+)$/, '4 月 $1 \- 4 月 $2'],
+	[/^May ([\d\.]+) \- May ([\d\.]+)$/, '5 月 $1 \- 5 月 $2'],
+	[/^Jun ([\d\.]+) \- Jun ([\d\.]+)$/, '6 月 $1 \- 6 月 $2'],
+	[/^Jul ([\d\.]+) \- Jul ([\d\.]+)$/, '7 月 $1 \- 7 月 $2'],
+	[/^Jun ([\d\.]+) \- Jul ([\d\.]+)$/, '6 月 $1 \- 7 月 $2'],
+	[/^Aug ([\d\.]+) \- Aug ([\d\.]+)$/, '8 月 $1 \- 8 月 $2'],
+	[/^Sep ([\d\.]+) \- Sep ([\d\.]+)$/, '9 月 $1 \- 9 月 $2'],
+	[/^Oct ([\d\.]+) \- Oct ([\d\.]+)$/, '10 月 $1 \- 10 $2'],
+	[/^Nov ([\d\.]+) \- Nov ([\d\.]+)$/, '11 月 $1 \- 11 $2'],
+	[/^Dec ([\d\.]+) \- Dec ([\d\.]+)$/, '12 月 $1 \- 12 $2'],
 	[/^([\d\.]+)\/sec$/, '$1\/秒'],
 	[/^([\d\.,]+)\/sec$/, '$1\/秒'],
 	[/^([\d\.,]+) OOMs\/sec$/, '$1 OOMs\/秒'],
@@ -687,14 +639,6 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)d ([\d\.]+)h ([\d\.]+)m$/, '$1天 $2小时 $3分'],
     [/^([\d\.]+)e([\d\.,]+) elves$/, '$1e$2 精灵'],
     [/^([\d\.,]+) elves$/, '$1 精灵'],
-    [/^\(\+([\d\.,]+)\/s\)$/, '(\+$1\/秒)'],
-    [/^\+([\d\.,]+) Bias$/, '\+$1 天赋'],
-    [/^\+([\d\.,]+) Multi$/, '\+$1 乘数'],
-    [/^\+B \(([\d\.,]+)s\)$/, '\+天赋 \($1秒\)'],
-    [/^\+M \(([\d\.,]+)s\)$/, '\+乘数 \($1秒\)'],
-    [/^\+M \(([\d\.,]+):([\d\.,]+)\)$/, '\+乘数 \($1:$2\)'],
-    [/^\+B \(([\d\.,]+):([\d\.,]+)\)$/, '\+天赋 \($1:$2\)'],
-    [/^\) (.+) Wine$/, '\) $1 酒'],
     [/^Day ([\d\.,]+)$/, '天数 $1'],
     [/^\*(.+) to electricity gain$/, '\*$1 到电力增益'],
     [/^Cost: (.+) points$/, '成本：$1 点数'],
@@ -887,6 +831,87 @@ function TransSubTextNode(node) {
 }
 
 ! function() {
+    // 引入右侧引导
+    var content = '';
+    content += '<!-- 脚本动态内容 开始 -->';
+    content += '<style>.main-im div{display:block;}.main-im{position:fixed;right:10px;top:calc(50vh + 35px);line-height:normal;z-index:9999;}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-raius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("https://g8hh.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:block;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:125px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;color:#000 !important;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;font-size:12px !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("https://g8hh.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:112px;height:200px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-125px;top:-126px;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("https://g8hh.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("https://g8hh.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .close-ball,.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("https://g8hh.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;top:50vh;}.main-im .close-ball{right:-15px;top:48vh;z-index:9999999;background:none;}</style>';
+    
+    content +='<!-- 客服动态内容 开始 -->';
+     content +='<div class="main-im">';
+    content +='<div id="open_im" class="open-im">&nbsp;</div><div class="close-ball">x</div>';
+    content +='<div class="im_main" id="im_main">';
+    content +='<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>';
+    // content +='<a href="https://qm.qq.com/cgi-bin/qm/qr?k=B1c6jzfLBTtNdim1peh9fSWdaOvvzo_S&jump_from=webapi" target="_blank" class="im-qq qq-a" title="点击加入 - Git游戏交流①群:627141737">';
+    // content +='<a href="https://qm.qq.com/cgi-bin/qm/qr?k=jlS3OQPfjBXuTV6kuLtThF5rICWNZynR&jump_from=webapi&authKey=qiagMjqscueWg8c8xvVh/SFDlYM4qdj/gFXjP/unmipGWDNoGRrCn4yO/+Z2Narl" target="_blank" class="im-qq qq-a" title="点击加入 - Git游戏交流②群:627141737">';
+    content +='<a href="https://qm.qq.com/cgi-bin/qm/qr?k=sCNqtJEi7Qjk-YtwHSs6S4vvVaEBxOO7&jump_from=webapi" target="_blank" class="im-qq qq-a" title="点击加入 - Git游戏交流③群:730783833">';
+    content +='<div class="qq-container"></div>';
+    content +='<div class="qq-hover-c"><img class="img-qq" src="//g8hh.cn/static/images/kf/qq.png"></div>';
+    content +='<span>点击加群</span>';
+    content +='</a>';
+    content +='<div class="im-tel">';
+    content +='<div>QQ群号:</div>';
+    content +='<div class="tel-num">730783833</div>';
+    content +='<div>更多同类游戏:</div>';
+    content +='<div class="tel-num"><a href="https://www.gityx.com" target="_blank" title="Git游戏：gityx.com~">Git游戏</a><a href="https://g8hh.com.cn" target="_blank" style="margin-left:5px;" title="锅巴汉化：g8hh.cn">锅巴汉化</a><br /><a href="https://gityx.com/hanhua/hanhuazhong/733.html" target="_blank" style="margin-left:5px;" title="点击查看游戏攻略" >游戏攻略交流论坛</a><br /><a href="javascript:void(0)" id="keepAlive" title="开启标签页后台运行，让游戏可以在后台继续运行，点击一次即可。" style="color:green !important;">* 启用后台游戏</a></div>';
+    content +='</div>';
+    content +='<div class="im-footer" style="position:relative">';
+    content +='<div class="weixing-container">';
+    content +='<div class="weixing-show">';
+    //content +='<div class="weixing-txt" style="font-size:13px;">支付宝扫一扫<br>每天领红包<br>0.1 - 99元<br><a href="http://g8hh.com/static/article/fuli.html" target="_blank" title="凡是扫这个二维码领的红包，都可以找我拿返现，点击查看详情">查看详情</a></div>';
+    //content +='<img class="weixing-ma" src="//g8hh.com/static/images/kf/zfb-ma.jpg">';
+//    content +='<div class="weixing-txt" style="font-size:13px;">打开手机QQ<br>扫码加群<br>一起讨论吧<br><a href="http://shang.qq.com/wpa/qunwpa?idkey=d10d784492d5e73cca25ff48f4763bdc14f698ffdbf42adbb0e9304495cb0387" target="_blank" title="点击加入 - GitHub游戏交流群:627141737">点击加群</a></div>';
+    content +='<div class="weixing-txt" style="font-size:13px;">打开微信扫一扫<br>关注公众号<br><br><a href="https://mp.weixin.qq.com/s/ezp5x6hOC8QPLnZ2bPFyEw" target="_blank" title="欢迎关注Git游戏关注，每周都有新游戏！">Git游戏</a></div>';
+    content +='<img class="weixing-ma" src="//g8hh.cn/static/images/kf/weixing-ma.jpg">';
+    content +='<div class="weixing-sanjiao"></div>';
+    content +='<div class="weixing-sanjiao-big"></div>';
+    content +='</div>';
+    content +='</div>';
+    content +='<div class="go-top"><a href="javascript:;" title="返回顶部"></a> </div>';
+    content +='<div style="clear:both"></div>';
+    content +='</div>';
+    content +='</div>';
+    content +='</div>';
+    content +='<!-- 客服动态内容 结束 -->';
+    $("body").append(content);
+	$('#close_im').bind('click',function(){
+		$('#main-im').css("height","0");
+		$('#im_main').hide();
+		$('#open_im').show();
+	});
+	$('#open_im').bind('click',function(e){
+		$('#main-im').css("height","272");
+		$('#im_main').show();
+		$(this).hide();
+	});
+	$('.go-top').bind('click',function(){
+		$(window).scrollTop(0);
+	});
+	$(".weixing-container").bind('mouseenter',function(){
+		$('.weixing-show').show();
+	})
+	$(".weixing-container").bind('mouseleave',function(){        
+		$('.weixing-show').hide();
+	});
+    // 启用标签页后台运行
+    $('#keepAlive').bind('click',function(e){
+		var d=document,s=d.createElement('script');s.src='//g8hh.cn/static/js/keepalive.js';d.body.appendChild(s);
+	});
+
+//	定时关闭
+  setTimeout(function () {
+    $('#im_main').hide();
+  },5000);
+      //    关闭小球，防止遮挡
+  $('.close-ball').bind('click', function() {
+    if ($('.close-ball').hasClass('show')) {
+      $('#open_im').show()
+      $('.close-ball').removeClass('show')
+    } else {
+      $('.close-ball').addClass('show')
+      $('.im_main').hide()
+      $('#open_im').hide()
+    }
+  })
     console.log("加载汉化模块");
 
     let observer_config = {
