@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mystery Company 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.40
+// @version      0.0.41
 // @description  网页游戏 Mystery Company (https://mysteryinc.app/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mystery Company.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -124,7 +124,7 @@ var cnItems = {
     "Storage": "存储",
     "The House in the Woods": "森林里的房子",
     "Total Solved": "累计解决",
-    "Trophy Room": "奖杯室",
+    "Trophy Room": "奖杯陈列室",
     "University": "大学",
     "/ sec": "/ 秒",
     "Achievement Unlocked!": "成就解锁！",
@@ -456,7 +456,6 @@ var cnItems = {
     "Roll a legendary figure card": "掷一张传说人物卡",
     "Scholar": "学者",
     "Shelter Maxed": "庇护所最大化",
-    "Shelter Upgraded": "避难所升级",
     "SILVER": "银",
     "Silvercreek Resort": "银溪度假村",
     "Target:": "目标:",
@@ -581,7 +580,6 @@ var cnItems = {
     "Investigation Started!": "调查开始!",
     "Save Deleted": "存档已删除",
     "Game Loaded": "游戏加载成功",
-    "Speed Demon Reward: 3000 coins, 25 crystals": "极速恶魔奖励：3000金币，25个水晶",
     "Save Changes": "保存更改",
     "Find a legendary cave item": "找到一个传说洞穴物品",
     "Sell an item on the market": "在市场上出售一件物品",
@@ -591,7 +589,6 @@ var cnItems = {
     "mystery-finding": "谜团发现",
     "Total Rate": "总几率",
     "Snack Bar": "零食棒",
-    "Shelter Upgraded Reward: 1500 coins": "避难所升级奖励：1500金币",
     "clue-rate": "线索几率",
     "gear-rate": "齿轮几率",
     "Research Lab": "研究实验室",
@@ -1408,9 +1405,9 @@ var cnItems = {
     "FULLY UPGRADED": "满级",
     "Crystallographic scanners detect the unique electromagnetic signatures of crystal formations. This technology identifies gemstone seams and crystalline deposits that would otherwise remain hidden in the rock.": "晶体扫描仪检测晶体形成的独特电磁特征。这项技术可以识别宝石缝和结晶沉积物，否则它们将隐藏在岩石中。",
     "Data Analyzer": "数据分析器",
-    "": "",
-    "": "",
-    "": "",
+    "Storage zone is ready!": "存储空间已就绪！",
+    "Zone Construction Complete": "区域建设完成",
+    "New Zone Discovered!": "发现新区域！",
     "": "",
     "": "",
     "": "",
@@ -1892,7 +1889,8 @@ var cnPrefix = {
     "Resource Hoarder": "资源囤积者",
     "Restaurant Builder": "餐厅建设者",
     "Restaurant Tycoon": "餐饮大亨",
-    "": "",
+    "Shelter Upgraded": "避难所升级",
+    "Arrived at ": "已抵达 ",
     "": "",
     "": "",
     "": "",
@@ -2214,6 +2212,7 @@ var cnRegReplace = new Map([
     [/^ Reward: ([\d\.,]+) crystals$/, ' 奖励: $1 水晶'],
     [/^ Beginner Reward: ([\d\.,]+) coins$/, ' 新手奖励: $1 金币'],
     [/^ Reward: ([\d\.,]+) coins$/, ' 奖励: $1 金币'],
+    [/^ Reward: ([\d\.,]+) coins, ([\d\.,]+) snacks$/, ' 奖励: $1 金币, $2 零食'],
     [/^ Reward: ([\d\.,]+) coins, ([\d\.,]+) crystals$/, ' 奖励: $1 金币, $2 水晶'],
     [/^\+([\d\.,]+) coins, \+([\d\.,]+) crystals, \+([\d\.,]+) EXP$/, '+$1 金币，+$2 水晶，+$3 经验'],
     [/^ completed! \+(.+) coins, \+(.+) crystals, \+(.+) EXP$/, ' 已完成！+$1 金币，+$2 水晶，+$3 经验'],
@@ -2268,6 +2267,7 @@ var cnRegReplace = new Map([
     [/^Upgrade any van upgrade to level ([\d\.,]+)$/, '将任意 货车 升级到等级 $1'],
     [/^Use Auto-Solve to complete ([\d\.,]+) mysteries$/, '使用自动解决去完成 $1 谜团'],
     [/^Journey to Bayhaven Coast will take ([\d\.,]+) seconds$/, '到达 贝黑文海岸 需要 $1 秒'],
+    [/^Journey to Silvercreek Resort will take ([\d\.,]+) seconds$/, '到达 银溪度假村 需要 $1 秒'],
     [/^Reach level ([\d\.,]+)$/, '达到等级 $1'],
     [/^Boosts ([\d\.,]+) double reward$/, '提升 $1 双倍奖励'],
     [/^Boosts ([\d\.,]+) drop rate$/, '提升 $1 掉率'],
