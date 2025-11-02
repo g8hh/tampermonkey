@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Mystery Company 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.52
+// @version      0.0.53
 // @description  网页游戏 Mystery Company (https://mysteryinc.app/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Mystery Company.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
