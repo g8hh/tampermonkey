@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Galactic Tycoons 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.40
+// @version      0.0.42
 // @description  网页游戏 Galactic Tycoons (https://galactictycoons.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Galactic Tycoons.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -18,6 +18,7 @@
  * ---------------------------
  * Time: 2025/10/10 12:56
  * Author: guoba
+ * QQ群: 783419535
  * View: https://www.gityx.com/
  * ---------------------------
  */
@@ -616,8 +617,8 @@ var cnItems = {
     "Minerals": "矿物",
     "Mining Vehicle": "采矿车",
     "Motor": "电动机",
-    "Neoplast": "肿瘤",
-    "Neoplast Sheet": "肿瘤片",
+    "Neoplast": "新塑料",
+    "Neoplast Sheet": "新塑料片材",
     "Nutrient Blend": "营养混合物",
     "Nutritious and flavorful plant products, rich in vitamins, minerals, and natural sugars.": "营养和美味的植物产品，富含维生素，矿物质和天然糖。",
     "Operating System": "操作系统",
@@ -1195,13 +1196,12 @@ var cnItems = {
     "Cancel Order": "取消订单",
     "Candidates": "申请者",
     "Application": "申请",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "If enabled, displays all factories combined.": "如果启用，则显示所有工厂的组合。",
+    " used internally cancel out, leaving only external imports needed and surplus available for export.": "内部使用抵消，只留下需要的外部进口和剩余可用于出口。",
+    " building plots.": "建筑地块。",
+    "Defense systems pack": "防御系统包",
+    "Heat Shielding": "隔热材料",
+    "Leave guild": "离开公会",
     "": "",
     "": "",
     "": "",
@@ -2117,6 +2117,7 @@ var cnPrefix = {
     "Hydrogen": "氢气",
     "Ship Repair Kit": "飞船维修套件",
     "Top Producer: ": "顶级生产商: ",
+    "Leftover materials aren't wasted - they will extend time until next repair by ": "剩余的材料不会被浪费，它们将延长时间，直到下次修理 ",
     "": "",
     "": "",
     "": "",
