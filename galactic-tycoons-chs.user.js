@@ -1202,7 +1202,7 @@ var cnItems = {
     "Defense systems pack": "防御系统包",
     "Heat Shielding": "隔热材料",
     "Leave guild": "离开公会",
-    "": "",
+    "YES, use": "确定, 使用",
     "": "",
     "": "",
     "": "",
