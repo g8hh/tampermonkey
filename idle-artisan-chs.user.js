@@ -8,7 +8,7 @@
 // @contributionUR    https://gityx.com/donate/intro.html
 // @icon         https://idleartisan.com/logo.png
 // @license      MIT
-// @include      *dleartisan.com*
+// @include      *https://idleartisan.com/*
 // @grant        none
 // @website      https://www.gityx.com/
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/idle-artisan-chs.user.js

@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Society Fail 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.79
+// @version      0.0.80
 // @description  网页游戏 Society Fail (https://society.fail/invite/gityx) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Society Fail.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1935,14 +1935,14 @@ var cnItems = {
     "When you die, you respawn at camp but LOSE EVERYTHING in your inventory.": "当你死亡时，你会在营地重生，但会失去所有物品。",
     "Your camp is your safe haven.": "你的营地是你的避风港。",
     "Your inventory is weight-based (default: 100 units).": "你的库存是基于重量的（默认：100单位）。",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "The world disappears in a wall of choking dust.": "世界消失在令人窒息的尘埃中。",
+    "Word spreads of new scavenging grounds. The race is on!": "新的拾荒地的消息传开了。比赛开始了！",
+    "A specialized dormant terminal that once processed complex calculations for The Grid. Efficient but requires careful calibration to reactivate.": "一个专门的休眠终端，曾经为网格处理复杂的计算。高效，但需要仔细校准才能重新激活。",
+    "Deadly hand weapons fitted with bear claws": "配有熊爪的致命手武器",
+    "Mounted wolf head display piece": "挂装的狼头展示件",
+    "Inactive Research Node Terminal": "未激活的研究节点终端",
+    "Outpost Post": "前哨站",
+    "Sand and ash blot out the sun. Stay low.": "沙子和灰烬遮住了阳光。维持在低水平。",
     "": "",
     "": "",
     "": "",
