@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Society Fail 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.80
+// @version      0.0.81
 // @description  网页游戏 Society Fail (https://society.fail/invite/gityx) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Society Fail.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1943,21 +1943,22 @@ var cnItems = {
     "Inactive Research Node Terminal": "未激活的研究节点终端",
     "Outpost Post": "前哨站",
     "Sand and ash blot out the sun. Stay low.": "沙子和灰烬遮住了阳光。维持在低水平。",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Daily Reward!": "每日奖励!",
+    "[CLAIM_REWARD]": "[领取奖励]",
+    "// select one:": "// 请选择一项:",
+    "// select your reward": "// 选择你的奖励",
+    "DAILY_REWARD": "每日奖励",
+    "days)": "天)",
+    "next_milestone: Day": "下一个里程碑: 天数",
+    "Novice": "新手",
+    "Start Your Streak!": "开始你的连续签到！",
+    "CLAIMING...": "领取中...",
+    "[CONTINUE]": "[继续]",
+    "// received": "// 收到了",
+    "Day Streak": "连续签到天数",
+    "REWARD_CLAIMED": "奖励已领取",
+    "day streak": "连续签到天数",
+    "A crude weapon cobbled together from junk. Better than bare fists.": "一件用破烂拼凑而成的粗糙武器。比赤手空拳好。",
     "": "",
     "": "",
     "": "",
@@ -2779,6 +2780,7 @@ var cnRegReplace = new Map([
     [/^([\d\.,]+) km$/, '$1 千米'],
     [/^([\d\.,]+) day$/, '$1 天'],
     [/^([\d\.,]+) days$/, '$1 天'],
+    [/^([\d\.,]+) month$/, '$1 个月'],
     [/^([\d\.,]+) days ago$/, '$1 天前'],
     [/^([\d\.,]+)h ([\d\.,]+)m$/, '$1 小时 $2 分钟'],
     [/^([\d\.,]+)m remaining$/, '剩余 $1 分钟'],
@@ -2796,6 +2798,7 @@ var cnRegReplace = new Map([
     [/^\+([\d\.,]+)\% Rare Find Chance$/, '+$1% 稀有发现几率'],
     [/^\+([\d\.,]+)\% Defense$/, '+$1% 防御'],
     [/^\+([\d\.,]+) Inventory Capacity$/, '+$1 库存容量'],
+    [/^\+([\d\.,]+) per day$/, '+$1 每天'],
     [/^\+([\d\.,]+) Damage$/, '+$1 伤害'],
     [/^\+([\d\.,]+) Energy$/, '+$1 能量'],
     [/^\+([\d\.,]+) Camp Comfort$/, '+$1 营地舒适度'],
