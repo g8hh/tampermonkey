@@ -1,18 +1,18 @@
 // ==UserScript==
-// @name         xxxx 简中汉化脚本
+// @name         Soul Echoes 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
 // @version      0.0.1
-// @description  网页游戏 xxxxx (https://www.xxxxx.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
+// @description  网页游戏 Soul Echoes (https://soulechoesgame.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Soul Echoes.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
-// @icon         https://www.zed.city/icons/favicon.svg
+// @icon        https://soulechoesgame.com/favicon.svg
 // @license      MIT
-// @include      *https://www.xxxxx.com/*
+// @include      *soulechoesgame.com*
 // @grant        none
 // @website      https://www.gityx.com/
-// @updateURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
-// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
+// @updateURL    https://g8hh.com.cn/zh/tampermonkey/soul-echoes-chs.user.js
+// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/soul-echoes-chs.user.js
 // ==/UserScript==
 /**
  * ---------------------------
@@ -77,10 +77,10 @@ var cnItems = {
     "Duplicate": "复制",
     "Mute": "静音",
     "Unmute": "播放",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "🌙 Game Features": "🌙 游戏功能",
+    "About": "关于",
+    "🌌 Explore Soul Echoes": "🌌 探索灵魂回响",
+    "✦ The Journey Awaits": "✦ 旅途等待着我们",
     "": "",
     "": "",
     "": "",
@@ -147,6 +147,7 @@ var cnItems = {
     "???": "???",
     "Gityx": "Gityx",
     "G8hh": "G8hh",
+    "© 2025 Soul Echoes. An existential idle progression game.": "© 2025 Soul Echoes. An existential idle progression game.",
     "": "",
     "": "",
     "": "",
@@ -157,12 +158,6 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
-    "": "",
-    "$": "$",
-    "#": "#",
-    "/": "/",
-    "]": "]",
-    "[": "[",
     ">>": ">>",
     ">": ">",
     "<<": "<<",
@@ -495,8 +490,6 @@ var cnExcludeWhole = [
     /^成本(.+)$/,
     /^\(([\d\.]+)\%\)$/,
     /^([\d\.]+):([\d\.]+):([\d\.]+)$/,
-    /^([\d\.]+)\-([\d\.]+)\-([\d\.]+)$/,
-    /^([\d\.]+)\/([\d\.]+)\/([\d\.]+)$/,
     /^([\d\.]+)\-([\d\.]+)\-([\d\.]+) ([\d\.]+):([\d\.]+):([\d\.]+)$/,
     /^\[([\d\.]+):([\d\.]+):([\d\.]+)\]$/,
     /^([\d\.]+)K$/,

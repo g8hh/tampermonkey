@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Vanya Online 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.47
+// @version      0.0.51
 // @description  网页游戏 Vanya Online (https://www.xxxxx.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Vanya Online.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -941,6 +941,30 @@ var cnItems = {
     "You are currently training offline! Stop it first.": "您目前正在离线训练！先停止它。",
     "Stop Ongoing Training": "停止离线训练",
     "Training Blocked": "训练受阻",
+    "You have completed the Quest 'Chapter 13: The Black Aegis'! You handed over 10x Lotus Bow. You earned 95000 Experience.": "你已经完成任务“第十三章：黑盾”！你交出了10张莲花弓。你获得了95000经验值。",
+    "You have completed the Quest 'Chapter 14: The Ironclad Will'! You earned 130000 Experience.": "你已经完成任务“第14章：钢铁意志”！你获得了130000经验值。",
+    "CN": "中文",
+    "EN": "英文",
+    "Global": "全球",
+    "BR": "巴西",
+    "The Pub Chat": "酒馆聊天",
+    "SLAIN IN BATTLE": "战死沙场",
+    "Your journey was cut short. All accumulated gains were lost, and your gold was stolen": "你的旅程被缩短了。所有积累的收益都失去了，你的金币也被偷走了",
+    "🛡️ Guild Info:": "🛡️ 公会信息:",
+    "Activity": "活跃",
+    "Guild members can talk on Guild Channel.": "公会成员可以在公会频道聊天。",
+    "Claim Stamina": "领取耐力",
+    "Ready! Click to claim.": "准备就绪! 点击领取.",
+    "Stamina Shrine": "耐力神殿",
+    "The shrine is frozen in time. Break the ice every 24h to claim.": "神殿被时间冻结了。每隔24小时可以破冰领取一次奖励。",
+    "Sort by: ": "排序方式: ",
+    "Online Now": "当前在线",
+    "Success": "成功",
+    "Worm ": "蠕虫",
+    "You swapped Terror Amulet for Spider Amulet.": "你把恐怖护身符换成了蜘蛛护身符。",
+    "Congratulations! You gained +1 DEFENSE": "恭喜! 你获得+1防御",
+    "⦾ Huntiary": "⦾ 捕猎者",
+    "(7 December)": "(12月7日开放)",
     "": "",
     "": "",
     "": "",
@@ -1564,6 +1588,7 @@ var cnExcludeWhole = [
     /^([\d\.]+)x$/,
     /^x([\d\.]+)$/,
     /^([\d\.,]+)$/,
+    /^([\d\.,]+) •$/,
     /^\$([\d\.,]+)$/,
     /^\+([\d\.,]+)$/,
     /^\-([\d\.,]+)$/,
@@ -1602,6 +1627,7 @@ var cnRegReplace = new Map([
     [/^You are gaining (.+) elves per second$/, '你每秒获得 $1 精灵'],
     [/^You have (.+) points$/, '你有 $1 点数'],
     [/^Next at (.+) points$/, '下一个在 $1 点数'],
+    [/^You were defeated by (.+).$/, '你被 $1 击败了。'],
     [/^Offline Training: (.+) hits \((.+) Stamina used\).$/, '离线训练: $1 命中 ($2 耐力消耗).'],
     [/^ in your area \(([\d\.,]+)\):$/, ' 在你的区域 ($1):'],
     [/^ on Drakmor World \((.+)\):\n(.+)$/, ' 在 德拉克莫尔 世界 ($1):\n$2'],
@@ -1662,6 +1688,7 @@ var cnRegReplace = new Map([
     [/^You stopped hunting in Dragon Peaks after (.+). You won (.+) XP \( 50\% bonus applied for (.+)\) and (.+) Gold! Items Found: (.+)$/, '你在龙之峰巅中狩猎 $1 后停止了。你获得了 $2经验 ( 50% 加成持续了 $3) 和 $4 金币! 发现物品: $5'],
     [/^You stopped hunting in Ashen Wastelands after (.+). You won (.+) XP \( 50\% bonus applied for (.+)\) and (.+) Gold! Items Found: (.+)$/, '你在灰色荒原中狩猎 $1 后停止了。你获得了 $2经验 ( 50% 加成持续了 $3) 和 $4 金币! 发现物品: $5'],
     [/^You stopped hunting in Forgotten Caverns after (.+). You won (.+) XP \( 50\% bonus applied for (.+)\) and (.+) Gold! Items Found: (.+)$/, '你在遗忘洞穴中狩猎 $1 后停止了。你获得了 $2经验 ( 50% 加成持续了 $3) 和 $4 金币! 发现物品: $5'],
+    [/^You stopped hunting in Celestial Ruins after (.+). You won (.+) XP \( 50\% bonus applied for (.+)\) and (.+) Gold! Items Found: (.+)$/, '你在天体遗迹中狩猎 $1 后停止了。你获得了 $2经验 ( 50% 加成持续了 $3) 和 $4 金币! 发现物品: $5'],
     [/^You stopped hunting in Dead River after (.+). You won (.+) XP and (.+) Gold! Items Found: (.+)$/, '你在 死亡之河 中狩猎 $1 后停止了。你获得了 $2经验 和 $3 金币! 发现物品: $4'],
     [/^You stopped hunting in Forgotten Caverns after (.+). You won (.+) XP and (.+) Gold! Items Found: (.+)$/, '你在 遗忘洞穴 中狩猎 $1 后停止了。你获得了 $2经验 和 $3 金币! 发现物品: $4'],
     [/^You stopped hunting in Ashen Wastelands after (.+). You won (.+) XP and (.+) Gold! Items Found: (.+)$/, '你在 灰色荒原 中狩猎 $1 后停止了。你获得了 $2经验 和 $3 金币! 发现物品: $4'],
@@ -1903,6 +1930,9 @@ var cnRegReplace = new Map([
     [/^Offline Result: \+([\d\.,]+) Skill Levels$/, '离线结果: +$1 技能等级'],
     [/^Offline Training: \+([\d\.,]+) hits \(([\d\.,]+) Stamina used\). LEVEL UP! \+([\d\.,]+) defense$/, '离线训练: +$1 攻击 (消耗了 $2 耐力). 升级了! +$3 防御'],
     [/^LEVEL UP! \+([\d\.,]+) Skill$/, '升级了! +$1 技能'],
+    [/^Active ([\d\.,]+)h ago$/, '活跃于 $1小时 前'],
+    [/^You received ([\d\.,]+) Stamina$/, '你收到了 $1 耐力'],
+    [/^Next claim available in: ([\d\.,]+)h ([\d\.,]+)m ([\d\.,]+)s$/, '距离下次领取还有: $1小时 $2分钟 $3秒'],
     [/^Day ([\d\.,]+)$/, '天数 $1'],
     [/^for ([\d\.,]+) G.$/, '花费了 $1 金币。'],
     [/^DEFENSE \(([\d\.,]+) Hits\)$/, '防御 ($1 命中)'],
