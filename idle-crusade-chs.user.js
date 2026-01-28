@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Idle Crusade 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.38
+// @version      0.0.40
 // @description  网页游戏 Idle Crusade (https://idlecrusade.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Idle Crusade.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1988,18 +1988,18 @@ var cnItems = {
     "Resets in": "距离重置",
     "Weeklies": "周常",
     "Weekly Contracts": "每周合同",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Claim": "领取",
+    "Claimed": "已领取",
+    "Bosses": "Boss",
+    "Raids": "突袭",
+    "Solo": "单人",
+    "Solo Bosses": "单人Boss",
+    "Login Required": "需要登录",
+    "Challenge powerful bosses alone. React to mechanics to survive": "独自挑战强大的Boss。根据机制变化做出反应以求生存。",
+    "Once a noble protector, this knight fell to corruption. His heavy blade demands respect - or death. Very weak to magic (3x damage).": "曾经是一位英勇的守护者，但这位骑士却堕入了堕落之中。他那沉重的剑刃威严至极——要么让人敬畏，要么命丧其手。对魔法的抵抗非常弱（3x伤害）。",
+    "The Fallen Knight Warden": "堕落的骑士守卫者",
+    "Your Combat Level:": "你的战斗等级:",
+    "You must be logged in to challenge bosses.": "您必须先登录账号才能挑战Boss。",
     "": "",
     "": "",
     "": "",
@@ -3448,6 +3448,8 @@ var cnRegReplace = new Map([
     [/^Bought ([\d\.,]+) Basic Cape for ([\d\.,]+) gold$/, '已购买 $1 基础披风 花费了 $1 金币'],
     [/^Sold ([\d\.,]+) Mudfin Catfish for ([\d\.,]+) gold$/, '出售 $1 泥鳍鲶鱼 获得了 $2 金币'],
     [/^Guest ([\d\.,]+)$/, '游客 $1'],
+    [/^Claimed ([\d\.,]+) gold and ([\d\.,]+) thieving XP$/, '领取 $1 金币和 $2 偷窃经验值'],
+    [/^Claimed ([\d\.,]+) gold and ([\d\.,]+) mining XP$/, '领取 $1 金币和 $2 采矿经验值'],
     [/^Eat \(\+([\d\.,]+)\)$/, '吃 (+$1)'],
     [/^Defeated Rat \(\+([\d\.,]+) XP\)$/, '击败 老鼠 (+$1 经验值)'],
     [/^You took ([\d\.,]+) damage$/, '敌人对你造成了 $1 伤害'],
@@ -3464,7 +3466,13 @@ var cnRegReplace = new Map([
     [/^Planted ([\d\.,]+) seeds$/, '种植了 $1 种子'],
     [/^Harvested ([\d\.,]+) crops$/, '收获了 $1 作物'],
     [/^Day ([\d\.,]+)$/, '天数 $1'],
+    [/^Kill ([\d\.,]+) Goblins$/, '击杀 $1 哥布林'],
     [/^Deliver ([\d\.,]+) Ironbark Bow$/, '交付 $1 铁皮木弓'],
+    [/^Deliver ([\d\.,]+) Sapwood Seed$/, '交付 $1 边木种子'],
+    [/^Deliver ([\d\.,]+) Raw Vambraces$/, '交付 $1 未加工的臂铠'],
+    [/^Deliver ([\d\.,]+) Steel Shield$/, '交付 $1 钢盾'],
+    [/^Deliver ([\d\.,]+) Ironbark Staff$/, '交付 $1 铁皮木杖'],
+    [/^Deliver ([\d\.,]+) Coal$/, '交付 $1 煤'],
     [/^Deliver ([\d\.,]+) Steel$/, '交付 $1 钢'],
     [/^Deliver ([\d\.,]+) Steel Warhammer$/, '交付 $1 钢战锤'],
     [/^Deliver ([\d\.,]+) Sapwood Staff$/, '交付 $1 边木法杖'],

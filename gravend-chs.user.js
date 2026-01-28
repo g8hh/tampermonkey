@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gravend 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.1
+// @version      0.0.2
 // @description  网页游戏 Gravend (https://www.gravend.net/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Gravend.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -115,7 +115,7 @@ var cnItems = {
     "Cancel": "取消",
     "Import Save Code (Slot": "导入存档代码 (槽位",
     "Use Abilities": "使用能力",
-    "Angler": "天使",
+    "Angler": "垂钓者",
     "Equipped Gear": "已穿装备",
     "enabled": "启用",
     "Abilities:": "能力:",
