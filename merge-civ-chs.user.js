@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Merge Civ 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.12
+// @version      0.0.14
 // @description  网页游戏 Merge Civ (https://mergeciv.io/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Merge Civ.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -332,6 +332,37 @@ var cnItems = {
     "Inspect Grid": "检查网格",
     "Increases Prestige Culture gain.": "增加声望文化增益。",
     "Splits a tile into two lower tier tiles.": "将一个地块分割成两个较低层级的地块。",
+    "Tree": "树",
+    "FISSION": "裂变",
+    "Ascension / Crystals": "转生 / 水晶",
+    "Rank": "等阶",
+    "Magical Upheaval": "魔法剧变",
+    "Better equipment and breaks let the Apprentice work faster.": "更先进的设备和更频繁的休息让这位学徒能够工作得更快了。",
+    "Equip scouts with swift steeds to hasten their exploration.": "给侦察员配备速度较快的马匹，以便加快他们的侦察速度。",
+    "Improve Working Conditions": "改善工作条件",
+    "Mounted Scouting": "骑马侦察",
+    "Research Tree": "研究树",
+    "Resettlement / Gold": "重新安置 / 黄金",
+    "Unlock Spell: Delete any tile (Cost: 100 Mana). Prevents Grid Lock.": "解锁法术：删除任意地块（消耗法力值 100）。解除地块锁定状态。",
+    "Unlock Spell: Split a tile into two lower tier tiles (Cost: 2000 Mana).": "解锁法术：将一个地块拆成两个较低层级的地块（消耗：2000法力值）。",
+    "Unlocks Crystal Upgrades.": "解锁水晶升级。",
+    "Unlocks Gold Upgrades.": "解锁黄金升级。",
+    "Soft Reset (Retry)": "软重置 (重试)",
+    "SPEED BOOST:": "速度提升:",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
+    "": "",
     "": "",
     "": "",
     "": "",

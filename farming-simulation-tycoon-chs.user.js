@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Farming Simulation Tycoon 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.1
+// @version      0.0.4
 // @description  网页游戏 Farming Simulation Tycoon (https://farmingsimulationtycoon.com/register.php?ref=77c80b2f267a2ff1) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Farming Simulation Tycoon.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -733,19 +733,19 @@ var cnItems = {
     "Subject:": "主题:",
     "FST has been hit by a nader! total reset of everything..": "农场模拟大亨 受到了一次严重的故障影响！所有内容都彻底重置了。",
     "Voice Message": "语音消息",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Plant your first Wheat crop on your farm. Go to your farm page, find the Wheat button, and click it to plant.": "在你的农场种植你的第一个小麦作物。前往你的农场页面，找到“小麦”按钮，然后点击它来播种。",
+    "Wait for your Wheat to grow (10 seconds), then click the \"Harvest\" button that appears on the crop. This will add it to your barn inventory.": "等待你的小麦生长（10 秒钟），然后点击作物上出现的“收割”按钮。这样就会将它添加到你的谷仓库存中。",
+    "Go to your Barn page, find the Wheat in your inventory, and click \"Sell\" to turn it into cash.": "前往“谷仓”页面，找到您库存中的小麦，然后点击“出售”将其兑换成现金。",
+    "Plant 3 Corn crops on your farm. Make sure you have enough energy (15 per crop) and money. Corn takes 15 seconds to grow.": "在你的农场种植 3 棵玉米作物。请确保你有足够的能量（每个作物需要 15 点）和金钱。玉米生长需要15秒。",
+    "You need a Lighter with uses left to burn a house!": "你需要一个打火机，可以用来烧房子！",
+    "Quest 'Seeds!' completed! Gained 150 XP and $300.": "“种子任务”已完成！获得了 150 点经验值以及 $300。",
+    "Go to Downtown, Hiring Agency and hire a Basic Worker. Workers help you harvest crops without using your energy!": "前往市中心的招聘机构，雇用一名基础工人。这些工人会帮助你收割庄稼，而无需耗费你的能量！",
+    "Crop not found!": "未找到作物!",
+    "Upgrade Your Farm Fields": "升级你的农场地块",
+    "Upgrade your Farm Fields to 3,shop and buy 2 more farm fields": "将你的农田升级至第 3 级，然后购买另外 2 块农田。",
+    "Buy 2 more farm fields-Head downtown and look for shops, Farmland! Better bring 1,000 dollars with you to purchase the two fields!": "再购买两块农田——前往市中心，寻找商店，农田！最好随身携带 $1000 用于购买这两块地！",
+    "Go to Downtown, Flea Market and list any item from your inventory for sale. Other players can buy it!": "前往市中心的跳蚤市场，从你的库存中挑选任何一件物品进行出售。其他玩家可以前来购买！",
+    "Quest 'Upgrade Your Farm Fields' completed! Gained 300 XP and $1000.": "“升级你的农场地块”任务已完成！获得了 300 点经验值和 $1000 。",
     "": "",
     "": "",
     "": "",
