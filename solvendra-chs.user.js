@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Solvendra 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.18
+// @version      0.0.19
 // @description  网页游戏 Solvendra (https://www.solvendra.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Solvendra.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -9,8 +9,7 @@
 // @icon         https://www.solvendra.com/assets/solvendra-CYwpGft2.ico
 // @license      MIT
 // @include      *https://www.solvendra.com/*
-// @grant        GM_addStyle
-// @grant        unsafeWindow
+// @grant        none
 // @website      https://www.gityx.com/
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/solvendra-chs.user.js
 // @downloadURL    https://g8hh.com.cn/zh/tampermonkey/solvendra-chs.user.js
@@ -24,7 +23,9 @@
  */
 
 
-/* ↓补充汉化↓ */
+/* ↓补充汉化↓ 
+// @grant        GM_addStyle
+// @grant        unsafeWindow
 let weburl = unsafeWindow.location.href
 if (weburl.indexOf('https://www.solvendra.com/') != -1) {
     // 页面背景色
@@ -1322,17 +1323,49 @@ var cnItems = {
     "Soft Salamander Scale": "柔软的蝾螈鳞片",
     "Tainted Thorn": "受污染的荆棘",
     "Verdant Spiderling": "绿色蜘蛛幼虫",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Collect over 600 Trophies, Pets and Cards": "收集超过 600 枚奖杯、宠物和卡片",
+    "Contact: solvendra@gmail.com": "联系人：solvendra@gmail.com",
+    "Fight over 250 enemies": "与超过250个敌人战斗",
+    "Guide": "指南",
+    "Play Now": "立即开始",
+    "Privacy Policy": "隐私政策",
+    "Solvendra idle mmorpg": "索尔文德拉大型多人在线角色扮演放置游戏",
+    "Solvendra offers the experience of an MMO with the simplicity of an idle RPG game. Train skills, craft valuable items, fight enemies, and join a thriving online community.": "索尔文德拉 融合了大型多人在线角色扮演游戏的丰富体验与单机休闲角色扮演游戏的简洁玩法。您可以提升技能、制作珍贵物品、与敌人战斗，并加入一个活跃的在线社区。",
+    "Terms of Use": "使用条款",
+    "Access the Game": "进入游戏",
+    "Choose one of the following options to access.": "请选择以下其中一个选项以进入游戏。",
+    "Email / Guest Username": "邮件/访客用户名",
+    "Email:": "电子邮件：",
+    "Forgot your password?": "忘记密码了？",
+    "Forgotten Password": "忘记密码",
+    "If you forgot your password, type in the associated email and request a reset link. You will receive a link to reset it.": "如果您忘记了密码，请输入相关的电子邮箱并申请重置链接。您将会收到一个用于重置密码的链接。",
+    "Log in": "登录",
+    "Log In": "登录",
+    "Password": "密码",
+    "Play as Guest": "以访客身份游玩",
+    "Register": "注册",
+    "Remember me?": "记住密码？",
+    "Request Password Reset": "请求重置密码",
+    "and": "和",
+    "By using this service, you agree to the following terms and conditions.": "通过使用此项服务，您即表示同意以下条款和条件。",
+    "Confirm Password": "确认密码",
+    "Do you have an account already?": "您已经有账户了吗？",
+    "Email": "邮箱",
+    "front page": "首页",
+    "Go back to": "返回到",
+    "I accept and agree to play and use only 1 (one) account.": "我接受并同意只使用一个帐号。",
+    "I accept and agree to the": "我接受并同意",
+    "Terms of Service": "服务条款",
+    "Crafteable Items": "可制作物品",
+    "Downloading data from server...": "从服务器下载数据...",
+    "Item Upgrades": "物品升级",
+    "Items": "物品",
+    "Loading game data": "加载游戏数据",
+    "Loot Tables": "战利品表",
+    "Preparing...": "准备中...",
+    "Regions": "区域",
+    "Skill Trees": "技能树",
+    "This might take a few seconds.": "这可能需要几秒钟的时间。",
     "": "",
     "": "",
     "": "",
@@ -1721,7 +1754,7 @@ var cnPrefix = {
     "Bandit": "暗行者",
     "Meadow": "草地",
     "Ceremonial": "仪式",
-    "": "",
+    "Downloading data... ": "正在下载数据... ",
     "": "",
     "": "",
     "": "",
