@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Merge Civ 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.17
+// @version      0.0.18
 // @description  网页游戏 Merge Civ (https://mergeciv.io/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Merge Civ.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -408,7 +408,11 @@ var cnItems = {
     "Available:": "可用:",
     "Cost:": "成本:",
     "Next tap yields massive resources based on tier.": "接下来点击操作会根据等级提供大量资源。",
-    "": "",
+    "Apprentice": "学徒",
+    "Auto-Scout": "自动侦查",
+    "Synced": "已同步",
+    "Cloud save enabled": "云保存已启用",
+    "just now": "刚刚",
     "": "",
     "": "",
     "": "",
