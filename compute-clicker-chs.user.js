@@ -1,18 +1,18 @@
 // ==UserScript==
-// @name         xxxx 简中汉化脚本
+// @name         Compute Clicker 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
 // @version      0.0.1
-// @description  网页游戏 xxxxx (https://www.xxxxx.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game xxxxx.
+// @description  网页游戏 Compute Clicker (https://computeclicker.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Compute Clicker.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
-// @icon         https://www.zed.city/icons/favicon.svg
+// @icon         https://storage.googleapis.com/gpt-engineer-file-uploads/gMub5rXCNOQzMCOuCgDJ6DIAJY72/uploads/1771055170950-0CAC819D-A7AF-47A7-960A-8353CE873F53.png
 // @license      MIT
-// @include      *https://www.xxxxx.com/*
+// @include      *https://computeclicker.com/*
 // @grant        none
 // @website      https://www.gityx.com/
-// @updateURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
-// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
+// @updateURL    https://g8hh.com.cn/zh/tampermonkey/compute-clicker-chs.user.js
+// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/compute-clicker-chs.user.js
 // ==/UserScript==
 /**
  * ---------------------------
