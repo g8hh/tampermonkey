@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Merge Civ 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.16
+// @version      0.0.17
 // @description  网页游戏 Merge Civ (https://mergeciv.io/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Merge Civ.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -405,9 +405,9 @@ var cnItems = {
     "Infuse (": "注入 (",
     "✓ Saved!": "✓ 已保存!",
     "Saved!": "已保存!",
-    "": "",
-    "": "",
-    "": "",
+    "Available:": "可用:",
+    "Cost:": "成本:",
+    "Next tap yields massive resources based on tier.": "接下来点击操作会根据等级提供大量资源。",
     "": "",
     "": "",
     "": "",
@@ -1038,6 +1038,7 @@ var cnRegReplace = new Map([
     [/^([\d\.]+)d ([\d\.]+)h ([\d\.]+)m$/, '$1天 $2小时 $3分'],
     [/^([\d\.]+)h ([\d\.]+)m$/, '$1小时 $2分'],
     [/^([\d\.]+)m ([\d\.]+)s$/, '$1分钟 $2秒'],
+    [/^([\d\.]+)m ([\d\.]+)s ago$/, '$1分钟 $2秒 前'],
     [/^([\d\.]+)e([\d\.,]+) elves$/, '$1e$2 精灵'],
     [/^([\d\.,]+)x Speed$/, '$1x 速度'],
     [/^([\d\.,]+) Mana$/, '$1 法力'],
