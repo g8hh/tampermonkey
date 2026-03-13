@@ -10,6 +10,9 @@
 // @license      MIT
 // @include      *https://supersonic-seven.github.io/AntimatterDimensionsEndgameUpdate/*
 // @include      *https://antimatter-dimensions-endgame.g8hh.com.cn/*
+// @include      *https://ivark.github.io/*
+// @include      *https://g1tyx.github.io/antimatter-dimensions/*
+// @include      *https://antimatter-dimensions.g8hh.com.cn*
 // @grant        none
 // @website      https://www.gityx.com/
 // @updateURL    https://g8hh.com.cn/zh/tampermonkey/antimatter-dimensions-endgame-chs.user.js
