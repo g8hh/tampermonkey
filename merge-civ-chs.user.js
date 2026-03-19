@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Merge Civ 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.23
+// @version      0.0.24
 // @description  网页游戏 Merge Civ (https://mergeciv.io/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Merge Civ.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -512,9 +512,9 @@ var cnItems = {
     "From Population": "来自人口",
     "Stockpiles:": "库存:", 
     "Tap a tile to SPLIT it.": "点击一个地块来拆分它。",
-    "": "",
-    "": "",
-    "": "",
+    "Build Citadel": "建造要塞",
+    "Construct the Citadel. Unlocks a hidden 3x3 grid centered on the Citadel.": "建造要塞。解锁一个位于要塞中心的隐藏 3x3 方格区域。",
+    "Global Mult:": "全局乘数:",
     "": "",
     "": "",
     "": "",
