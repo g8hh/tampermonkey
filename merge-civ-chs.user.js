@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Merge Civ 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.24
+// @version      0.0.25
 // @description  网页游戏 Merge Civ (https://mergeciv.io/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Merge Civ.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -515,10 +515,10 @@ var cnItems = {
     "Build Citadel": "建造要塞",
     "Construct the Citadel. Unlocks a hidden 3x3 grid centered on the Citadel.": "建造要塞。解锁一个位于要塞中心的隐藏 3x3 方格区域。",
     "Global Mult:": "全局乘数:",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Bonus Time": "加成时间",
+    "FREE": "免费",
+    "Work": "工作",
+    "Faster production while boost is active": "当提升激活时，更快的生产",
     "": "",
     "": "",
     "": "",
@@ -575,7 +575,7 @@ var cnItems = {
     "⬥": "⬥",
     "→": "→",
     "▼": "▼",
-    "": "",
+    "x ·": "x ·",
     "": "",
     "": "",
     "": "",
@@ -807,7 +807,7 @@ var cnPrefix = {
     "Reinvestment (": "再投资 (",
     "Capped at ": "上限是 ",
     "Highest Tile × ": "最高地块 × ",
-    "": "",
+    "Ascend ": "转生 ",
     "": "",
     "": "",
     "": "",
