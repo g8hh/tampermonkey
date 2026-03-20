@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Merge Civ 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.30
+// @version      0.0.31
 // @description  网页游戏 Merge Civ (https://mergeciv.io/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Merge Civ.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -610,9 +610,9 @@ var cnItems = {
     "Culture / hr": "文化 / 小时",
     "Current Libraries:": "当前图书馆:",
     "Increases Knowledge Cap by": "提高知识上限",
-    "": "",
-    "": "",
-    "": "",
+    "Merges": "合并",
+    "Profile": "个人资料",
+    "Unnamed Civilization": "未命名文明",
     "": "",
     "": "",
     "": "",
