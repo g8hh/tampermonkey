@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rejected Draft 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.8
+// @version      0.0.9
 // @description  网页游戏 Rejected Draft (https://kuzzigames.com/rejected_draft/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Rejected Draft.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -1869,21 +1869,21 @@ var cnItems = {
     "Upotos Odinthcn": "乌波托斯·奥丁辛",
     "Use Precise Eraser on the Erased Face sketch.": "用精确的橡皮擦擦去被涂掉的面部草图。",
     "Yoogaak": "约乌加克",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "TOOL & MILESTONE": "工具 & 里程碑",
+    "Booster Power": "助推器力量",
+    "Buy Me a Coffee": "请作者喝杯咖啡",
+    "I have built 3 incremental games before this one, all of which are fully free hosted at kuzzigames.com - if you have not played them, feel free to check them out. This is my first ever game that I am planning to release on Steam. I would really appreciate your support and wishlist!": "在此之前，我已经开发了三款增量游戏，它们全部都是完全免费的，并托管在 kuzzigames.com 上——如果您还没有玩过这些游戏，不妨去试试看。这是我的第一款计划在 Steam 上发布的游戏。非常感谢您的支持和心愿单！",
+    "Note: I will continue developing this free web version and it will never be downgraded to less content than it already has. Currently the major differences between the two versions is that passive progression (with minimized/hidden window) and UI scaling benefit a lot from being a standalone client rather than having to rely on a wide variety of browsers for compatibility.": "注意：我将继续开发这个免费的网络版本，且其内容绝不会比现有的少。目前这两个版本的主要区别在于被动式推进（带有最小化/隐藏窗口）以及用户界面缩放方面，它们得益于独立客户端的特性，而无需依赖多种浏览器以实现兼容性。",
+    "Since this game is planned for a Steam release, I wasn't going to add a donation button at all. However, many of you pointed out the graveyard of abandoned projects in your wishlists and wanted a way to help ensure this one survives. I believe I have the constitution to finish this regardless, but your support serves as a concrete reminder that people want to see the fully polished and completed game. Knowing there’s a community backing the work makes the long hours feel worth it.": "由于这款游戏计划在 Steam 平台上发布，所以我原本根本就没有打算添加捐赠按钮。然而，你们当中很多人指出了你们心愿单上那些已废弃项目的“坟墓”，并希望有一种方式能帮助确保这款游戏能够继续下去。我相信无论怎样我都有能力完成它，但你们的支持则实实在在地提醒了我们，人们是希望看到这款游戏最终完成并达到完美状态的。知道有社区在支持这项工作，让那些漫长的工作时光变得值得了。",
+    "This project is now in Beta. I'm still pushing 1-2 updates per day. Join our tester community to track changes, suggest new features, and help refine the grind. Discord also currently has the most up to date changelog.": "该项目目前处于测试阶段。我每天仍在进行 1 到 2 次更新。加入我们的测试者社区，以跟踪变化、提出新功能建议并协助完善游戏流程。目前，Discord 上也有最新的更新日志。",
+    "Automatically zoom to affordable skills in the Masterpiece Archive.": "自动将视角聚焦于“杰作档案”中的实惠技能。",
+    "Reward Booster is affordable!": "奖励加速器价格实惠！",
+    "Skill Tree Auto-Zoom": "技能树自动缩放",
+    "On": "开启",
+    "Drawn with a ginger root.": "用姜根绘制而成。",
+    "Increases one sketch's rewards by +50% for the rest of this Redraw. Max Rarity and # Uses are based on your Archive skills.": "在本次重新绘制期间，可使一个草图的奖励提高 50%。最大稀有度和使用次数取决于您的档案技能。",
+    "Norooto": "无姜根版",
+    "Reward Booster": "奖励增强器",
     "": "",
     "": "",
     "": "",
@@ -2667,6 +2667,7 @@ var cnExcludeWhole = [
     /^\+([\d\.,]+)$/,
     /^\-([\d\.,]+)$/,
     /^([\d\.,]+)x$/,
+    /^([\d\.,]+)\)$/,
     /^([\d\.,]+)ms$/,
     /^x([\d\.,]+)$/,
     /^×([\d\.,]+)$/,
