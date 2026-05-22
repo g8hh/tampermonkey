@@ -2310,6 +2310,15 @@ var cnItems = {
     "Well Rounded. Versatile. Reach 250 total skill levels.": "全能均衡·多才多艺：总技能等级达到250级",
     "Whole Care Package: all 5 buffs for 20 minutes": "全套福利礼包：全部五种增益效果持续20分钟",
     "Win with less than 1% HP remaining 50 times": "剩余生命值低于1%时获胜50次",
+    // AI
+    "Community event starting: Rogue Worm Containment": "社区活动开始：流浪蠕虫遏制",
+    "Extended Collection": "扩展收集",
+    "Living Dangerously - Untouchable ★★★": "危险生活 - 不可触碰 ★★★",
+    "Living Dangerously - Untouchable ★★★★": "危险生活 - 不可触碰 ★★★★",
+    "Proof of Work - FPGA Board": "工作量证明 - FPGA开发板",
+    "Quick Elimination": "快速消除",
+    "Time Played - Visitor": "游玩时间 - 访客",
+    "Treasure Hunter - Hoarder": "寻宝者 - 囤积者",
     "": "",
     "": "",
     "": "",
@@ -3378,6 +3387,18 @@ var cnRegReplace = new Map([
     [/^Req: (.+) \/ (.+) elves$/, '要求：$1 \/ $2 精灵'],
     [/^Usages: (\d+)\/$/, '用途：$1\/'],
     [/^workers: (\d+)\/$/, '工人：$1\/'],
+    // AI
+    [/^Complete (\d+) gathering actions\.$/, '完成$1次收集行动。'],
+    [/^Find ([\d,]+) items$/, '找到$1个物品'],
+    [/^Living Dangerously\. Untouchable ★★★\. (\d+)\.$/, '危险生活。不可触碰 ★★★。$1。'],
+    [/^Living Dangerously\. Untouchable ★★★★\. (\d+)\.$/, '危险生活。不可触碰 ★★★★。$1。'],
+    [/^Play for (\d+) hours$/, '游玩$1小时'],
+    [/^Proof of Work\. FPGA Board\. Reach mine level (\d+)\.$/, '工作量证明。FPGA开发板。到达矿场等级$1。'],
+    [/^Reach mine level (\d+)$/, '到达矿场等级$1'],
+    [/^Recover (\d+) Corrupted Memory Dumps from hacking victories\.$/, '从黑客胜利中回收$1个损坏的内存转储。'],
+    [/^Recover (\d+) Encrypted Key Shards from hacking victories\.$/, '从黑客胜利中回收$1个加密密钥碎片。'],
+    [/^Time Played\. Visitor\. Play for (\d+) hours\.$/, '游玩时间。访客。游玩$1小时。'],
+    [/^Treasure Hunter\. Hoarder\. Find ([\d,]+) items\.$/, '寻宝者。囤积者。找到$1个物品。'],
 
 ]);
 
