@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Gravend 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.5
+// @version      0.0.6
 // @description  网页游戏 Gravend (https://www.gravend.net/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Gravend.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -10,8 +10,8 @@
 // @include      *https://www.gravend.net/*
 // @grant        none
 // @website      https://www.gityx.com/
-// @updateURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
-// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/iqrpg-chs.user.js
+// @updateURL    https://g8hh.com.cn/zh/tampermonkey/gravend-chs.user.js
+// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/gravend-chs.user.js
 // ==/UserScript==
 /**
  * ---------------------------
