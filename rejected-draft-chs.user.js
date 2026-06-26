@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Rejected Draft 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.15
+// @version      0.0.16
 // @description  网页游戏 Rejected Draft (https://kuzzigames.com/rejected_draft/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Rejected Draft.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
@@ -3161,13 +3161,13 @@ var cnItems = {
     "Master Control": "主控开关",
     "Reduces the cost of all Charcoal stat upgrades by 75%.": "所有木炭属性升级花费削减75%",
     "Unlocks a master toggle to instantly enable Auto-Buy for all stat upgrades at once.": "解锁总控开关，一键开启全部属性升级自动购买",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "Briefly pause combat for first encounters and first victories.": "首次遭遇敌人、首次击败敌人时战斗会短暂暂停",
+    "Encounter & Defeat Animations": "遭遇与击败特效动画",
+    "Show some love to the content creators covering Rejected Draft!": "支持制作《废弃初稿》相关内容的创作者",
+    "Watch Community Videos on YouTube": "前往油管观看玩家自制视频",
+    "Selective Study": "定向研习",
+    "Skip Amplification": "跳过增幅",
+    "Threshold": "临界阈值",
     "": "",
     "": "",
     "": "",
@@ -4292,6 +4292,7 @@ var cnRegReplace = new Map([
     [/^Unlock required ([\d\.,]+) Rough sketch$/, '解锁要求 $1 粗糙草图'],
     [/^Unlock required ([\d\.,]+) Opus sketch$/, '解锁要求 $1 巨著草图'],
     [/^Unlock required ([\d\.,]+) Framed sketch$/, '解锁要求 $1 装裱的草图'],
+    [/^Slot ([\d\.,]+)$/, '槽位 $1'],
     [/^Day ([\d\.,]+)$/, '天数 $1'],
     [/^ defeated! \nRewards:\n\+(.+) HP\n\+(.+) Wax$/, ' 已击败! \n奖励:\n+$1 生命值\n+$2 蜡质'],
     [/^ defeated! \nRewards:\n\+(.+) HP\n\+(.+) Graphite$/, ' 已击败! \n奖励:\n+$1 生命值\n+$2 石墨'],
