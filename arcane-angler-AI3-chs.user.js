@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Arcane Angler 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.23
+// @version      0.0.24
 // @description  网页游戏 Arcane Angler (https://arcaneangler.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Arcane Angler.高效汉化 + Canvas 2D 汉化，内置 DodecaDragons 翻译
 // @author       好阳光的小锅巴 & 麦子、人民当家做主
 // @copyright    锅巴汉化
@@ -257,6 +257,7 @@
             "{{0}} has been kicked": "{{0}} 被移出公会",
             "{{0}} Common)": "{{0}} 普通)",
             "{{0}} has joined the guild": "{{0}} 加入了公会",
+            "Arcane Surge is Active! (Round {{0}} of {{1}})": "奥术涌动已激活！（第{{0}}轮，共{{1}}轮）",
             "Activate boosters for {{0}} biome(s) for {{1}} min? Cost": "激活提升增益在 {{0}} 生物区 持续 {{1}} 分钟？成本",
             "Activated {{0}} booster(s) for {{1}}": "已激活 {{0}} 提升增益持续 {{1}}",
             "+{{0}}% exp boosters activated for {{1}} hour(s) in": "+{{0}}% 经验提升增益已激活，持续 {{1}} 小时 在",
@@ -2340,7 +2341,7 @@
             "Blossom Basin": "花绽盆地",
             "Blossom Explorer": "花绽探索者",
             "Blossom Master": "花绽大师",
-            "Blue": "蓝色",
+            // "Blue": "蓝色",
             "boat b4 btw": "船b4顺便说下",
             "Boat spots B4": "船位B4",
             "Bodybuilder": "健美先生",
@@ -3779,14 +3780,13 @@
             "I fih where the boat/blight takes me lol": "船/枯萎去哪我就去哪钓鱼哈哈",
             "Loading notifications...": "加载通知中......",
             "Arcane Offering Complete!": "异珍供奉完成！",
-            "Arcane Surge is Active! (Round 1 of 2)": "异珍激涌已激活！（第1轮，共2轮）",
             "The Arcane Offering (relics) has been fully completed! +75% XP across all biomes for 4 hours — this was the final round.": "异珍供奉（遗物）已全部完成！所有生态区+75%经验持续4小时——这是最后一轮。",
             "The Arcane Offering (relics) round 1 is complete! +75% XP across all biomes for 4 hours. The offering continues into round 2 — keep contributing!": "异珍供奉（遗物）第1轮已完成！所有生态区+75%经验持续4小时。供奉进入第2轮——继续贡献吧！",
             "World Boss Spawning Soon!": "世界Boss即将出现！",
             "🗑️ Delete All": "🗑️ 删除全部",
             "⚠️ Confirm?": "⚠️ 确认？",
             "All notifications deleted": "所有通知已删除",
-            "Arcane Surge": "异珍激涌",
+            "Arcane Surge": "奥术涌动",
             "Blight": "枯萎",
             "The clouds formed a shape that looked like:": "云朵聚成了一个形状，看起来像：",
             "Dapple Carp": "斑纹鲤",
