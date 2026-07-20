@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Arcane Angler 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.30
+// @version      0.0.31
 // @description  网页游戏 Arcane Angler (https://arcaneangler.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Arcane Angler.高效汉化 + Canvas 2D 汉化，内置 DodecaDragons 翻译
 // @author       好阳光的小锅巴 & 麦子、人民当家做主
 // @copyright    锅巴汉化
@@ -2802,7 +2802,7 @@
             "Claimed!": "已领取！",
             "Claiming...": "领取中...",
             "Classic cast button": "经典抛竿按钮",
-            "Clear": "晴天",
+            "Clear": "清空",
             "Clear Skies Angler": "晴空钓手",
             "Clear Sky Titan": "晴空泰坦",
             "Clear Waters Expert": "清水专家",
