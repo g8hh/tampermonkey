@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Arcane Angler 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.32
+// @version      0.0.33
 // @description  网页游戏 Arcane Angler (https://arcaneangler.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Arcane Angler.高效汉化 + Canvas 2D 汉化，内置 DodecaDragons 翻译
 // @author       好阳光的小锅巴 & 麦子、人民当家做主
 // @copyright    锅巴汉化
@@ -156,7 +156,9 @@
             "Sold to {{0}}": "卖给了 {{0}}",
             "Kicked {{0}}": "踢出了 {{0}}",
             "Buy x{{0}}": "购买 x{{0}}",
+            "⭐ Quest Complete! Catch {{0}} fish. (+🔮 {{0}} )": "⭐ 任务完成! 捕获 {{0}} 鱼. (+🔮 {{0}} )",
             "🪙 {{0}} + 🔮 {{1}} + 🪙 {{2}} and + 🔮 {{3}} for {{4}} bonus points)": "🪙 {{0}} + 🔮 {{1}} + 🪙 {{2}} 和 + 🔮 {{3}} 对于 {{4}} 奖励分数)",
+            "📚 +{{0}}% XP Boost (Ancient Tome)": "📚 +{{0}}% 经验提升 (古籍)",
             "Upgrade to +{{0}}": "升级至 +{{0}}",
             "Price/Unit ({{0}})": "价格/单位 ({{0}})",
             "Upgraded to +{{0}}!": "已升级到 +{{0}}!",
