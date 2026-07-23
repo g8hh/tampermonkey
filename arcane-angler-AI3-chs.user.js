@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Arcane Angler 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.0.34
+// @version      0.0.35
 // @description  网页游戏 Arcane Angler (https://arcaneangler.com/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Arcane Angler.高效汉化 + Canvas 2D 汉化，内置 DodecaDragons 翻译
 // @author       好阳光的小锅巴 & 麦子、人民当家做主
 // @copyright    锅巴汉化
@@ -159,6 +159,8 @@
             "⭐ Quest Complete! Catch {{0}} fish. (+🔮 {{0}} )": "⭐ 任务完成! 捕获 {{0}} 鱼. (+🔮 {{0}} )",
             "🪙 {{0}} + 🔮 {{1}} + 🪙 {{2}} and + 🔮 {{3}} for {{4}} bonus points)": "🪙 {{0}} + 🔮 {{1}} + 🪙 {{2}} 和 + 🔮 {{3}} 对于 {{4}} 奖励分数)",
             "📚 +{{0}}% XP Boost (Ancient Tome)": "📚 +{{0}}% 经验提升 (古籍)",
+            "🎖️ Tournament #{{0}} Ended Your guild scored {{1}} points in the tournament. No trophy or gold was awarded because the minimum of 100 points was not reached. {{2}}": "🎖️ 锦标赛 #{{0}} 结束 你的公会在锦标赛中获得 {{1}} 积分。因未达到最低100积分门槛，无法获取奖杯与金币奖励。{{2}}",
+            "⚔️ Hit! Dealt {{0}} damage! +{{0}} exp": "⚔️命中！造成 {{0}} 伤害！获得 {{1}} 经验",
             "Upgrade to +{{0}}": "升级至 +{{0}}",
             "Price/Unit ({{0}})": "价格/单位 ({{0}})",
             "Upgraded to +{{0}}!": "已升级到 +{{0}}!",
@@ -218,6 +220,7 @@
             "{{0}} - Electric Caster": "{{0}} - 电能抛竿",
             "{{0}} - Gym Rat": "{{0}} - 健身房老鼠",
             "{{0}} - Heavy Hitter": "{{0}} - 重炮手",
+            "{{0}} - Ascension": "{{0}} - 飞升",
             "{{0}} - Journeyman": "{{0}} - 出师",
             "{{0}} - Nibbles": "{{0}} - 小口咬",
             "{{0}} - Ritual Fisher": "{{0}} - 仪式钓手",
@@ -255,6 +258,12 @@
             "{{0}} - Alpha Tester": "{{0}} - Alpha测试者",
             "{{0}} - Storm Chaser": "{{0}} - 风暴追逐者",
             "{{0}} - The Strongest": "{{0}} - 最强",
+            "{{0}} - Two Year Veteran": "{{0}} - 两年老将",
+            "{{0}} - Lucky Find": "{{0}} - 幸运发现",
+            "{{0}} - Fortune Wind Rider": "{{0}} - 幸运风骑士",
+            "{{0}} - Oracle": "{{0}} - 神谕",
+            "{{0}} - Mastermind": "{{0}} - 幕后策划",
+            "{{0}} - Professor": "{{0}} - 教授",
             "{{0}} - Newcomer": "{{0}} - 新人",
             "{{0}} - Toxic Champion": "{{0}} - 毒性冠军",
             "{{0}} - Spell Angler": "{{0}} - 法术钓手",
@@ -475,11 +484,8 @@
             "": "",
             "": "",
             "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
-            "": "",
+            "A multi-headed beast from the cosmic depths, each head a different element.": "来自宇宙深渊的多头巨兽，每个头颅掌控不同元素。",
+            "Not enough": "没有足够的",
             "Ashfall Mask": "落灰面罩",
             "Blightcurrent Legwraps": "枯流裹腿",
             "Deepseer Loop": "深视环饰",
