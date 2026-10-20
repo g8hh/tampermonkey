@@ -1,15 +1,20 @@
 // ==UserScript==
 // @name         《永恒之塔》自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
-// @version      0.0.39
-// @description  Eternity Tower (http://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
+// @version      0.0.41.4
+// @description  Eternity Tower (https://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
-// @include      *http://tower.bluesky.site/*
+// @copyright    锅巴汉化
+// @contributionUR    https://gityx.com/donate/intro.html
+// @icon         https://eternitytower.net/favicon.ico
+// @license      MIT
+// @include      *https://eternitytower.net/*
 // @grant        none
-// @require      https://g8hh.com.cn/static/js/keepalive.js
+// @grant        none
 // @website      https://www.gityx.com
-// @updateURL    https://g8hh.com.cn/zh/tampermonkey/eternitytower-auto2.user.js
-// @downloadURL    https://g8hh.com.cn/zh/tampermonkey/eternitytower-auto2.user.js
+// @require      https://cdn.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js
+// @updateURL    https://g8hh.cn/zh/tampermonkey/eternitytower-auto2.user.js
+// @downloadURL    https://g8hh.cn/zh/tampermonkey/eternitytower-auto2.user.js
 // ==/UserScript==
 
 /**
@@ -24,6 +29,10 @@
  * 更新日志
  * 0.0.x
  * ·种地：自定义种子没了的情况下，应该要自动种其它种子；
+ * 0.0.40
+ * ·自动出售：增加自动出售已标记物品功能。
+ * 0.0.40
+ * ·自动化：增加重置脚本配置功能。
  * 0.0.39
  * ·战斗：撤退按钮放在顶部。
  * 0.0.38
@@ -78,13 +87,13 @@
 ! function () {
     var content = '';
     content += '<!-- 脚本动态内容 开始 -->';
-    content += '<style>.main-im{position:fixed;right:10px;bottom:50px;line-height:normal;z-index:9999}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-radius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("//g8hh.com.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:none;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:105px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("//g8hh.com.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:670px;height:400px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-680px;top:-354px;overflow-y:auto;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("//g8hh.com.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:-10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("//g8hh.com.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("//g8hh.com.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;bottom:320px;}.JB-form{padding:10px;color:#000;}.JB-form *{margin:5px;font-size:13px;}.JB-form .tit{font-weight:bold;}.JB-form input{width:100px;height:30px;line-height:30px;text-align:center;}.JB-form input#minTime,.JB-form input#famingTime{width:50px;}.JB-form button{width:50px;height:30px;}#nofood,#noseed,#noSkill{opacity:0;color:red;}#nofood.show,#noseed.show,#noSkill.show{opacity:1;}.JB-form input[type=checkbox]{width:auto;vertical-align: middle;}.JB-form label{user-select: none;margin-left:0;}.recent-battles-btn.text-muted{color:#0275d8 !important;}.forfeit-battle{position:absolute;top:0px;}@media screen and (max-width: 800px) {.main-im {right:inherit;left:50%;display:block !important;bottom:inherit; top:30px;margin-left:-100px;}.main-im .open-im{left:50%;right:inherit;bottom:inherit;top:10px;margin-left:inherit;}.main-im .im_main .weixing-show{left:-50px;width:320px;height:480px;top:-120px}.main-im .im_main .weixing-show select{display:block;width:280px;}.forfeit-battle{right:0px;}}</style>';
+    content += '<style>.main-im{position:fixed;right:10px;bottom:50px;line-height:normal;z-index:9999}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-radius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("//g8hh.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:none;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:105px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("//g8hh.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:670px;height:400px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-680px;top:-354px;overflow-y:auto;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("//g8hh.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:-10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("//g8hh.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("//g8hh.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;bottom:320px;}.JB-form{padding:10px;color:#000;}.JB-form *{margin:5px;font-size:13px;}.JB-form .tit{font-weight:bold;}.JB-form input{width:100px;height:30px;line-height:30px;text-align:center;}.JB-form input#minTime,.JB-form input#famingTime{width:50px;}.JB-form button{width:50px;height:30px;}#nofood,#noseed,#noSkill{opacity:0;color:red;}#nofood.show,#noseed.show,#noSkill.show{opacity:1;}.JB-form input[type=checkbox]{width:auto;vertical-align: middle;}.JB-form label{user-select: none;margin-left:0;}.recent-battles-btn.text-muted{color:#0275d8 !important;}.forfeit-battle{position:absolute;top:0px;}@media screen and (max-width: 800px) {.main-im {right:inherit;left:50%;display:block !important;bottom:inherit; top:30px;margin-left:-100px;}.main-im .open-im{left:50%;right:inherit;bottom:inherit;top:10px;margin-left:inherit;}.main-im .im_main .weixing-show{left:-50px;width:320px;height:480px;top:-120px}.main-im .im_main .weixing-show select{display:block;width:280px;}.forfeit-battle{right:0px;}}</style>';
     content += '<div class="main-im">';
     content += '<div id="open_im" class="open-im">&nbsp;</div>  ';
     content += '<div class="im_main" id="im_main">';
     content += '<div id="close_im" class="close-im"><a href="javascript:void(0);" title="点击关闭">&nbsp;</a></div>';
     content += '<div class="qq-container"></div>';
-    content += '<div class="qq-hover-c"><img class="img-qq" src="//g8hh.com.cn/static/images/kf/qq.png"></div>';
+    content += '<div class="qq-hover-c"><img class="img-qq" src="//g8hh.cn/static/images/kf/qq.png"></div>';
     content += '<a href="https://qm.qq.com/cgi-bin/qm/qr?k=g-yVu_Uf_rCUbHOVbLHy-ko0G7nJl1nI&jump_from=webapi" target="_blank" class="im-qq qq-a" title="点击加入 - 永恒之塔交流群:867979275">';
     content += '<span>点击加群</span>';
     content += '</a>';
@@ -92,19 +101,60 @@
     content += '<div>QQ群号:</div>';
     content += '<div class="tel-num">867979275</div>';
     content += '<div>更多同类游戏:</div>';
-    content += '<div class="tel-num"><a href="http://www.gityx.com" target="_blank" title="我们有域名啦~">Git游戏</a><a href="https://gityx.com/notify/447.html" target="_blank" style="margin-left:5px;" title="点击查看游戏攻略">论坛</a><a href="http://g8hh.com.cn/" target="_blank" style="margin-left:5px;" title="锅巴汉化">锅巴汉化</a></div>';
+    content += '<div class="tel-num"><a href="http://www.gityx.com" target="_blank" title="有很多网页挂机放置游戏哦~">Git游戏</a><a href="https://gityx.com/notify/447.html" target="_blank" style="margin-left:5px;" title="点击查看游戏攻略">论坛</a><a href="http://g8hh.com.cn/" target="_blank" style="margin-left:5px;" title="锅巴汉化">锅巴汉化</a></div>';
     content += '</div>';
     content += '<div class="im-footer" style="position:relative">';
     content += '<div class="weixing-container">';
     content += '<div class="weixing-show">';
-    //无人值守-开始
+    //介绍-开始
     content += '<div class="JB-form">';
+    content += '<div class="tit">永恒之塔自动化脚本介绍</div>';
+    content += '1、可以根据需要打开1-4个浏览器标签页，分别打开挖矿、种地、战斗、制作页面；';
+    content += '<br/>';
+    content += '2、各个标签页里面，都只做一件事，然后启动对应的脚本，避免各个页面来回跳。';
+    content += '<br/>';
+    content += '3、脚本的时间间隔不要设太低，以免频繁请求导致服务器卡顿。';
+    content += '<br/>';
+    content += '4、玩家尽量加一下QQ群：867979275，方便组队、问问题。';
+    content += '</div>';
+    //介绍-结束
+    //重置脚本-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">重置脚本配置（当出现脚本乱点等不正常情况时使用）</div>';
+    content += '* 此操作将重置你的脚本配置到默认值并自动刷新页面，然后需要重新配置、启动脚本';
+    content += '<button id="resetAuto" type="primary" >重置</button>';
+    content += '</div>';
+    //重置脚本-结束
+
+    //标签页后台运行脚本-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">标签页后台运行（刷新页面后点击一次即可）</div>';
+    content += '* 此功能是为了解决：游戏标签页切到后台时，游戏可能进入停滞，再次切换过来时爆发大量请求的问题。';
+    content += '<br/>';
+    content += '* 一般只需要在 挖矿、种地、战斗 这三个标签页下启用即可。';
+    content += '<button id="keepAlive" type="primary" >启动</button>';
+    content += '</div>';
+    //标签页后台运行脚本-结束
+
+    //无人值守-开始
+    content += '<div class="JB-form" style="display:none;">';
     content += '<div class="tit">无人值守模式（适合睡觉、出门时启用挂机，当服务器更新时，实现自动重启脚本）</div>';
     content += '* 首次使用需配置好需要的各项条件，然后手动点击其后面的“启动”按钮一次，完成后再启动这个 →';
     content += '<button id="nobodyStart" type="primary" >启动</button>';
     content += '<button id="nobodyStop" type="danger" disabled>停止</button>';
     content += '</div>';
     //无人值守-结束
+
+    //自动出售-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">自动出售已标记物品（背包上限500，防止挂机时爆仓，建议间隔设大点，5分钟以上(300+)）</div>';
+    content += '* 适合刷多人塔掉落物品较多时启动，需要预先标记好要出售的物品。';
+    content += '<br/>';
+    content += '出售间隔(秒) <input id="sellTime" type="text" value="300" placeholder="输入整数数字" autocomplete="on"/> 秒；';
+    content += '<button id="multiSellStart" type="primary" >启动</button>';
+    content += '<button id="multiSellStop" type="danger" disabled>停止</button>';
+    content += '</div>';
+    //自动出售-结束
 
     //制作-开始
     content += '<div class="JB-form">';
@@ -131,6 +181,7 @@
     content += '<option value="meteorite_dagger">陨石匕首-单个250000经验-48分钟</option>';
     content += '<option value="fairy_steel_dagger">仙女钢匕首-单个400000经验-48分钟</option>';
     content += '<option value="elven_steel_dagger">精灵钢匕首-单个625000经验-48分钟</option>';
+    content += '<option value="cursed_dagger">诅咒匕首-单个1000000经验-48分钟</option>';
     content += '<option value="none" disabled>武器 - 战斧（每次1个）</option>';
     content += '<option value="copper_battle_axe">铜战斧-单个76经验-1分36秒</option>';
     content += '<option value="tin_battle_axe">锡战斧-单个76经验-1分36秒</option>';
@@ -151,6 +202,7 @@
     content += '<option value="meteorite_battle_axe">陨石战斧-单个1000000经验-72分钟</option>';
     content += '<option value="fairy_steel_battle_axe">仙女钢战斧-单个1600000经验-72分钟</option>';
     content += '<option value="elven_steel_battle_axe">精灵钢战斧-单个2500000经验-72分钟</option>';
+    content += '<option value="cursed_battle_axe">诅咒战斧-单个4000000经验-72分钟</option>';
     content += '<option value="none" disabled>经验 - 塔（每次5个，单个96秒，共480秒）</option>';
     content += '<option value="stone_pylon">石塔-单个30经验</option>';
     content += '<option value="tin_pylon">锡塔-单个50经验</option>';
@@ -162,6 +214,7 @@
     content += '<option value="mithril_pylon">秘银塔-单个800经验</option>';
     content += '<option value="orichalcum_pylon">星陨石塔-单个1500经验</option>';
     content += '<option value="fairy_steel_pylon">仙女钢塔-单个2000经验</option>';
+    content += '<option value="cursed_pylon">诅咒塔-单个2500经验</option>';
     content += '<option value="none" disabled>经验 - 墙壁（每次100个，单个48秒，共4800秒）</option>';
     content += '<option value="stone_wall">石墙-单个10经验</option>';
     content += '<option value="copper_wall">铜墙-单个15经验</option>';
@@ -184,8 +237,9 @@
     content += '<option value="polished_titanium">抛光钛-单个x金币</option>';
     content += '<option value="polished_obsidian">抛光黑曜石-单个x金币</option>';
     content += '<option value="polished_mithril">抛光秘银-单个2200金币</option>';
-    content += '<option value="polished_orichalcum">抛光的星陨石-单个2200金币</option>';
-    content += '<option value="polished_fairy_steel">抛光的仙女钢-单个3000金币</option>';
+    content += '<option value="polished_orichalcum">抛光星陨石-单个2200金币</option>';
+    content += '<option value="polished_fairy_steel">抛光仙女钢-单个3000金币</option>';
+    content += '<option value="polished_cursed">抛光诅咒石-单个3600金币</option>';
     content += '<option value="none" disabled>金币 - 雕像（每次100个，单个48秒，共4800秒，单价x金币）</option>';
     content += '<option value="copper_sculpture">铜雕像-单个45金币</option>';
     content += '<option value="bronze_sculpture">青铜雕像-单个125金币</option>';
@@ -217,6 +271,8 @@
     content += '<option value="meteorite_bar">陨石锭-单个29秒-共2900秒</option>';
     content += '<option value="fairy_steel_bar">仙女钢锭-单个36秒-共3600秒</option>';
     content += '<option value="elven_steel_bar">精灵钢锭-单个40秒-共4000秒</option>';
+    content += '<option value="cursed_bar">诅咒锭-单个56秒-共5600秒</option>';
+    content += '<option value="purestone_bar">纯石锭-单个56秒-共5600秒</option>';
     content += '</select> ';
     content += '<br/>';
     content += '制作间隔(秒) <input id="craftTime" type="text" value="100" placeholder="输入整数数字" autocomplete="on"/> 秒；';
@@ -316,6 +372,16 @@
     content += '</div>';
     //选择技能-结束
 
+    //法师技能-开始
+    content += '<div class="JB-form">';
+    content += '<div class="tit">标签页后台运行（刷新页面后点击一次即可）</div>';
+    content += '* 此功能是为了解决：游戏标签页切到后台时，游戏可能进入停滞，再次切换过来时爆发大量请求的问题。';
+    content += '<br/>';
+    content += '* 一般只需要在 挖矿、种地、战斗 这三个标签页下启用即可。';
+    content += '<button id="keepAlive" type="primary" >启动</button>';
+    content += '</div>';
+    //法师技能-结束
+
     //单人战斗-开始
     content += '<div class="JB-form">';
     content += '<div class="tit">单人战斗（Solo）</div>';
@@ -366,7 +432,7 @@
     content += '（建议设久一点，防止残血开战导致惨败）';
     content += '<br/>';
     content += '<br/>';
-    content += '队长功能：队友（能量低于2、没吃东西、没开自动吃能量食物脚本）时自动踢人，防止无法继续战斗</label>';
+    content += '队长功能：队友（能量低于5、没吃东西、没开自动吃能量食物脚本）时自动踢人，防止无法继续战斗</label>';
     content += '<button id="startTi" type="primary" >启动</button>';
     content += '<button id="stopTi" type="danger" disabled>停止</button>';
     content += '</div>';
@@ -500,7 +566,7 @@
     content += '<option value="redHydrangeaSeed" >红色绣球花-可以卖钱-单价xx金币-需要种植49级</option>';
     content += '<option value="sunburstHydrangeaSeed" >阳光绣球花-可以卖钱-单价xx金币-需要种植59级-生长需15分钟</option>';
     content += '<option value="zinniaSeed" >百日菊-可以卖钱-单价xx金币-需要种植59级-生长需8小时</option>';
-    content += '<option value="crimsonHydrangeaSeed" >深红色绣球花-可以卖钱-单价xx金币-需要种植69级-生长需8小时</option>';
+    content += '<option value="crimsonHydrangeaSeed" >深红色绣球花-可以卖钱-单价1500金币-需要种植69级-生长需15分钟</option>';
     content += '<option value="tulipSeed" >郁金香-可以卖钱-单价xx金币-需要种植69级-生长需8小时</option>';
     content += '<option value="lilySeed" >百合-可以卖钱-单价xx金币-需要种植79级-生长需15分钟</option>';
     content += '<option value="orchidSeed" >兰花-可以卖钱-单价xx金币-需要种植79级-生长需8小时</option>';
@@ -599,7 +665,100 @@
         var my_seconds = d.getSeconds();
         return my_hours + ":" + my_minutes + ":" + my_seconds
     }
+    // 重置脚本选项
+    $('#resetAuto').click(function () {
+        // localStorage.setItem('autoFill2', false);
+        // localStorage.setItem('autoSkill', false);
+        // localStorage.setItem('autoHeal', false);
+        // localStorage.setItem('autoHeal2', false);
+        // localStorage.setItem('autoFarm', false);
+        // localStorage.setItem('attLeft', false);
+        // localStorage.setItem('autoCraft', false);
+        // localStorage.setItem('autoMing', false);
+        // localStorage.setItem('soloBattle', false);
+        // localStorage.setItem('autoEateEnergy', false);
+        // localStorage.setItem('autoEate', false);
+        // localStorage.setItem('afkBattle', false);
+        // localStorage.setItem('groupBattle', false);
+        // localStorage.setItem('minEnergy', 30);
+        //  localStorage.setItem('fightTime', 60);
+        // localStorage.setItem('myFamingTime', 2);
+        // localStorage.setItem('craftTime', 100);
+        // localStorage.setItem('soloFightTime', 10);
+        localStorage.removeItem('autoFill2');
+        localStorage.removeItem('autoSkill');
+        localStorage.removeItem('autoHeal');
+        localStorage.removeItem('autoHeal2');
+        localStorage.removeItem('autoFarm');
+        localStorage.removeItem('attLeft');
+        localStorage.removeItem('autoCraft');
+        localStorage.removeItem('autoMing');
+        localStorage.removeItem('autoEateEnergy');
+        localStorage.removeItem('autoEate');
+        localStorage.removeItem('afkBattle');
+        localStorage.removeItem('craftTime');
+        localStorage.removeItem('CraftType');
+        localStorage.removeItem('fightTime');
+        localStorage.removeItem('fightMinHP');
+        localStorage.removeItem('fightMinEnergy');
+        localStorage.removeItem('famingTime');
+        localStorage.removeItem('Food1');
+        localStorage.removeItem('Food2');
+        localStorage.removeItem('FoodSeed');
+        localStorage.removeItem('groupTiRen');
+        localStorage.removeItem('groupBattle');
+        localStorage.removeItem('minHP');
+        localStorage.removeItem('minTime');
+        localStorage.removeItem('minEnergy');
+        localStorage.removeItem('MingEnergy');
+        localStorage.removeItem('MingType');
+        localStorage.removeItem('myFamingTime');
+        localStorage.removeItem('soloBattle');
+        localStorage.removeItem('soloFightTime');
+        localStorage.removeItem('soloUpBattle');
+        localStorage.removeItem('username');
+        localStorage.removeItem('keepAlive');
+        localStorage.removeItem('autoSell');
+        localStorage.removeItem('sellTime');
+        location.reload();
+        
+    });
     // 初始化时自动启用上次的脚本配置
+    setTimeout(function () {
+     // 刷新页面后，从本地存储里面取出时间间隔，填入文本框
+     if(localStorage.getItem('minEnergy')){
+        var minEnergy = parseInt(localStorage.getItem('minEnergy'));
+        $('#minEnergy').val(minEnergy);
+     }
+     if(localStorage.getItem('Food2')){
+        var Food2 = localStorage.getItem('Food2');
+        $('#Food2').val(Food2);
+     }
+     if(localStorage.getItem('Food1')){
+        var Food1 = localStorage.getItem('Food1');
+        $('#Food1').val(Food1)
+     }
+     if(localStorage.getItem('minHP')){
+        var minHP = parseInt(localStorage.getItem('minHP'));
+        $('#minHP').val(minHP)
+     }
+     if(localStorage.getItem('FoodSeed')){
+        var FoodSeed = localStorage.getItem('FoodSeed');
+        $('#FoodSeed').val(FoodSeed)
+     }
+     if(localStorage.getItem('minTime')){
+        var minTime = parseInt(localStorage.getItem('minTime'));
+        $('#minTime').val(minTime)
+     }
+     if(localStorage.getItem('MingType')){
+        var MingType = localStorage.getItem('MingType');
+        $('#MingType').val(MingType)
+     }
+     if(localStorage.getItem('sellTime')){
+        var sellTime = parseInt(localStorage.getItem('sellTime'));
+        $('#sellTime').val(sellTime)
+     }
+    }, 3000);
     setTimeout(function () {
         // 自动攻击右边敌人
         if (localStorage.getItem('autoFill2') == 'true') {
@@ -608,6 +767,12 @@
         // 禁用死亡通知
         $('.disable-combat-deaths').trigger('click');
     }, 5000);
+    // 如果用户名为空，先尝试从本地读取
+    if (localStorage.getItem('username')) {
+        username = localStorage.getItem('username');
+        //   从本地存储里面取出用户名，填入文本框
+        $('#username').val(username)
+    }
     // 1分钟检测一次页面是否刷新过
     var autoFill2;
     //启动无人值守模式
@@ -629,7 +794,7 @@
     var url = window.location.href;
     function autoLoad2() {
         var username = $('#username').val();
-        if (username == '') {
+        // if (username == '') {
             // 如果用户名为空，先尝试从本地读取
             if (localStorage.getItem('username')) {
                 username = localStorage.getItem('username');
@@ -637,7 +802,7 @@
                 $('#username').val(username)
             }
             // 自动回血
-            if (localStorage.getItem('autoEate') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('autoEate') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var minHP = parseInt(localStorage.getItem('minHP'));
                 $('#minHP').val(minHP)
@@ -646,35 +811,50 @@
                 $('#startEatFood').trigger('click');
             }
             // 自动回能量
-            if (localStorage.getItem('autoEateEnergy') == 'true') {
-                //   从本地存储里面取出时间间隔，填入文本框
-                var minEnergy = parseInt(localStorage.getItem('minEnergy'));
-                $('#minEnergy').val(minEnergy)
+            if (url.includes('battle') && localStorage.getItem('autoEateEnergy') == 'true') {
+                if(localStorage.getItem('minEnergy')){
+                    //   从本地存储里面取出时间间隔，填入文本框
+                    var minEnergy = parseInt(localStorage.getItem('minEnergy'));
+                    $('#minEnergy').val(minEnergy)
+                }else{
+                    localStorage.setItem('minEnergy', 30);
+                    $('#minEnergy').val(30);
+                }
                 var Food2 = localStorage.getItem('Food2');
                 $('#Food2').val(Food2)
                 $('#startEatEnergyFood').trigger('click');
             }
             // 自动放技能
-            if (localStorage.getItem('autoSkill') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('autoSkill') == 'true') {
                 $('#startSkill').trigger('click');
             }
-            // 自动放回血技能
-            if (localStorage.getItem('autoHeal') == 'true') {
+            // 自动放回血技能 1
+            if (url.includes('battle') && localStorage.getItem('autoHeal') == 'true') {
                 $('#autoHeal').trigger('click');
             }
+            // 自动放回血技能 2
+            if (url.includes('battle') && localStorage.getItem('autoHeal2') == 'true') {
+                $('#autoHeal2').trigger('click');
+            }
             // 自动攻击右边敌人
-            if (localStorage.getItem('attLeft') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('attLeft') == 'true') {
                 $('#attLeft').trigger('click');
             }
             // 如果用户在组队战斗，则继续战斗
-            if (localStorage.getItem('groupBattle') == 'true') {
-                //   从本地存储里面取出时间间隔，填入文本框
-                var fightTime = parseInt(localStorage.getItem('fightTime'));
-                $('#fightTime').val(fightTime)
-                $('#startGroupFight').trigger('click');
+            if (url.includes('battle') && localStorage.getItem('groupBattle') == 'true') {
+                if(localStorage.getItem('fightTime')){
+                    //   从本地存储里面取出时间间隔，填入文本框
+                    var fightTime = parseInt(localStorage.getItem('fightTime'));
+                    $('#fightTime').val(fightTime)
+                    $('#startGroupFight').trigger('click');
+                }else{
+                    localStorage.setItem('fightTime', 60);
+                    $('#fightTime').val(60);
+                    $('#startGroupFight').trigger('click');
+                }
             }
             // 如果用户在组队战斗时选了自动踢人，则继续战斗
-            if (localStorage.getItem('groupTiRen') == 'true') {
+            if (url.includes('battle') && localStorage.getItem('groupTiRen') == 'true') {
                 if ($('.me').parent().parent().find('.justify-content-center img.mr-1').length == 1) {
                     $('#startTi').trigger('click');
                 }
@@ -693,7 +873,7 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'http://tower.bluesky.site/battle') {
+                if (url == 'https://tower.bluesky.site/battle') {
                     $('#startSolo').trigger('click');
                 }
             }
@@ -706,7 +886,7 @@
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
                 $('#soloFightTime').val(soloFightTime);
-                if (url == 'http://tower.bluesky.site/battle') {
+                if (url == 'https://tower.bluesky.site/battle') {
                     $('#startSoloUp').trigger('click');
                 }
             }
@@ -719,7 +899,7 @@
                 $('#MingType').val(MingType)
                 var MingEnergy = parseInt(localStorage.getItem('MingEnergy'));
                 $('#MingEnergy').val(MingEnergy)
-                if (url == 'http://tower.bluesky.site/mining') {
+                if (url == 'https://tower.bluesky.site/mining') {
                     $('#startMing').trigger('click');
                 }
             }
@@ -732,7 +912,7 @@
                 $('#myFamingTime').val(myFamingTime)
                 var famingTime = parseInt(localStorage.getItem('famingTime'));
                 $('#famingTime').val(famingTime)
-                if (url == 'http://tower.bluesky.site/farming') {
+                if (url == 'https://tower.bluesky.site/farming') {
                     $('#startFarming').trigger('click');
                 }
             }
@@ -743,10 +923,70 @@
                 $('#craftTime').val(craftTime)
                 var MingType = localStorage.getItem('CraftType');
                 $('#CraftType').val(CraftType)
-                if (url == 'http://tower.bluesky.site/crafting') {
+                if (url == 'https://tower.bluesky.site/crafting') {
                     $('#startCraft').trigger('click');
                 }
             }
+            // 自动出售
+            if (url.includes('crafting') && localStorage.getItem('autoSell') == 'true') {
+                //   从本地存储里面取出时间间隔，填入文本框
+                var sellTime = parseInt(localStorage.getItem('sellTime'));
+                $('#sellTime').val(sellTime)
+                if (url == 'https://tower.bluesky.site/crafting') {
+                    $('#multiSellStart').trigger('click');
+                }
+            }
+            // 自动启用标签页后台运行
+            if (localStorage.getItem('keepAlive') == 'true') {
+                $('#keepAlive').trigger('click');
+                $("#keepAlive").attr("disabled", true);
+            }
+        // }
+    }
+
+    //启用自动出售
+    var autoSell = false
+    var sellInterval;
+    $('#multiSellStart').click(function () {
+        // 标识自动出售
+        autoSell = true
+        localStorage.setItem('autoSell', autoSell);
+        // 标识启动出售
+        var sellTime = parseInt($('#sellTime').val());
+        localStorage.setItem('sellTime', sellTime);
+        sellTime = sellTime * 1000;
+        sellInterval = setInterval(sellFunc, sellTime);
+        $(this).attr("disabled", true);
+        $("#multiSellStop").attr("disabled", false);
+    });
+
+    //停止自动出售
+    $('#multiSellStop').click(function () {
+        // 标识自动出售
+        autoSell = false
+        localStorage.setItem('autoSell', autoSell);
+        clearInterval(sellInterval);
+        $(this).attr("disabled", true);
+        $("#multiSellStart").attr("disabled", false);
+    });
+    
+    //自动出售主方法
+    function sellFunc() {
+        //自动切换到制作界面
+        if (!url.includes('crafting')){
+            $('.navbar-nav .nav-item:nth-child(4) a').trigger('click');
+        }
+        if(url.includes('crafting')){
+            // 点击批量出售按钮
+            $('.multiSellStart').trigger('click');
+            //延时点击确认出售按钮，避免页面未加载完
+            setTimeout(function () {
+                $('.multiSellConfirm').trigger('click');
+            }, 10000);
+            //延时点击弹框的确认出售按钮，避免页面未加载完
+            setTimeout(function () {
+                $('.modalButtonConfirm').trigger('click');
+            }, 20000);
         }
     }
 
@@ -851,7 +1091,7 @@
                 growTime = 480;
                 break;
             case 'crimsonHydrangeaSeed':
-                growTime = 480;
+                growTime = 15;
                 break;
             case 'lilySeed':
                 growTime = 15;
@@ -989,6 +1229,13 @@
 
     });
 
+    // 启用标签页后台运行
+    $('#keepAlive').bind('click',function(e){
+		var d=document,s=d.createElement('script');s.src='//g8hh.cn/static/js/keepalive.js';d.body.appendChild(s);
+        // 标识启动后台
+        localStorage.setItem('keepAlive', true);
+        $("#keepAlive").attr("disabled", true);
+	});
     var autoSkill;
     var c1, c2, c3, c4, c5, c6, c7, c8;
     //    var bb;
@@ -1089,7 +1336,6 @@
             //$('.battle-unit-container .battle-unit').trigger("click");
             // 判断血量，低于xx才放加血技能
             var healAmount =  $('#healAmount').val()
-            var healAmount2 =  $('#healAmount2').val()
             if (attObj == 1) {
                 //优先打最后一个怪，防止召唤小弟
                 $('.battle-units-container+.col .flex-row .flex-column:last-child img').trigger("click");
@@ -1112,20 +1358,23 @@
                     }
                 }else{
                     // 组队情况下，给血量低的加血
-                    for (var h = 1; h <= groupAmount; h++) {
+                    for (var h1 = 1; h1 <= groupAmount; h1++) {
                         // 判断血量
-                        var minWidth = ($('.battle-units-container .flex-column:nth-child(' + h + ')').find('.health-bar .progress-bar').width() / $('.battle-units-container .flex-column:nth-child(' + h + ')').find('.progress.health-bar').width()) * 100;
+                        var minWidth = ($('.battle-units-container .flex-column:nth-child(' + h1 + ')').find('.health-bar .progress-bar').width() / $('.battle-units-container .flex-column:nth-child(' + h1 + ')').find('.progress.health-bar').width()) * 100;
                         // 判断开启加血了
                         if (isAutoHeal && minWidth < healAmount) {
                             doSkill(2);
+                            // console.log('队伍人数' + groupAmount);
+                            // console.log('当前循环到了：' + h1);
                             setTimeout(function() {
-                                $('.battle-units-container .flex-column:nth-child(' + h + ')').find('.battle-unit').trigger('click'); 
-                                // console.log(minWidth +'当前生命值; 组队加血执行给了：' + h)
+                                $('.battle-units-container .flex-column:nth-child(' + h1 + ')').find('.battle-unit').trigger('click'); 
+                                // console.log(minWidth +'当前生命值; 组队加血执行给了：' + h1);
                             },50)
                                 break;
                         }else if(!isAutoHeal){
                             // 如果1技能不是加血技能，则直接施放
                             doSkill(2);
+                            console.log(minWidth +'未启用');
                         }
                     }
                 }
@@ -1133,12 +1382,13 @@
             if (c2) {
                 // 获取当前队伍人数
                 var groupAmount2 = $('.battle-units-container .flex-column.flex-wrap').length;
+                var healAmount2 =  $('#healAmount2').val()
                 // 如果是一个人，只给自己加血
                 if(groupAmount2 < 2){
                     // 1技能放加血技能，当生命值低于设定值时，开始加血
                     var minWidMe = ($('.me').parent().parent().find('.health-bar .progress-bar').width() / $('.me').parent().parent().find('.progress.health-bar').width()) * 100;
                     if (isAutoHeal2 && minWidMe < healAmount2) {
-                        console.log('技能2血少');
+                        // console.log('技能2血少');
                         doSkill(3);
                         setTimeout(function() {
                             $('.me').parent().find('.battle-unit').trigger('click'); 
@@ -1823,15 +2073,20 @@
 
     //自动踢能量值过低，并且没吃柠檬的人
     function tiren() {
-        $(".energy-bar .progress-bar .health-bar").each(function () {
+        $(".energy-bar .progress-bar .energy-bar").each(function () {
             var username2 = $('#username').val();
             var person = $(this).parents('.flex-column.d-flex').children().find('.battle-unit-name').text().replace(/(^\s*)|(\s*$)/g, "");
             var statusLenth = $('.tempStatus').length;
             var penergy = parseInt($(this).text());
             var isEating = $(this).parents('.battle-unit-container').children().find('.justify-content-center img').length;
-            //判断自己之外的人、能量值低于2、没有在吃柠檬
-            if ((person != username2) && (penergy < 2) && (isEating == 0)) {
+            // console.log("username2", username2);
+            // console.log("penergy", penergy);
+            // console.log("person", person);
+            // console.log("isEating", isEating);
+            //判断自己之外的人、能量值低于5、没有在吃柠檬
+            if ((person != username2) && (penergy < 5) && (isEating == 0)) {
                 //踢人
+                // console.log($(this).parents('.flex-column.d-flex').children().find('.btn-kick').html())
                 // console.log($(this).parents('.flex-column.d-flex').children().find('.btn-kick').html())
                 $(this).parents('.flex-column.d-flex').children().find('.btn-kick').trigger('click');
             } else {
