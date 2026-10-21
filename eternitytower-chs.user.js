@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Eternity Tower 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.2.19
+// @version      0.2.20
 // @description  Eternity Tower (https://eternitytower.net/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Eternity Tower.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
 // @icon         https://eternitytower.net/favicon.ico
 // @license      MIT
-// @include      *://eternitytower.net*
+// @include      *eternitytower.net*
 // @grant        none
 // @website      https://www.gityx.com
 // @updateURL    https://g8hh.cn/zh/tampermonkey/eternitytower-chs.user.js
@@ -3609,19 +3609,19 @@ var cnItems = {
     "Send the verification email again": "再次发送验证邮件",
     "Are you sure?": "你确定吗？",
     "'s messages in any chat, ": "消息在任何聊天中，",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    "(crafted) or": "(制作) 或",
+    "Tinker Item": "重铸物品",
+    "Tinker an item's rarity up to": "将物品的稀有度重铸提升至",
+    "(looted), then reforge it higher at the risk of losing it.": "（战利品），然后以更高的丢失风险重新锻造。",
+    "The Workshop is locked. Collect the Take 500 Damage achievement to unlock the Workshop and Alchemy.": "工坊未解锁。收集“造成500点伤害”成就以解锁工坊和炼金术。",
+    "The game will reconnect automatically.": "游戏将自动重新连接。",
+    "Reconnecting": "重新连接",
+    "Keep going": "继续前进",
+    "Workshop": "工坊",
+    "(nothing in the workshop)": "(工坊里面什么都没有)",
+    "Distill an item's rarity, then transfer it between crafted items or between looted items of the same material.": "提取一件物品的稀有度，然后在制作的物品之间或在掠夺的相同材料的物品之间转移。",
+    "Distillation destroys an item you are qualified to work in the Workshop and turns its rarity into a separate distillation item. There is a 1% chance for each rarity tier above the base that nothing is produced; a global crafting buff prevents that. Infusion uses a distillation to raise a target item's rarity.": "蒸馏会销毁你有资格在工坊中制作的物品，并将其稀有度转化为一个独立的蒸馏物品。对于基础稀有度以上的每一级，都有1%的概率无法生成任何物品；但全局制作物品加成可防止此情况发生。注入则通过蒸馏来提升目标物品的稀有度。",
+    "Alchemy is locked. Collect the Take 500 Damage achievement to unlock the Workshop and Alchemy.": "炼金未解锁。收集“造成500点伤害”成就以解锁工坊和炼金术。",
     "": "",
     "": "",
     "": "",
@@ -5508,7 +5508,7 @@ var cnRegReplace = new Map([
     [/^Failed to craft (.+). The Craft queue is full.$/, '无法制作 $1。制作队列已满。'],
     [/^Banned (.+) forever.$/, '$1 已被永久封禁。'],
     [/^You tended the overgrowth: (.+) Farming XP.$/, '你控制了过度生长：$1 农业经验值。'],
-    [/^You tended the overgrowth: (.+) Farming XP and (.+) endive.$/, '你控制了过度生长：$1 农业经验值 和 $2 生菜。'],
+    [/^You tended the overgrowth: (.+) Farming XP and (.+).$/, '你控制了过度生长：$1 农业经验值 和 $2。'],
     [/^You tended the overgrowth: (.+) Farming XP. Your crops grew faster.$/, '你控制了过度生长：$1 农业经验值。你的作物生长得更快了。'],
     [/^Feast tier (.+): (.+) left$/, '宴请等级 $1: $2 剩余'],
     [/^Unbanned (.+).$/, '$1 已被解除封禁。'],
