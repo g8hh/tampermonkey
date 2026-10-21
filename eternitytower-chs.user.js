@@ -1,14 +1,14 @@
 // ==UserScript==
 // @name         Eternity Tower 简中汉化脚本
 // @namespace    https://www.g8hh.com.cn/
-// @version      0.2.15
+// @version      0.2.16
 // @description  Eternity Tower (https://eternitytower.net/) 的简体中文汉化脚本。Simplified Chinese i18n script for web game Eternity Tower.
 // @author       好阳光的小锅巴 & 麦子
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
 // @icon         https://eternitytower.net/favicon.ico
 // @license      MIT
-// @include      *https://eternitytower.net/*
+// @include      *://eternitytower.net*
 // @grant        none
 // @website      https://www.gityx.com
 // @updateURL    https://g8hh.cn/zh/tampermonkey/eternitytower-chs.user.js
@@ -579,6 +579,7 @@ var cnItems = {
     'Personal Woodcutting Upgrade': '个人木工升级',
     'Phasing Key': '相位钥匙',
     'Raise Your Glass': '举起酒杯',
+    'raise your glass': '举起酒杯',
     'Randomly contains one of various goodies that were available during the Holidays': '随机包含节日期间可用的各种各样的好东西之一',
     'Randomly contains one of various goodies that were available during the Lunar New Year\'s event': '随机包含一个各种各样的糖果，可在农历新年期间的活动',
     'Randomly contains one of various goodies that were available during the New Year\'s event': '随机包含新年活动期间提供的各种好东西之一',
@@ -607,6 +608,7 @@ var cnItems = {
     'T2 Tank Icon': 'T2坦克图标',
     'lemonade (food item': '柠檬水（食用物品',
     'festive hat (head equipment': '节日帽子（头部装备',
+    'holiday cheer': '假日欢呼',
     'Holiday Cheer': '假日欢呼',
     'Key is consumed on use': '钥匙在使用时消耗',
     'Increase item quality by up to': '将物品品质提高',
@@ -3582,28 +3584,30 @@ var cnItems = {
     "Sort:": "排序:",
     "copper raider chest": "铜掠夺者胸甲",
     "Designed for vicious combat": "专为激烈战斗而设计",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
-    "": "",
+    ". . . waiting . . .": ". . . 等待中 . . .",
+    "✓ ready": "✓ 已准备",
+    "Equip": "装备",
+    "Ready": "准备",
+    "Ready check": "准备检查",
+    "Return to ready check": "返回准备检查",
+    "Not Ready": "未准备",
+    "greater snail": "高级蜗牛",
+    "Chop": "砍",
+    "Golden tree": "金树",
+    "Disable idle page titles": "禁用放置页面标题",
+    "Enable idle page titles": "启用放置页面标题",
+    "Magic Codex recipes are locked": "魔法法典的配方还未解锁",
+    "Collect the PQ 50 achievement to unlock them.": "领取 个人任务（PQ） 50成就以解锁它们。",
+    "Please wait": "请稍候",
+    "Relaunch Test": "重启测试",
+    "The game is updating": "游戏更新中",
+    "The game will reconnect automatically when the update is complete.": "游戏将在更新完成后自动重新连接。",
+    "You won't see": "你不会看到",
+    "won't be able to invite you to a group. You can unblock them on the Social page.": "无法邀请你加入群组。你可以在社交页面上取消屏蔽他们。",
+    "Send email again": "再次发送邮件",
+    "Send the verification email again": "再次发送验证邮件",
+    "Are you sure?": "你确定吗？",
+    "'s messages in any chat, ": "消息在任何聊天中，",
     "": "",
     "": "",
     "": "",
@@ -3654,7 +3658,7 @@ var cnItems = {
     "": "",
     "": "",
     "": "",
-    "": "",
+    "expand_more": "expand_more",
     "arrow_upward": "arrow_upward",
     "remove_red_eye": "remove_red_eye",
     "home": "home",
@@ -5406,7 +5410,7 @@ var cnPostfix = {
     "Multihit": "多次",
     "Single Hit": "单次",
     "Replant All": "全部重种",
-    "": "",
+    "Force!": "强制!",
     "": "",
     "": "",
     "": "",
@@ -5507,6 +5511,7 @@ var cnRegReplace = new Map([
     [/^You tended the overgrowth: (.+) Farming XP. Your crops grew faster.$/, '你控制了过度生长：$1 农业经验值。你的作物生长得更快了。'],
     [/^Feast tier (.+): (.+) left$/, '宴请等级 $1: $2 剩余'],
     [/^Unbanned (.+).$/, '$1 已被解除封禁。'],
+    [/^Equipped “(.+)”.$/, '已装备 “$1”.'],
     [/^(.+) damage and (.+) accuracy for every passive passive slotted in your loadout(.+)beyond 3 passive abilities.$/, '超过3个被动技能后，每个被动技能增加 $1 的伤害和 $2 的精准度。'],
     [/^You must have at least level 95 defense to equip your cursed helmet.$/, '你必须达到至少 $1 级防御才能装备你的诅咒头盔。'],
     [/^(.+) has extended the combat buff for all players \((.+) hours remaining\)!$/, '$1 延长了全局战斗Buff，所有玩家都会受益（Buff剩余 $2 小时）！'],
