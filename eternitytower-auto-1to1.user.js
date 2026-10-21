@@ -2,7 +2,7 @@
 // @name         《永恒之塔》2026官方服-自动化脚本-多标签页版（一个标签页只做一件事）
 // @namespace    https://www.gityx.com/
 // @version      0.0.42
-// @description  Eternity Tower (https://tower.bluesky.site/) 游戏汉化脚本 - 锅巴汉化出品
+// @description  Eternity Tower (https://eternitytower.net/) 游戏汉化脚本 - 锅巴汉化出品
 // @author       麦子、JAR、小蓝、好阳光的小锅巴
 // @copyright    锅巴汉化
 // @contributionUR    https://gityx.com/donate/intro.html
@@ -91,7 +91,66 @@
 ! function () {
     var content = '';
     content += '<!-- 脚本动态内容 开始 -->';
-    content += '<style>.main-im{position:fixed;right:10px;bottom:50px;line-height:normal;z-index:9999}.main-im .qq-a{display:block;width:106px;height:116px;font-size:14px;color:#0484cd !important;text-align:center;position:relative;}.main-im .qq-a span{bottom:5px;position:absolute;width:90px;left:10px;}.main-im .qq-hover-c{width:70px;height:70px;border-radius:35px;position:absolute;left:18px;top:10px;overflow:hidden;z-index:9;}.main-im .qq-container{z-index:99;position:absolute;width:109px;height:118px;border-top-left-radius:10px;border-top-right-radius:10px;border-bottom:1px solid #dddddd;background-image:url("//g8hh.cn/static/images/kf/qq-icon-bg.png");background-position:center 8px;background-repeat:no-repeat;}.main-im .img-qq{max-width:60px;display:block;position:absolute;left:6px;top:3px;-webkit-transition:all 0.5s;-o-transition:all 0.5s;transition:all 0.5s;}.main-im .im-qq:hover .img-qq{max-width:70px;left:1px;top:8px;position:absolute;color:#ff0000 !important;}.main-im .im_main{background-color:#F9FAFB !important;border:1px solid #dddddd;border-radius:10px;background-color:#F9FAFB !important;display:none;z-index:999;}.main-im .im_main .im-tel{color:#000000 !important;text-align:center;width:109px;height:105px;border-bottom:1px solid #dddddd;}.main-im .im_main .im-tel div{font-weight:bold;font-size:12px;margin-top:6px;}.main-im .im_main .im-tel .tel-num{font-family:Arial;font-weight:bold;}.main-im .im_main .im-tel .tel-num a{color:#e66d15 !important;}.main-im .im_main .im-tel:hover{background-color:#fafafa !important;}.main-im .im_main .weixing-container{width:55px;height:47px;border-right:1px solid #dddddd;background-color:#f5f5f5 !important;border-bottom-left-radius:10px;background-image:url("//g8hh.cn/static/images/kf/weixing-icon.png");background-position:center;background-repeat:no-repeat;float:left;}.main-im .im_main .weixing-show{width:670px;height:400px;background-color:#ffffff;border-radius:10px;border:1px solid #dddddd;position:absolute;left:-680px;top:-354px;overflow-y:auto;}.main-im .im_main .weixing-show .weixing-sanjiao{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #ffffff;border-width:6px;left:112px;top:134px;position:absolute;z-index:2;}.main-im .im_main .weixing-show .weixing-sanjiao-big{width:0;height:0;border-style:solid;border-color:transparent transparent transparent #dddddd;border-width:8px;left:112px;top:132px;position:absolute;}.main-im .im_main .weixing-show .weixing-ma{width:104px;height:103px;padding-left:5px;padding-top:5px;}.main-im .im_main .weixing-show .weixing-txt{position:absolute;top:110px;left:7px;width:100px;margin:0 auto;text-align:center;color:#000 !important;}.main-im .im_main .weixing-show .weixing-txt a,.main-im .im_main .weixing-show .weixing-txt a:hover,.main-im .im_main .im-tel .tel-num a:hover{color:#ff0000 !important;}.main-im .im_main .go-top{width:50px;height:47px;background-color:#f5f5f5;border-bottom-right-radius:10px;background-image:url("//g8hh.cn/static/images/kf/totop-icon.png");float:right;background-position:center center;background-repeat:no-repeat;}.main-im .im_main .go-top a{display:block;width:52px;height:47px;}.main-im .close-im{position:absolute;right:-10px;top:-12px;z-index:100;width:24px;height:24px;}.main-im .close-im a{display:block;width:24px;height:24px;background-image:url("//g8hh.cn/static/images/kf/close_im.png") !important;text-decoration:none;background-position:left top;background-repeat:no-repeat;}.main-im .close-im a:hover{text-decoration:none;}.main-im .open-im{cursor:pointer;margin-left:68px;width:30px;height:30px;background-image:url("//g8hh.cn/static/images/kf/open_im.png");background-repeat:no-repeat;background-position:left top;cursor:pointer;background-size:100%;z-index:100;position:fixed;right:10px;bottom:320px;}.JB-form{padding:10px;color:#000;}.JB-form *{margin:5px;font-size:13px;}.JB-form .tit{font-weight:bold;}.JB-form input{width:100px;height:30px;line-height:30px;text-align:center;}.JB-form input#minTime,.JB-form input#famingTime{width:50px;}.JB-form button{width:50px;height:30px;}#nofood,#noseed,#noSkill{opacity:0;color:red;}#nofood.show,#noseed.show,#noSkill.show{opacity:1;}.JB-form input[type=checkbox]{width:auto;vertical-align: middle;}.JB-form label{user-select: none;margin-left:0;}.recent-battles-btn.text-muted{color:#0275d8 !important;}.forfeit-battle{position:absolute;top:0px;}@media screen and (max-width: 800px) {.main-im {right:inherit;left:50%;display:block !important;bottom:inherit; top:30px;margin-left:-100px;}.main-im .open-im{left:50%;right:inherit;bottom:inherit;top:10px;margin-left:inherit;}.main-im .im_main .weixing-show{left:-50px;width:320px;height:480px;top:-120px}.main-im .im_main .weixing-show select{display:block;width:280px;}.forfeit-battle{right:0px;}}</style>';
+    content += '<style>' +
+        '.main-im{position:fixed;right:20px;bottom:20px;line-height:normal;z-index:99999;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif}' +
+        '.main-im .open-im{position:fixed;right:20px;bottom:20px;z-index:100;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#5b8def,#8b5cf6);box-shadow:0 10px 26px rgba(91,141,239,.45);cursor:pointer;text-align:center;line-height:52px;font-size:23px;color:#fff;transition:transform .18s ease,box-shadow .18s ease}' +
+        '.main-im .open-im::before{content:"⚙"}' +
+        '.main-im .open-im:hover{transform:scale(1.07) rotate(30deg);box-shadow:0 14px 32px rgba(91,141,239,.6)}' +
+        '.main-im .im_main{position:fixed;right:20px;bottom:84px;width:min(680px,calc(100vw - 40px));max-height:min(78vh,760px);display:none;background:rgba(23,27,38,.97);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.1);border-radius:16px;box-shadow:0 24px 64px rgba(0,0,0,.55);overflow:hidden;color:#e8ecf5}' +
+        '.main-im .close-im{position:absolute;right:8px;top:8px;z-index:20;width:28px;height:28px}' +
+        '.main-im .close-im a{display:block;width:28px;height:28px;border-radius:8px;background:rgba(255,255,255,.06);background-image:none !important;text-align:center;line-height:28px;color:#aab3c5;font-size:15px;text-decoration:none;transition:.15s}' +
+        '.main-im .close-im a::before{content:"✕"}' +
+        '.main-im .close-im a:hover{background:rgba(239,75,94,.2);color:#ff8a95;text-decoration:none}' +
+        '.main-im .im_main .im-tel{display:flex;align-items:center;gap:6px;flex-wrap:wrap;width:auto;height:auto;margin:0;padding:9px 46px 9px 16px;border-bottom:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);color:#aab3c5;font-size:12px;line-height:1.6;border-bottom-left-radius:0}' +
+        '.main-im .im_main .im-tel div{margin:0;font-weight:500;font-size:12px}' +
+        '.main-im .im_main .im-tel:hover{background:rgba(255,255,255,.03) !important}' +
+        '.main-im .im_main .im-tel .tel-num{color:#e8ecf5;font-weight:600}' +
+        '.main-im .im_main .im-tel .tel-num a{color:#7aa7ff !important;text-decoration:none;margin-left:8px}' +
+        '.main-im .im_main .im-tel .tel-num a:hover{color:#a8c4ff !important}' +
+        '.main-im .im_main .qq-a{display:inline-flex;align-items:center;width:auto;height:auto;margin:10px 16px 0;padding:6px 14px;border-radius:999px;background:linear-gradient(135deg,#4a6cf7,#6d5cf6);color:#fff !important;font-size:12px;font-weight:600;text-decoration:none;transition:filter .15s}' +
+        '.main-im .im_main .qq-a span{position:static;bottom:auto;left:auto;width:auto}' +
+        '.main-im .im_main .qq-a:hover{filter:brightness(1.12);text-decoration:none}' +
+        '.main-im .im_main .qq-container,.main-im .im_main .qq-hover-c,.main-im .im_main .weixing-show .weixing-sanjiao,.main-im .im_main .weixing-show .weixing-sanjiao-big,.main-im .im_main .weixing-show .weixing-ma{display:none}' +
+        '/* 注意：.weixing-show 是 .weixing-container 的子元素，容器只能重置样式、绝不能 display:none */' +
+        '.main-im .im_main .weixing-container{width:auto;height:auto;float:none;padding:0;margin:0;border:none;border-radius:0;background:none;background-image:none}' +
+        '.main-im .im_main .im-footer{position:relative}' +
+        '.main-im .im_main .weixing-show{position:relative;left:auto;top:auto;width:auto;height:auto;max-height:min(62vh,600px);overflow-y:auto;overflow-x:hidden;padding:12px 14px 6px;background:transparent;border:none;border-radius:0}' +
+        '.main-im .im_main .weixing-show::-webkit-scrollbar{width:8px;height:8px}' +
+        '.main-im .im_main .weixing-show::-webkit-scrollbar-track{background:transparent}' +
+        '.main-im .im_main .weixing-show::-webkit-scrollbar-thumb{background:rgba(255,255,255,.16);border-radius:4px;border:2px solid transparent;background-clip:content-box}' +
+        '.main-im .im_main .weixing-show::-webkit-scrollbar-thumb:hover{background:rgba(255,255,255,.32);background-clip:content-box}' +
+        '.main-im .im_main .go-top{width:auto;height:auto;float:none;padding:2px 14px 10px;text-align:right;background:none;border-radius:0}' +
+        '.main-im .im_main .go-top a{display:inline-block;width:auto;height:auto;padding:5px 12px;border-radius:8px;background:rgba(255,255,255,.07);color:#aab3c5;font-size:12px;text-decoration:none;transition:.15s}' +
+        '.main-im .im_main .go-top a::before{content:"↑ "}' +
+        '.main-im .im_main .go-top a::after{content:"顶部"}' +
+        '.main-im .im_main .go-top a:hover{background:rgba(91,141,239,.22);color:#cfe0ff}' +
+        '.JB-form{margin:0 0 10px;padding:12px 14px;border:1px solid rgba(255,255,255,.08);border-radius:12px;background:rgba(255,255,255,.035);color:#dfe5f0;line-height:1.7;transition:border-color .18s,background .18s}' +
+        '.JB-form:hover{border-color:rgba(122,167,255,.28);background:rgba(255,255,255,.055)}' +
+        '.JB-form .tit{display:block;margin:0 0 8px;padding:0 0 0 9px;border-left:3px solid #5b8def;font-size:13px;font-weight:600;color:#fff;letter-spacing:.3px}' +
+        '.JB-form select,.JB-form input,.JB-form button{margin:4px 6px 4px 0;vertical-align:middle;font-family:inherit;font-size:12px}' +
+        '.JB-form select{max-width:100%;height:30px;padding:0 28px 0 9px;border:1px solid rgba(255,255,255,.14);border-radius:7px;background-color:#1b2030;background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2210%22 height=%226%22%3E%3Cpath d=%22M0 0l5 6 5-6z%22 fill=%22%23aab3c5%22/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;color:#e8ecf5;appearance:none;-webkit-appearance:none;cursor:pointer;transition:border-color .15s,box-shadow .15s}' +
+        '.JB-form select:hover,.JB-form select:focus{border-color:#5b8def;outline:none}' +
+        '.JB-form select:focus{box-shadow:0 0 0 3px rgba(91,141,239,.18)}' +
+        '.JB-form input[type=text]{width:64px;height:30px;padding:0 8px;border:1px solid rgba(255,255,255,.14);border-radius:7px;background:#1b2030;color:#e8ecf5;text-align:center;transition:border-color .15s,box-shadow .15s}' +
+        '.JB-form input[type=text]:focus{border-color:#5b8def;box-shadow:0 0 0 3px rgba(91,141,239,.18);outline:none}' +
+        '.JB-form input[type=text]:disabled{opacity:.5;cursor:not-allowed}' +
+        '.JB-form input#minTime,.JB-form input#famingTime{width:52px}' +
+        '.JB-form input[type=checkbox]{width:15px;height:15px;margin:0 5px 0 0;accent-color:#5b8def;cursor:pointer}' +
+        '.JB-form label{display:inline-flex;align-items:center;margin:0 12px 0 0;font-size:12px;color:#c9d1e0;cursor:pointer;user-select:none}' +
+        '.JB-form label:hover{color:#fff}' +
+        '.JB-form button{min-width:58px;height:30px;padding:0 14px;border:none;border-radius:7px;font-size:12px;font-weight:600;cursor:pointer;color:#fff;background:#39404f;transition:transform .12s,filter .15s}' +
+        '.JB-form button:hover{filter:brightness(1.18)}' +
+        '.JB-form button:active{transform:scale(.96)}' +
+        '.JB-form button[type=primary]{background:linear-gradient(135deg,#5b8def,#4a6cf7);box-shadow:0 4px 12px rgba(91,141,239,.3)}' +
+        '.JB-form button[type=danger]{background:linear-gradient(135deg,#ef4b5e,#d63a4d);box-shadow:0 4px 12px rgba(239,75,94,.3)}' +
+        '.JB-form button#resetAuto{background:linear-gradient(135deg,#f59e0b,#d97706);box-shadow:0 4px 12px rgba(245,158,11,.32)}' +
+        '.JB-form button:disabled{background:#2b3040 !important;color:#6b7285 !important;box-shadow:none !important;cursor:not-allowed;filter:none;transform:none}' +
+        '#nofood,#noseed,#noSkill{display:none;margin:6px 0 0;padding:6px 10px;border-radius:7px;background:rgba(239,75,94,.12);border:1px solid rgba(239,75,94,.28);color:#ff9aa5 !important;font-size:12px}' +
+        '#nofood.show,#noseed.show,#noSkill.show{display:block}' +
+        '.recent-battles-btn.text-muted{color:#7aa7ff !important}' +
+        '.forfeit-battle{position:absolute;top:0px}' +
+        '@media screen and (max-width:800px){.main-im{right:16px;bottom:16px}.main-im .open-im{right:16px;bottom:16px}.main-im .im_main{right:16px;left:16px;bottom:80px;width:auto;max-height:80vh}.main-im .im_main .weixing-show{max-height:60vh}.main-im .im_main .weixing-show select{display:block;max-width:100%}.forfeit-battle{right:0px}}' +
+        '</style>';
     content += '<div class="main-im">';
     content += '<div id="open_im" class="open-im">&nbsp;</div>  ';
     content += '<div class="im_main" id="im_main">';
@@ -796,6 +855,23 @@
         $("#nobodyStop").attr("disabled", true);
     });
     var url = window.location.href;
+    // 仅在按钮可点击（未 disabled = 未在运行）时才触发。
+    // autoLoad2 每 5 秒执行一次，原本无条件 trigger 会导致 startXXX 反复执行、
+    // setInterval 不断新建且旧句柄被覆盖，最终定时器无限累积、点停止也停不下来。
+    function triggerIfIdle(sel) {
+        var $btn = $(sel);
+        if ($btn.length && !$btn.prop("disabled")) $btn.trigger("click");
+    }
+
+    // 仅当配置值有效时才回填输入框。原代码直接 $('#x').val(parseInt(localStorage.getItem(...)))
+    // 在键不存在时会把控件写成 "NaN"，随后 setInterval(farming, NaN) 被浏览器当作 0ms，
+    // 造成种地/战斗等逻辑疯狂循环执行（即"脚本乱点"）。
+    function fillIfValid(sel, val) {
+        if (val === null || val === undefined || val === "" || val === "NaN") return;
+        if (typeof val === "number" && isNaN(val)) return;
+        $(sel).val(val);
+    }
+
     function autoLoad2() {
         var username = $('#username').val();
         // if (username == '') {
@@ -803,146 +879,146 @@
             if (localStorage.getItem('username')) {
                 username = localStorage.getItem('username');
                 //   从本地存储里面取出用户名，填入文本框
-                $('#username').val(username)
+                fillIfValid('#username', username);
             }
             // 自动回血
             if (url.includes('battle') && localStorage.getItem('autoEate') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var minHP = parseInt(localStorage.getItem('minHP'));
-                $('#minHP').val(minHP)
+                fillIfValid('#minHP', minHP);
                 var Food1 = localStorage.getItem('Food1');
-                $('#Food1').val(Food1)
-                $('#startEatFood').trigger('click');
+                fillIfValid('#Food1', Food1);
+                triggerIfIdle('#startEatFood');
             }
             // 自动回能量
             if (url.includes('battle') && localStorage.getItem('autoEateEnergy') == 'true') {
                 if(localStorage.getItem('minEnergy')){
                     //   从本地存储里面取出时间间隔，填入文本框
                     var minEnergy = parseInt(localStorage.getItem('minEnergy'));
-                    $('#minEnergy').val(minEnergy)
+                    fillIfValid('#minEnergy', minEnergy);
                 }else{
                     localStorage.setItem('minEnergy', 30);
                     $('#minEnergy').val(30);
                 }
                 var Food2 = localStorage.getItem('Food2');
-                $('#Food2').val(Food2)
-                $('#startEatEnergyFood').trigger('click');
+                fillIfValid('#Food2', Food2);
+                triggerIfIdle('#startEatEnergyFood');
             }
             // 自动放技能
             if (url.includes('battle') && localStorage.getItem('autoSkill') == 'true') {
-                $('#startSkill').trigger('click');
+                triggerIfIdle('#startSkill');
             }
             // 自动放回血技能 1
             if (url.includes('battle') && localStorage.getItem('autoHeal') == 'true') {
-                $('#autoHeal').trigger('click');
+                triggerIfIdle('#autoHeal');
             }
             // 自动放回血技能 2
             if (url.includes('battle') && localStorage.getItem('autoHeal2') == 'true') {
-                $('#autoHeal2').trigger('click');
+                triggerIfIdle('#autoHeal2');
             }
             // 自动攻击右边敌人
             if (url.includes('battle') && localStorage.getItem('attLeft') == 'true') {
-                $('#attLeft').trigger('click');
+                triggerIfIdle('#attLeft');
             }
             // 如果用户在组队战斗，则继续战斗
             if (url.includes('battle') && localStorage.getItem('groupBattle') == 'true') {
                 if(localStorage.getItem('fightTime')){
                     //   从本地存储里面取出时间间隔，填入文本框
                     var fightTime = parseInt(localStorage.getItem('fightTime'));
-                    $('#fightTime').val(fightTime)
-                    $('#startGroupFight').trigger('click');
+                    fillIfValid('#fightTime', fightTime);
+                    triggerIfIdle('#startGroupFight');
                 }else{
                     localStorage.setItem('fightTime', 60);
                     $('#fightTime').val(60);
-                    $('#startGroupFight').trigger('click');
+                    triggerIfIdle('#startGroupFight');
                 }
             }
             // 如果用户在组队战斗时选了自动踢人，则继续战斗
             if (url.includes('battle') && localStorage.getItem('groupTiRen') == 'true') {
                 if ($('.me').parent().parent().find('.justify-content-center img.mr-1').length == 1) {
-                    $('#startTi').trigger('click');
+                    triggerIfIdle('#startTi');
                 }
             }
             // 如果用户在AFK战斗，则继续战斗
             if (url.includes('battle') && localStorage.getItem('afkBattle') == 'true') {
-                $('#startAFK').trigger('click');
+                triggerIfIdle('#startAFK');
             }
             // 如果用户在solo固定战斗，则继续战斗
             if (url.includes('battle') && localStorage.getItem('soloBattle') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var fightMinHP = parseInt(localStorage.getItem('fightMinHP'));
-                $('#fightMinHP').val(fightMinHP);
+                fillIfValid('#fightMinHP', fightMinHP);
                 var fightMinEnergy = parseInt(localStorage.getItem('fightMinEnergy'));
-                $('#fightMinEnergy').val(fightMinEnergy);
+                fillIfValid('#fightMinEnergy', fightMinEnergy);
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
-                $('#soloFightTime').val(soloFightTime);
-                if (url == 'https://tower.bluesky.site/battle') {
-                    $('#startSolo').trigger('click');
+                fillIfValid('#soloFightTime', soloFightTime);
+                if (url == 'https://eternitytower.net/battle') {
+                    triggerIfIdle('#startSolo');
                 }
             }
             // 如果用户在solo爬楼战斗，则继续战斗
             if (url.includes('battle') && localStorage.getItem('soloUpBattle') == 'true') {
                 var fightMinHP = parseInt(localStorage.getItem('fightMinHP'));
-                $('#fightMinHP').val(fightMinHP);
+                fillIfValid('#fightMinHP', fightMinHP);
                 var fightMinEnergy = parseInt(localStorage.getItem('fightMinEnergy'));
-                $('#fightMinEnergy').val(fightMinEnergy);
+                fillIfValid('#fightMinEnergy', fightMinEnergy);
                 // 单人战斗时间间隔
                 var soloFightTime = parseInt(localStorage.getItem('soloFightTime'));
-                $('#soloFightTime').val(soloFightTime);
-                if (url == 'https://tower.bluesky.site/battle') {
-                    $('#startSoloUp').trigger('click');
+                fillIfValid('#soloFightTime', soloFightTime);
+                if (url == 'https://eternitytower.net/battle') {
+                    triggerIfIdle('#startSoloUp');
                 }
             }
             // 自动采矿
             if (url.includes('mining') && localStorage.getItem('autoMing') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var minTime = parseInt(localStorage.getItem('minTime'));
-                $('#minTime').val(minTime)
+                fillIfValid('#minTime', minTime);
                 var MingType = localStorage.getItem('MingType');
-                $('#MingType').val(MingType)
+                fillIfValid('#MingType', MingType);
                 var MingEnergy = parseInt(localStorage.getItem('MingEnergy'));
-                $('#MingEnergy').val(MingEnergy)
-                if (url == 'https://tower.bluesky.site/mining') {
-                    $('#startMing').trigger('click');
+                fillIfValid('#MingEnergy', MingEnergy);
+                if (url == 'https://eternitytower.net/mining') {
+                    triggerIfIdle('#startMing');
                 }
             }
             // 自动种地
             if (url.includes('farming') && localStorage.getItem('autoFarm') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var FoodSeed = localStorage.getItem('FoodSeed');
-                $('#FoodSeed').val(FoodSeed)
+                fillIfValid('#FoodSeed', FoodSeed);
                 var myFamingTime = parseInt(localStorage.getItem('myFamingTime'));
-                $('#myFamingTime').val(myFamingTime)
+                fillIfValid('#myFamingTime', myFamingTime);
                 var famingTime = parseInt(localStorage.getItem('famingTime'));
-                $('#famingTime').val(famingTime)
-                if (url == 'https://tower.bluesky.site/farming') {
-                    $('#startFarming').trigger('click');
+                fillIfValid('#famingTime', famingTime);
+                if (url == 'https://eternitytower.net/farming') {
+                    triggerIfIdle('#startFarming');
                 }
             }
             // 自动制作
             if (url.includes('crafting') && localStorage.getItem('autoCraft') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var craftTime = parseInt(localStorage.getItem('craftTime'));
-                $('#craftTime').val(craftTime)
+                fillIfValid('#craftTime', craftTime);
                 var MingType = localStorage.getItem('CraftType');
-                $('#CraftType').val(CraftType)
-                if (url == 'https://tower.bluesky.site/crafting') {
-                    $('#startCraft').trigger('click');
+                fillIfValid('#CraftType', CraftType);
+                if (url == 'https://eternitytower.net/crafting') {
+                    triggerIfIdle('#startCraft');
                 }
             }
             // 自动出售
             if (url.includes('crafting') && localStorage.getItem('autoSell') == 'true') {
                 //   从本地存储里面取出时间间隔，填入文本框
                 var sellTime = parseInt(localStorage.getItem('sellTime'));
-                $('#sellTime').val(sellTime)
-                if (url == 'https://tower.bluesky.site/crafting') {
-                    $('#multiSellStart').trigger('click');
+                fillIfValid('#sellTime', sellTime);
+                if (url == 'https://eternitytower.net/crafting') {
+                    triggerIfIdle('#multiSellStart');
                 }
             }
             // 自动启用标签页后台运行
             if (localStorage.getItem('keepAlive') == 'true') {
-                $('#keepAlive').trigger('click');
+                triggerIfIdle('#keepAlive');
                 $("#keepAlive").attr("disabled", true);
             }
         // }
@@ -997,7 +1073,7 @@
     //获取种植的植物
     var growTime = 1;
     $('#FoodSeed').change(function () {
-        var ok = getElementByAttr('img', 'src', $(this).val(), 'svg');
+        var ok = findSeedIcons($(this).val());
         if (ok.length == 0) {
             //没有种子
             $('#noseed').addClass('show');
@@ -1453,16 +1529,21 @@
         // 标识检测成熟的间隔
         var myFamingTime = $('#myFamingTime').val();
         localStorage.setItem('myFamingTime', myFamingTime);
-        var ok = getElementByAttr('img', 'src', p, 'svg');
-        //判断有无种子
-        if (ok.length == 0) {
-            //没有种子
+        var seedName = pickSeedName(p);
+        //判断有无种子（选中的种子没库存时，自动降级到实际拥有的种子）
+        if (!seedName) {
+            //没有任何可用种子
             $('#noseed').addClass('show');
             return;
         } else {
             $('#noseed').removeClass('show');
+            if (seedName !== p) {
+                console.log('[种地] 种子 ' + p + ' 没有库存，自动改用 ' + seedName);
+                $('#FoodSeed').val(seedName);
+                localStorage.setItem('FoodSeed', seedName);
+            }
             // var gTime = parseInt($('#famingTime').val());
-            var gTime = parseInt($('#myFamingTime').val());
+            var gTime = parseInt($('#myFamingTime').val()) || 2;
             //先执行一次
             farming();
             //延后3秒
@@ -1484,6 +1565,28 @@
         $("#startFarming").attr("disabled", false);
     });
 
+    /* ==================== 种子查询与自动降级 ==================== */
+    // 种子图标在页面新旧版本中格式不一（实测 farming 页实际为 svg，旧版曾为 png），
+    // 原实现写死单一格式，一旦不匹配就永远查不到，导致种地静默失败。
+    // 这里按优先级全查，两种格式都能命中。
+    function findSeedIcons(seedName) {
+        if (!seedName) return [];
+        return getElementByAttr('img', 'src', seedName, 'svg')
+            .concat(getElementByAttr('img', 'src', seedName, 'png'));
+    }
+
+    // 备选种子（按所需种植等级从高到低）。对应更新日志里的需求：
+    // “种地：自定义种子没了的情况下，应该要自动种其它种子”
+    var SEED_FALLBACKS = ['rockmelonSeed', 'watermelonSeed', 'pearSeed', 'redAppleSeed', 'grapeFruitSeed', 'lemonSeed', 'letticeSeed', 'bananaSeed'];
+    function pickSeedName(preferred) {
+        if (findSeedIcons(preferred).length) return preferred;
+        for (var i = 0; i < SEED_FALLBACKS.length; i++) {
+            if (findSeedIcons(SEED_FALLBACKS[i]).length) return SEED_FALLBACKS[i];
+        }
+        return null;
+    }
+    /* ============================================================= */
+
     //自动种地
     function farming() {
         //自动切换到种地界面
@@ -1496,6 +1599,9 @@
             // 点第一个tab，防止当前界面非地块
             $('.nav-tabs .nav-item:nth-child(1) a').trigger('click');
             var p = $('#FoodSeed').val();
+            // 每次执行都重新挑种子：选中的种子可能被消耗完，此时自动降级
+            var seedName = pickSeedName(p);
+            if (!seedName) return;   // 页面上没有任何可用种子
             // 照料按钮点击
             if($('.tend-overgrowth').length > 0){
                 $('.tend-overgrowth').trigger('click');
@@ -1525,13 +1631,13 @@
                     if (src.indexOf('emptyFarmSpace') === -1) return;          // 非空地跳过
 
                     setTimeout(function () {
-                        // 点击前重新取一次种子图标：3.5 秒前的 ok 可能已因 DOM 重绘失效
-                        var okNow = getElementByAttr('img', 'src', p, 'png');
-                        if (!okNow.length) return;
-                        okNow[0].click();
+                        // 点击前重新取一次种子图标：延时期间的旧引用可能已因 DOM 重绘失效
+                        var icons = findSeedIcons(seedName);
+                        if (!icons.length) return;
+                        icons[0].click();
                         if (isMobile) {
                             setTimeout(function () {
-                                var again = getElementByAttr('img', 'src', p, 'png');
+                                var again = findSeedIcons(seedName);
                                 if (again.length) again[0].click();
                             }, 310);
                         }
